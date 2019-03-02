@@ -26,31 +26,42 @@
 
                         <h3>Datos del Cupón</h3>
 
-                        <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
-                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox><br />
+                        <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
+                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox><br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del cupón" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        </div>
 
+                        <div class="form-group">
+                            <asp:Label ID="Label3" runat="server" Text="Descripción"></asp:Label><br />
+                            <textarea id="txtDescripcion" runat="server" cols="20" rows="2" class="form-control"></textarea><br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Error, debe digitar una descripción para el cupón" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        </div>
 
-                        <asp:Label ID="Label3" runat="server" Text="Descripcion"></asp:Label><br />
-                        <textarea id="txtDescripcion" cols="20" rows="2" class="form-control"></textarea><br />
+                        <div class="form-group">
+                            <asp:Label ID="Label4" runat="server" Text="Monedas necesarias"></asp:Label><br />
+                            <asp:TextBox ID="txtMonedasNecesarias" runat="server" CssClass="form-control"></asp:TextBox><br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtMonedasNecesarias" ErrorMessage="Error, debe digitar la cantidad de monedas necesarias para el cupón" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        </div>
 
+                        <div class="form-group">
+                            <asp:Label ID="Label2" runat="server" Text="Imagen"></asp:Label><br />
+                            <asp:FileUpload ID="archivoImagen" runat="server" /><br />
+                            <br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="archivoImagen" ErrorMessage="Error, la imagen es requerida" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        </div>
 
-                        <asp:Label ID="Label4" runat="server" Text="Monedas necesarias"></asp:Label><br />
-                        <asp:TextBox ID="txtMonedasNecesarias" runat="server" CssClass="form-control"></asp:TextBox><br />
-
-
-                        <asp:Label ID="Label2" runat="server" Text="Imagen"></asp:Label><br />
-                        <asp:FileUpload ID="archivoImagen" runat="server" /><br />
-                        <br />
-
-                        <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
-                        <asp:RadioButton ID="rbActivo" runat="server" Text="Activo" />
-                        <asp:RadioButton ID="rbInactivo" runat="server" Text="Inactivo" /><br />
+                        <div class="form-group">
+                            <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
+                            <asp:RadioButton ID="rbActivo" runat="server" GroupName="estado" Text="Activo" />
+                            <asp:RadioButton ID="rbInactivo" runat="server" GroupName="estado" Text="Inactivo" /><br />
+                        </div>
 
                         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
                     </div>
                     <div class="col-md-1"></div>
-                    <div class="col-md-6" style="margin-top: 40px; margin-bottom:50px;">
+                    <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
 
                         <h3>Lista de Cupones</h3>
 
