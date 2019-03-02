@@ -14,6 +14,7 @@
             border-radius:3px;
             border: 1px solid red;
             /* Hola crack */
+            /*Tdo biem?*/
         }
     </style>
 
