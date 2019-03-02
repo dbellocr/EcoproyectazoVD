@@ -121,7 +121,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div id="navbarNavDropdown" class="navbar-collapse collapse" style="color: black;">
+                <div id="navbarNavDropdown" class="navbar-collapse collapse" style="color: black; margin-right:40px">
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <ul class="navbar-nav">
