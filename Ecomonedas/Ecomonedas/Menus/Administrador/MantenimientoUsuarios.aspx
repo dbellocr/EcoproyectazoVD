@@ -8,11 +8,6 @@
             float: right;
         }
         .validaciones{
-            background-color:#F8D7DA;
-            color:red;
-            padding: 5px;
-            border-radius:3px;
-            border: 1px solid red;
             font-size:14px;
         }
     </style>
