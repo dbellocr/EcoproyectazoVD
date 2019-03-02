@@ -7,6 +7,13 @@
         .boton {
             float: right;
         }
+        .validaciones{
+            background-color:#F8D7DA;
+            color:red;
+            padding: 5px;
+            border-radius:3px;
+            border: 1px solid red;
+        }
     </style>
 
 </asp:Content>
@@ -28,20 +35,20 @@
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
                             <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="validaciones" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                         </div>
                         <div class="form-group">
                             <asp:Label ID="Label5" runat="server" Text="Primer Apellido"></asp:Label><br />
                             <asp:TextBox ID="txtPrimerApellido" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrimerApellido" ErrorMessage="Error, debe digitar el nombre del primer apellido del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" CssClass="validaciones" ControlToValidate="txtPrimerApellido" ErrorMessage="Error, debe digitar el nombre del primer apellido del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                         </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label6" runat="server" Text="Segundo Apellido"></asp:Label><br />
                             <asp:TextBox ID="txtSegundoApellido" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSegundoApellido" ErrorMessage="Error, debe digitar el segundo apellido del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="validaciones" ControlToValidate="txtSegundoApellido" ErrorMessage="Error, debe digitar el segundo apellido del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
 
                         </div>
@@ -49,27 +56,23 @@
                         <div class="form-group">
                             <asp:Label ID="Label3" runat="server" Text="Correo Electrónico"></asp:Label><br />
                             <asp:TextBox ID="txtCorreo" runat="server" AutoCompleteType="Disabled" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Error, debe digitar el correo electrónico del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Error, debe ingresar un correo electrónico válido" ValidationExpression="^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$" ControlToValidate="txtCorreo" ForeColor="red" SetFocusOnError="true" Display="Dynamic"></asp:RegularExpressionValidator>
-
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo" ErrorMessage="Error, debe digitar el correo electrónico del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Dirección"></asp:Label><br />
                             <asp:TextBox ID="txtDireccion" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtDireccion" ErrorMessage="Error, debe digitar la dirección del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtDireccion" ErrorMessage="Error, debe digitar la dirección del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                        </div>
+                             </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label4" runat="server" Text="Teléfono"></asp:Label><br />
                             <asp:TextBox ID="txtTelefono" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Error, debe digitar el teléfono del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ValidationExpression="^\d+$" ControlToValidate="txtTelefono" runat="server" ErrorMessage="Error, el teléfono ingresado es inválido" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ValidationExpression="[0-9]{8}" ControlToValidate="txtTelefono" runat="server" ErrorMessage="Error, el número de teléfono debe tener 8 dígitos" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" CssClass="validaciones" ControlToValidate="txtTelefono" ErrorMessage="Error, debe digitar el teléfono del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-
-                        </div>
+                            
+                             </div>
                         <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
                         <asp:RadioButton ID="rbActivo" GroupName="estado" runat="server" Text="Activo" />
                         <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
