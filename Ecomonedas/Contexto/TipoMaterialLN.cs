@@ -25,12 +25,17 @@ namespace Contexto
 
              oTipo= db.Tipo_Material.Where(x => x.ID == id).First<Tipo_Material>();
 
+               
+           
+
 
             }
 
 
             oTipo.Estado = estado == true ? 1 : 0;
             oTipo.ID_Color = idColor;
+
+
             oTipo.Imagen_Path = imagenPath;
             oTipo.Nombre = nombre;
             oTipo.Precio = Convert.ToDecimal(precio);
@@ -53,7 +58,14 @@ namespace Contexto
             return db.Tipo_Material;
 
         }
+        public static Tipo_Material ObtenerMaterial(int id)
+        {
 
+            EcomonedasContexto db = new EcomonedasContexto();
+            return db.Tipo_Material.Where(x => x.ID == id).First<Tipo_Material>();
+
+
+        }
 
     }
 }

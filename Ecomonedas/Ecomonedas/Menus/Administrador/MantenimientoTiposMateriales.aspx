@@ -6,6 +6,7 @@
     <style>
         .boton {
             float: right;
+            margin-right:10px;
         }
 
         #lblMensaje {
@@ -35,8 +36,8 @@
                         <h3>Datos del Material Reciclable</h3>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
-                            <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:TextBox ValidationGroup="guardar" ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
+                            <asp:RequiredFieldValidator  ValidationGroup="guardar" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
 
 
@@ -51,8 +52,8 @@
 
                                 </div>
                             </div>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrecio" ErrorMessage="Error, debe digitar el precio equivalente a la ecomoneda" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationExpression="^\d+$" ControlToValidate="txtPrecio" runat="server" ErrorMessage="Error, el precio de la ecomoneda solo debe tener números sin decimales" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator  ValidationGroup="guardar" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrecio" ErrorMessage="Error, debe digitar el precio equivalente a la ecomoneda" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator  ValidationGroup="guardar" ID="RegularExpressionValidator1" ValidationExpression="^\d+$" ControlToValidate="txtPrecio" runat="server" ErrorMessage="Error, el precio de la ecomoneda solo debe tener números sin decimales" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
 
                         </div>
 
@@ -83,14 +84,17 @@
                         <asp:FileUpload ID="archivoImagen" runat="server" /><br />
 
                     </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="archivoImagen" ErrorMessage="Error, debe seleccionar una imagen para el tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="archivoImagen" ErrorMessage="Error, debe seleccionar una imagen para el tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>--%>
+                    <asp:CustomValidator  ValidationGroup="guardar" ID="CustomValidator1"  ValidateEmptyText="true" OnServerValidate="CustomValidator1_ServerValidate" runat="server" ControlToValidate="archivoImagen" ErrorMessage="Error, debe seleccionar una imagen para el tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:CustomValidator>
+
 
                     <div class="form-group">
                         <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
                         <asp:RadioButton ID="rbActivo" Checked="true" GroupName="estado" runat="server" Text="Activo" />
                         <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
                     </div>
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" OnClick="btnGuardar_Click" />
+                    <asp:Button ValidationGroup="guardar" ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" OnClick="btnGuardar_Click" />
+                    <asp:Button ID="btnNuevo" Visible="false"  runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />                    
 
                 </div>
                 <div class="col-md-1"></div>
@@ -98,8 +102,9 @@
 
                     <h3>Lista de Materiables Reciclables</h3>
 
-                    <asp:GridView ID="gvMateriales" OnRowEditing="gvMateriales_RowUpdating"  AutoGenerateEditButton="true" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
+                    <asp:GridView ID="gvMateriales" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvMateriales_SelectedIndexChanged"  DataKeyNames="ID" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
                         <Columns>
+                         
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
                             <asp:BoundField HeaderText="Precio" DataFormatString="{0:N0} ecomonedas" DataField="Precio"></asp:BoundField>
                             <asp:BoundField HeaderText="Color" DataField="Color.Descripcion"></asp:BoundField>
@@ -110,7 +115,7 @@
                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-
+                    <asp:HiddenField ID="hvIdMaterial" runat="server" />
                 </div>
             </div>
         </div>
