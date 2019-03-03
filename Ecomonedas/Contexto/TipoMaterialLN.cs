@@ -46,7 +46,13 @@ namespace Contexto
            return db.SaveChanges();
 
         }
+        public static IQueryable ListaMateriales()
+        {
 
+            EcomonedasContexto db = new EcomonedasContexto();
+            return db.Tipo_Material;
+
+        }
 
 
     }

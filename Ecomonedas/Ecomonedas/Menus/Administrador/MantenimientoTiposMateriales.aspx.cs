@@ -21,6 +21,10 @@ namespace Ecomonedas
                 ddlColor.DataTextField = "Descripcion";
                 ddlColor.DataBind();
 
+                gvMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales()).ToList();
+                gvMateriales.DataBind();
+
+
             }
             string accion = Request.QueryString["accion"];
             if (accion == "guardar")
