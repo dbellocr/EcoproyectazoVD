@@ -98,10 +98,10 @@
 
                     <h3>Lista de Materiables Reciclables</h3>
 
-                    <asp:GridView ID="gvMateriales" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
+                    <asp:GridView ID="gvMateriales" AutoGenerateEditButton="true" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
                         <Columns>
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
-                            <asp:BoundField HeaderText="Precio" DataField="Precio"></asp:BoundField>
+                            <asp:BoundField HeaderText="Precio" DataFormatString="{0:N0} ecomonedas" DataField="Precio"></asp:BoundField>
                             <asp:BoundField HeaderText="Color" DataField="Color.Descripcion"></asp:BoundField>
                             <%--                            <asp:BoundField HeaderText="Imagen" DataField=""></asp:BoundField>--%>
                         </Columns>
