@@ -294,6 +294,12 @@
     <Folder Include="ImagenesBD\Thumbs\" />
     <Folder Include="Imagenes\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contexto\Contexto.csproj">
+      <Project>{a72f2cd3-1522-4939-95dd-967b22377184}</Project>
+      <Name>Contexto</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
