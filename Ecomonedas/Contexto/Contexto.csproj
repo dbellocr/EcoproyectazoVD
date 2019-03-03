@@ -62,6 +62,7 @@
     <Compile Include="Provincia.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="sysdiagrams.cs" />
+    <Compile Include="TipoMaterialLN.cs" />
     <Compile Include="Tipo_Material.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

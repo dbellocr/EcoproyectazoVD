@@ -7,23 +7,29 @@
         .boton {
             float: right;
         }
+        #lblMensaje{
+
+            margin-bottom:50px;
+
+        }
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container-fluid">
-
         <div class="row">
 
             <div class="col-md-1"></div>
 
 
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
+
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 84px;">
-
+                        <asp:Label ID="lblMensaje" runat="server" Visible="false" Text=""></asp:Label>
+                        <br />
                         <h3>Datos del Material Reciclable</h3>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
@@ -58,7 +64,7 @@
                                     <div class="input-group mb-3">
 
                                         <asp:DropDownList ID="ddlColor" AutoPostBack="true" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
-                                        
+
                                         <div class="input-group-append">
                                             <span runat="server" style="background-color: blue; display: block; width: 30px;" class="input-group-text" id="spanColor"></span>
                                         </div>
@@ -82,32 +88,32 @@
                         <asp:RadioButton ID="rbActivo" GroupName="estado" runat="server" Text="Activo" />
                         <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
                     </div>
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" OnClick="btnGuardar_Click" />
 
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
 
-                        <h3>Lista de Materiables Reciclables</h3>
+                    <h3>Lista de Materiables Reciclables</h3>
 
-                        <asp:GridView ID="grCentrosAcopio" runat="server">
-                            <Columns>
-                                <asp:BoundField HeaderText="Nombre"></asp:BoundField>
-                                <asp:BoundField HeaderText="precio"></asp:BoundField>
-                                <asp:BoundField HeaderText="Color"></asp:BoundField>
-                                <asp:BoundField HeaderText="Imagen"></asp:BoundField>
-                            </Columns>
-                        </asp:GridView>
+                    <asp:GridView ID="grCentrosAcopio" runat="server">
+                        <Columns>
+                            <asp:BoundField HeaderText="Nombre"></asp:BoundField>
+                            <asp:BoundField HeaderText="precio"></asp:BoundField>
+                            <asp:BoundField HeaderText="Color"></asp:BoundField>
+                            <asp:BoundField HeaderText="Imagen"></asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
 
-                    </div>
                 </div>
             </div>
-
-            <div class="col-md-1"></div>
-
-
         </div>
 
- 
-    
+        <div class="col-md-1"></div>
+
+
+    </div>
+
+
+
 </asp:Content>
