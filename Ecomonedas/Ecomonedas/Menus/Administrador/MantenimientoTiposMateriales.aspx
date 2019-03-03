@@ -98,12 +98,16 @@
 
                     <h3>Lista de Materiables Reciclables</h3>
 
-                    <asp:GridView ID="gvMateriales" AutoGenerateEditButton="true" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
+                    <asp:GridView ID="gvMateriales" OnRowEditing="gvMateriales_RowUpdating"  AutoGenerateEditButton="true" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
                         <Columns>
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
                             <asp:BoundField HeaderText="Precio" DataFormatString="{0:N0} ecomonedas" DataField="Precio"></asp:BoundField>
                             <asp:BoundField HeaderText="Color" DataField="Color.Descripcion"></asp:BoundField>
-                            <%--                            <asp:BoundField HeaderText="Imagen" DataField=""></asp:BoundField>--%>
+                           <asp:TemplateField HeaderText="Imagen">
+                               <ItemTemplate>
+                                   <asp:Image ID="imgMaterial" ImageAlign="Middle" ImageUrl='<%# Eval("Imagen_Path", "~/Imagenes/TipoMateriales/{0}") %>' runat="server" /> 
+                               </ItemTemplate>
+                           </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
 

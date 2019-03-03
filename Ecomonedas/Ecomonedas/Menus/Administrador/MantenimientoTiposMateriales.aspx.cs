@@ -116,5 +116,9 @@ namespace Ecomonedas
 
 
         }
+        protected void gvMateriales_RowUpdating(object sender, EventArgs e)
+        {
+
+        }
     }
 }
