@@ -85,7 +85,7 @@
 
                     <div class="form-group">
                         <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
-                        <asp:RadioButton ID="rbActivo" GroupName="estado" runat="server" Text="Activo" />
+                        <asp:RadioButton ID="rbActivo" Checked="true" GroupName="estado" runat="server" Text="Activo" />
                         <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
                     </div>
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" OnClick="btnGuardar_Click" />
@@ -96,7 +96,7 @@
 
                     <h3>Lista de Materiables Reciclables</h3>
 
-                    <asp:GridView ID="grCentrosAcopio" runat="server">
+                    <asp:GridView ID="gvCentrosAcopio" AutoGenerateColumns="false" runat="server">
                         <Columns>
                             <asp:BoundField HeaderText="Nombre"></asp:BoundField>
                             <asp:BoundField HeaderText="precio"></asp:BoundField>

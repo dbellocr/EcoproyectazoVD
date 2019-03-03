@@ -72,7 +72,7 @@ namespace Ecomonedas
                     // Guardar imagen en la carpeta
                     archivoImagen.PostedFile.SaveAs(path + archivoImagen.FileName);
                     // Guardar imagen en la carpeta Thumbs
-                    archivoImagen.PostedFile.SaveAs(path + "Thumbs/" + archivoImagen.FileName);
+                    archivoImagen.PostedFile.SaveAs(path + "TipoMateriales/" + archivoImagen.FileName);
 
                     //Aqui se manda a la capa lógica los valores todos los controles
 
