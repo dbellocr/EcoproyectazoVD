@@ -25,5 +25,12 @@ namespace Ecomonedas
 
 
         }
+        protected void ddlColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorSeleccionado = ddlColor.SelectedValue;
+            spanColor.Style.Add("background-color", valorSeleccionado);
+            spanColor.Style.Add("width", "100%");
+
+        }
     }
 }

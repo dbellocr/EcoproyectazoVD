@@ -54,10 +54,18 @@
 
                             <asp:Label ID="Label4" runat="server" Text="Color"></asp:Label><br />
                             <div class="input-group mb-3">
-                                <asp:DropDownList ID="ddlColor" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
+
+                                <asp:DropDownList ID="ddlColor" AutoPostBack="true" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server" >
+                                    <ContentTemplate>
+                                        <div class="input-group-append">
+                                            <span runat="server" style="background-color: blue; display:block; width: 30px;" class="input-group-text" id="spanColor"></span>
+                                        </div>
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="ddlColor" EventName="SelectedIndexChanged" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
                             </div>
                         </div>
 

@@ -103,10 +103,6 @@
             border-radius: 3px;
             color: white;
         }
-
-
-
-
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -117,6 +113,7 @@
     <form id="form1" runat="server">
 
         <header>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #218838; border-bottom: 2px solid #A3D921; color: white; font-size: 18px;">
                 <a href="/Menus/Administrador/MenuPrincipal.aspx">
@@ -124,16 +121,16 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div id="navbarNavDropdown" class="navbar-collapse collapse" style="color: white; margin-right:40px">
-                    <ul class="navbar-nav mr-auto" >
+                <div id="navbarNavDropdown" class="navbar-collapse collapse" style="color: white; margin-right: 40px">
+                    <ul class="navbar-nav mr-auto">
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Menus/Administrador/MenuPrincipal.aspx" style="color:white;">Inicio</a>
+                            <a class="nav-link" href="/Menus/Administrador/MenuPrincipal.aspx" style="color: white;">Inicio</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" style="color:white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestiones</a>
+                            <a class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestiones</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/Menus/Administrador/MantenimientoCentrosAcopio.aspx">Centros de Acopio</a>
                                 <a class="dropdown-item" href="/Menus/Administrador/MantenimientoTiposMateriales.aspx">Tipos de Materiales Reciclables</a>
@@ -142,10 +139,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/Menus/Administrador/MantenimientoCupones.aspx" style="color:white;">Cupones</a>
+                            <a class="nav-link" href="/Menus/Administrador/MantenimientoCupones.aspx" style="color: white;">Cupones</a>
                         </li>
-                            <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" style="color:white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/Menus/Administrador/CambiarContrasena.aspx">Configuración</a>
                                 <asp:LinkButton ID="LinkButton1" CssClass="dropdown-item" runat="server">Cerrar Sesión</asp:LinkButton>
@@ -175,6 +172,7 @@
             [Logo]
             Daniel Bello Ramírez y Victor Salazar Badilla -
             I Cuatrimestre 2019
+       
         </div>
 
     </footer>
