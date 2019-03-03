@@ -22,13 +22,31 @@ namespace Ecomonedas.Menus.AdminCentroAcopio {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Control txtCedula.
+        /// Control txtCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
+        /// Control RegularExpressionValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// Control Label1.
@@ -47,6 +65,15 @@ namespace Ecomonedas.Menus.AdminCentroAcopio {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// Control Label3.

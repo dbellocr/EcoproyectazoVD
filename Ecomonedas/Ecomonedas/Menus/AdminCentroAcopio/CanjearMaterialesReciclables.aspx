@@ -7,8 +7,8 @@
         .boton {
             float: right;
         }
-        .lista{
-            
+
+        .lista {
         }
     </style>
 
@@ -29,12 +29,18 @@
 
                         <h3>Canjeo de Materiales</h3>
 
-                        <asp:Label ID="Label5" runat="server" Text="Correo Electrónico"></asp:Label><br />
-                        <asp:TextBox ID="txtCedula" runat="server" CssClass="form-control"></asp:TextBox><br />
+                        <div class="form-group">
+                            <asp:Label ID="Label5" runat="server" Text="Correo Electrónico"></asp:Label><br />
+                            <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control"></asp:TextBox><br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo" ErrorMessage="Error, debe digitar el correo electrónico del cliente" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" CssClass="validaciones" ErrorMessage="Error, debe ingresar un correo electrónico válido" ValidationExpression="^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$" ControlToValidate="txtCorreo" ForeColor="red" SetFocusOnError="true" Display="Dynamic"></asp:RegularExpressionValidator>
+                        </div>
 
-
-                        <asp:Label ID="Label1" runat="server" Text="Nombre del Cliente"></asp:Label><br />
-                        <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
+                        <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="Nombre del Cliente"></asp:Label><br />
+                            <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="validaciones" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del cliente" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        </div>
 
                         <asp:Label ID="Label3" runat="server" Text="Seleccione los materiales a canjear"></asp:Label><br />
                         <asp:Label ID="Label6" runat="server" Text=" (presione control para seleccionar más de un elemento)"></asp:Label>
@@ -47,28 +53,28 @@
                         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
                     </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
+                <div class="col-md-1"></div>
+                <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
 
-                        <h3>Mi historial de Canjeos</h3>
+                    <h3>Mi historial de Canjeos</h3>
 
-                        <asp:GridView ID="grCentrosAcopio" runat="server">
-                            <Columns>
-                                <asp:BoundField HeaderText="Nombre"></asp:BoundField>
-                                <asp:BoundField HeaderText="precio"></asp:BoundField>
-                                <asp:BoundField HeaderText="Color"></asp:BoundField>
-                                <asp:BoundField HeaderText="Imagen"></asp:BoundField>
-                            </Columns>
-                        </asp:GridView>
+                    <asp:GridView ID="grCentrosAcopio" runat="server">
+                        <Columns>
+                            <asp:BoundField HeaderText="Nombre"></asp:BoundField>
+                            <asp:BoundField HeaderText="precio"></asp:BoundField>
+                            <asp:BoundField HeaderText="Color"></asp:BoundField>
+                            <asp:BoundField HeaderText="Imagen"></asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
 
-                    </div>
                 </div>
             </div>
-
-            <div class="col-md-1"></div>
-
-
         </div>
+
+        <div class="col-md-1"></div>
+
+
+    </div>
 
     </div>
 
