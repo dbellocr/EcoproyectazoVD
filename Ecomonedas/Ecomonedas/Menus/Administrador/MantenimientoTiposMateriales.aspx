@@ -7,10 +7,9 @@
         .boton {
             float: right;
         }
-        #lblMensaje{
 
-            margin-bottom:50px;
-
+        #lblMensaje {
+            margin-bottom: 50px;
         }
     </style>
 
@@ -28,10 +27,11 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 84px;">
-                       
-                        <div class="form-group">
-                             <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
-                        </div>
+
+
+                        <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
+                        <br />
+
                         <h3>Datos del Material Reciclable</h3>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
@@ -98,12 +98,12 @@
 
                     <h3>Lista de Materiables Reciclables</h3>
 
-                    <asp:GridView ID="gvMateriales" CssClass="table" HeaderStyle-CssClass="table table-success"  AutoGenerateColumns="false" runat="server">
+                    <asp:GridView ID="gvMateriales" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
                         <Columns>
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
                             <asp:BoundField HeaderText="Precio" DataField="Precio"></asp:BoundField>
-                            <asp:BoundField HeaderText="Color" DataField="Color.Descripcion" ></asp:BoundField>
-<%--                            <asp:BoundField HeaderText="Imagen" DataField=""></asp:BoundField>--%>
+                            <asp:BoundField HeaderText="Color" DataField="Color.Descripcion"></asp:BoundField>
+                            <%--                            <asp:BoundField HeaderText="Imagen" DataField=""></asp:BoundField>--%>
                         </Columns>
                     </asp:GridView>
 
