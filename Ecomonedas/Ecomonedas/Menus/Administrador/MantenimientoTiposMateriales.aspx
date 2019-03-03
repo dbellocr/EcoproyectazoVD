@@ -53,35 +53,36 @@
                         <div class="form-group">
 
                             <asp:Label ID="Label4" runat="server" Text="Color"></asp:Label><br />
-                            <div class="input-group mb-3">
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <div class="input-group mb-3">
 
-                                <asp:DropDownList ID="ddlColor" AutoPostBack="true" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
-                                <asp:UpdatePanel ID="UpdatePanel1" runat="server" >
-                                    <ContentTemplate>
+                                        <asp:DropDownList ID="ddlColor" AutoPostBack="true" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
+                                        
                                         <div class="input-group-append">
-                                            <span runat="server" style="background-color: blue; display:block; width: 30px;" class="input-group-text" id="spanColor"></span>
+                                            <span runat="server" style="background-color: blue; display: block; width: 30px;" class="input-group-text" id="spanColor"></span>
                                         </div>
-                                    </ContentTemplate>
-                                    <Triggers>
-                                        <asp:AsyncPostBackTrigger ControlID="ddlColor" EventName="SelectedIndexChanged" />
-                                    </Triggers>
-                                </asp:UpdatePanel>
-                            </div>
+                                </ContentTemplate>
+                                <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="ddlColor" EventName="SelectedIndexChanged" />
+                                </Triggers>
+                            </asp:UpdatePanel>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <asp:Label ID="Label2" runat="server" Text="Imagen"></asp:Label><br />
-                            <asp:FileUpload ID="archivoImagen" runat="server" /><br />
+                    <div class="form-group">
+                        <asp:Label ID="Label2" runat="server" Text="Imagen"></asp:Label><br />
+                        <asp:FileUpload ID="archivoImagen" runat="server" /><br />
 
-                        </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="archivoImagen" ErrorMessage="Error, debe seleccionar una imagen para el tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                    </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="archivoImagen" ErrorMessage="Error, debe seleccionar una imagen para el tipo de material" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                        <div class="form-group">
-                            <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
-                            <asp:RadioButton ID="rbActivo" GroupName="estado" runat="server" Text="Activo" />
-                            <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
-                        </div>
-                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
+                    <div class="form-group">
+                        <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
+                        <asp:RadioButton ID="rbActivo" GroupName="estado" runat="server" Text="Activo" />
+                        <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
+                    </div>
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
                     </div>
                     <div class="col-md-1"></div>
