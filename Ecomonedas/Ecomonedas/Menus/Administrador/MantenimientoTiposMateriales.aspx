@@ -50,9 +50,16 @@
 
 
 
+                        <div class="form-group">
 
-                        <asp:Label ID="Label4" runat="server" Text="Color"></asp:Label><br />
-                        <asp:DropDownList ID="ddlColor" runat="server" CssClass="form-control"></asp:DropDownList><br />
+                            <asp:Label ID="Label4" runat="server" Text="Color"></asp:Label><br />
+                            <div class="input-group mb-3">
+                                <asp:DropDownList ID="ddlColor" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Imagen"></asp:Label><br />

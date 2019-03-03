@@ -217,5 +217,6 @@
                 .WithOptional(e => e.Usuario)
                 .HasForeignKey(e => e.ID_Usuario);
         }
+        public void FixEProviderServicesProblem() { var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance; }
     }
 }

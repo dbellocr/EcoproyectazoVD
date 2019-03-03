@@ -54,6 +54,7 @@
     <Compile Include="Billetera_Virtual.cs" />
     <Compile Include="Centro_Acopio.cs" />
     <Compile Include="Color.cs" />
+    <Compile Include="ColorLN.cs" />
     <Compile Include="Cupon.cs" />
     <Compile Include="EcomonedasContexto.cs" />
     <Compile Include="Enc_CanjeoMaterial.cs" />
