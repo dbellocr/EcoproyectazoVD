@@ -292,7 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImagenesBD\Thumbs\" />
-    <Folder Include="Imagenes\" />
+    <Folder Include="Imagenes\TipoMateriales\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contexto\Contexto.csproj">
