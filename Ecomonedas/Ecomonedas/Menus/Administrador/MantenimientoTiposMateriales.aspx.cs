@@ -28,7 +28,7 @@ namespace Ecomonedas
 
                 lblMensaje.Visible = true;
                 lblMensaje.CssClass = "alert alert-dismissible alert-success";
-                lblMensaje.Text = "Se ha registrado el material";
+                lblMensaje.Text = "Se ha registrado el Tipo de Material";
 
             }
 

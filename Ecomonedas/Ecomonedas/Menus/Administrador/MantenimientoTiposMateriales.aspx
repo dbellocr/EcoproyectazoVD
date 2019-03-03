@@ -28,8 +28,10 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 84px;">
-                        <asp:Label ID="lblMensaje" runat="server" Visible="false" Text=""></asp:Label>
-                        <br />
+                       
+                        <div class="form-group">
+                             <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
+                        </div>
                         <h3>Datos del Material Reciclable</h3>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
@@ -66,7 +68,7 @@
                                         <asp:DropDownList ID="ddlColor" AutoPostBack="true" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" Width="80%" runat="server" CssClass="form-control"></asp:DropDownList>
 
                                         <div class="input-group-append">
-                                            <span runat="server" style="background-color: blue; display: block; width: 30px;" class="input-group-text" id="spanColor"></span>
+                                            <span runat="server" style="background-color: black; display: block;" class="input-group-text" id="spanColor"></span>
                                         </div>
                                 </ContentTemplate>
                                 <Triggers>
