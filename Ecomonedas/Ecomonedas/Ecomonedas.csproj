@@ -76,6 +76,7 @@
     <Content Include="Menus\AdminCentroAcopio\CanjearMaterialesReciclables.aspx" />
     <Content Include="Menus\AdminCentroAcopio\MenuPrincipalCA.aspx" />
     <Content Include="Menus\Administrador\CambiarContrasena.aspx" />
+    <Content Include="Menus\Administrador\ListadoUsuario.aspx" />
     <Content Include="Menus\Administrador\MantenimientoCupones.aspx" />
     <Content Include="Menus\Administrador\MantenimientoTiposMateriales.aspx" />
     <Content Include="Menus\Administrador\MantenimientoCentrosAcopio.aspx" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Menus\Administrador\CambiarContrasena.aspx.designer.cs">
       <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Administrador\ListadoUsuario.aspx.cs">
+      <DependentUpon>ListadoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\Administrador\ListadoUsuario.aspx.designer.cs">
+      <DependentUpon>ListadoUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menus\Administrador\MantenimientoCupones.aspx.cs">
       <DependentUpon>MantenimientoCupones.aspx</DependentUpon>

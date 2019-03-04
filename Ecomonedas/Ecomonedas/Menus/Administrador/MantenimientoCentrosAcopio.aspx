@@ -43,7 +43,7 @@
 
                         <div class="form-group">
                             <asp:Label ID="Label3" runat="server" Text="Dirección Exacta"></asp:Label><br />
-                            <textarea id="txtDireccion" cols="20" rows="2" runat="server" class="form-control"></textarea><br />
+                            <asp:TextBox ID="txtDireccionExacta" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox><br />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccion" ErrorMessage="Error, debe digitar la dirección exacta del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-gruop">
@@ -58,8 +58,8 @@
                             <asp:RadioButton ID="rbActivo" runat="server" GroupName="estado" Text="Activo" />
                             <asp:RadioButton ID="rbInactivo" runat="server" GroupName="estado" Text="Inactivo" /><br />
                         </div>
-                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
-
+                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="btn btn-success boton" />
+                         <asp:Button ID="btnNuevo" Visible="false"  runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />                    
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
@@ -74,7 +74,7 @@
                                 <asp:BoundField HeaderText="Usuario Administrador" DataField="Usuario.NombreCompleto"></asp:BoundField>
                             </Columns>
                         </asp:GridView>
-
+                        <asp:HiddenField ID="hvIdCentro" runat="server" />
                     </div>
                 </div>
             </div>
