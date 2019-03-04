@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contexto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,20 @@ namespace Ecomonedas.Menus
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsPostBack)
+            {
+
+                ddlProvincia.DataSource = ProvinciaLN.ListaProvincia();
+                ddlProvincia.DataValueField = "ID";
+                ddlProvincia.DataTextField = "Descripcion";
+                ddlProvincia.DataBind();
+
+                //gvMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales()).ToList();
+                //gvMateriales.DataBind();
+
+
+            }
 
         }
     }

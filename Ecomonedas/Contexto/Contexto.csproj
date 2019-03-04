@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Billetera_Virtual.cs" />
     <Compile Include="Centro_Acopio.cs" />
+    <Compile Include="Centro_AcopioLN.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="ColorLN.cs" />
     <Compile Include="Cupon.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Enc_CanjeoMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
+    <Compile Include="ProvinciaLN.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="sysdiagrams.cs" />
     <Compile Include="TipoMaterialLN.cs" />
