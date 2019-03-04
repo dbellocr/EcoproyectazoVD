@@ -52,7 +52,7 @@ namespace Ecomonedas.Menus
             hvUsuarios.Value = "1";
 
             btnNuevo.Visible = true;
-
+            btnGuardar.Text = "Actualizar";
 
         }
 
@@ -61,7 +61,7 @@ namespace Ecomonedas.Menus
             try {
 
                 btnNuevo.Visible = false;
-                UsuarioLN.GuardarUsuario(txtCorreo.Text, txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtDireccion.Text, txtTelefono.Text, "2", rbActivo.Checked);
+                UsuarioLN.GuardarUsuario(txtCorreo.Text, txtNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtDireccion.Text, txtTelefono.Text, "2", rbActivo.Checked,hvUsuarios.Value);
                 Response.Redirect("MantenimientoUsuarios.aspx?accion=guardar");
 
 
@@ -78,7 +78,13 @@ namespace Ecomonedas.Menus
 
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            txtCorreo.Text = "";
+            txtDireccion.Text = "";
+            txtNombre.Text = "";
+            txtPrimerApellido.Text = "";
+            txtSegundoApellido.Text = "";
+            txtTelefono.Text = "";
+            btnNuevo.Visible = false;
         }
     }
 }

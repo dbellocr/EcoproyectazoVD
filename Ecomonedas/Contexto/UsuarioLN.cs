@@ -9,7 +9,7 @@ namespace Contexto
     public class UsuarioLN
     {
 
-        public static int GuardarUsuario(string correoElectronico, string nombre, string apellidoPaterno, string apellidoMaterno, string direccion, string telefono, string idRol, bool estado, string contrasenna="" ,string actualizar="")
+        public static int GuardarUsuario(string correoElectronico, string nombre, string apellidoPaterno, string apellidoMaterno, string direccion, string telefono, string idRol, bool estado, string actualizar = "",string contrasenna="" )
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
