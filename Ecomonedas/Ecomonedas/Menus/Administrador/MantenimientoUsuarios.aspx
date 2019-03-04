@@ -6,7 +6,7 @@
     <style>
         .boton {
             float: right;
-             margin-right:10px;
+            margin-right: 10px;
         }
 
         .validaciones {
@@ -27,7 +27,8 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 84px;">
-
+                        <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
+                        <br />
                         <h3>Datos del Usuario</h3>
 
                         <div class="form-group">
@@ -74,8 +75,6 @@
 
                         </div>
                         <asp:Label ID="Label8" runat="server" Text="Rol"></asp:Label><br />
-
-                        <asp:DropDownList ID="ddlRol" CssClass="form-control" runat="server"></asp:DropDownList>
                         <br />
 
 
@@ -90,7 +89,7 @@
 
                         <asp:Button ID="btnNuevo" Visible="false" runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />
 
-                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
+                        <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
                     </div>
                     <div class="col-md-1"></div>
@@ -98,13 +97,16 @@
 
                         <h3>Lista de Usuarios</h3>
 
-                        <asp:GridView ID="gvUsuarios" runat="server">
+                        <asp:GridView ID="gvUsuarios" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvUsuarios_SelectedIndexChanged" DataKeyNames="Correo_Electronico" runat="server" CssClass="table table-light" AutoGenerateColumns="false" HeaderStyle-CssClass="table table-success">
                             <Columns>
-                                <asp:BoundField HeaderText=""></asp:BoundField>
-                                <asp:BoundField HeaderText="Provincia"></asp:BoundField>
+                                <asp:BoundField HeaderText="Correo Electrónico" DataField="Correo_Electronico"></asp:BoundField>
+                                <asp:BoundField HeaderText="Nombre" DataField="NombreCompleto"></asp:BoundField>
+                                <asp:BoundField HeaderText="Rol" DataField="Rol.Descripcion" />
+                                <asp:BoundField HeaderText="Telefono" DataField="Telefono" />
+
                             </Columns>
                         </asp:GridView>
-
+                        <asp:HiddenField ID="hvUsuarios" runat="server" />
                     </div>
                 </div>
             </div>
