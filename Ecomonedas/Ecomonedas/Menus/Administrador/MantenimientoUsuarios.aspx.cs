@@ -78,12 +78,14 @@ namespace Ecomonedas.Menus
 
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
+
             txtCorreo.Text = "";
             txtDireccion.Text = "";
             txtNombre.Text = "";
             txtPrimerApellido.Text = "";
             txtSegundoApellido.Text = "";
             txtTelefono.Text = "";
+            btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;
         }
     }
