@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <asp:Label ID="Label3" runat="server" Text="Dirección Exacta"></asp:Label><br />
                             <asp:TextBox ID="txtDireccionExacta" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccion" ErrorMessage="Error, debe digitar la dirección exacta del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccionExacta" ErrorMessage="Error, debe digitar la dirección exacta del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-gruop">
                             <asp:Label ID="Label4" runat="server" Text="Usuario Administrador"></asp:Label><br />
@@ -66,7 +66,7 @@
 
                         <h3>Lista de Centros de Acopio</h3>
 
-                        <asp:GridView ID="grCentrosAcopio" runat="server" AutoGenerateSelectButton="true" OnSelectedIndexChanged="grCentrosAcopio_SelectedIndexChanged" >
+                        <asp:GridView ID="grCentrosAcopio" runat="server" AutoGenerateSelectButton="true" HeaderStyle-CssClass="table table-success" RowStyle-CssClass="table table-Deafult" OnSelectedIndexChanged="grCentrosAcopio_SelectedIndexChanged" DataKeyNames="ID" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
                                 <asp:BoundField HeaderText="Provincia" DataField="Provincia.Descripcion"></asp:BoundField>

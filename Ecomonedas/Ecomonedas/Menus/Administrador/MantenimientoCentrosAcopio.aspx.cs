@@ -26,7 +26,7 @@ namespace Ecomonedas.Menus
                 ddlUsuario.DataTextField = "NombreCompleto";
                 ddlUsuario.DataBind();
 
-                grCentrosAcopio.DataSource = ((IEnumerable<CentrosAcopio>)Centro_AcopioLN.ListaCentrosAcopio()).ToList();
+                grCentrosAcopio.DataSource = Centro_AcopioLN.ListaCentrosAcopio();
                 grCentrosAcopio.DataBind();
 
 
@@ -62,18 +62,17 @@ namespace Ecomonedas.Menus
         {
             try
             {
-                var centroAcopio = Centro_AcopioLN.ObtenerCentro(Convert.ToInt32(hvIdCentro.Value));
 
                 int cantRegistros = Centro_AcopioLN.GuardarCentroAcopio(txtNombre.Text, ddlProvincia.SelectedValue,txtDireccionExacta.Text,ddlUsuario.SelectedValue, rbActivo.Checked ? true : false, hvIdCentro.Value);
 
-                Response.Redirect("MantenimientoTiposMateriales.aspx?accion=guardar");
+                Response.Redirect("MantenimientoCentrosAcopio.aspx?accion=guardar");
 
             }
             catch
             {
                 lblMensaje.Visible = true;
                 lblMensaje.CssClass = "alert alert-dismissible alert-danger";
-                lblMensaje.Text = "Ha ocurrido un error al guardar el producto";
+                lblMensaje.Text = "Ha ocurrido un error al guardar el Centro de Acopio";
             }
         }
 
