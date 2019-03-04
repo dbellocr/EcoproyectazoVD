@@ -24,6 +24,9 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 52px;">
 
+                        <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
+                        <br />
+
                         <h3>Datos del Centro de Acopio</h3>
 
                         <div class="form-group">
@@ -63,12 +66,12 @@
 
                         <h3>Lista de Centros de Acopio</h3>
 
-                        <asp:GridView ID="grCentrosAcopio" runat="server">
+                        <asp:GridView ID="grCentrosAcopio" runat="server" AutoGenerateSelectButton="true" OnSelectedIndexChanged="grCentrosAcopio_SelectedIndexChanged" >
                             <Columns>
-                                <asp:BoundField HeaderText="Nombre"></asp:BoundField>
-                                <asp:BoundField HeaderText="Provincia"></asp:BoundField>
-                                <asp:BoundField HeaderText="Direcci&#243;n"></asp:BoundField>
-                                <asp:BoundField HeaderText="Usuario Administrador"></asp:BoundField>
+                                <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
+                                <asp:BoundField HeaderText="Provincia" DataField="Provincia.Descripcion"></asp:BoundField>
+                                <asp:BoundField HeaderText="Direcci&#243;n" DataField="Direccion_Exacta"></asp:BoundField>
+                                <asp:BoundField HeaderText="Usuario Administrador" DataField="Usuario.NombreCompleto"></asp:BoundField>
                             </Columns>
                         </asp:GridView>
 

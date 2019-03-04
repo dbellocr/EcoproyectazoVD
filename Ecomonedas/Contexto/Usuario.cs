@@ -57,5 +57,18 @@ namespace Contexto
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cupon> Cupon { get; set; }
+
+        public String toString()
+        {
+            return Nombre + Apellido_Paterno + Apellido_Materno;
+        }
+
+        public String NombreCompleto{
+            get
+            {
+                return Nombre + Apellido_Paterno + Apellido_Materno;
+            }
+
+        }
     }
 }
