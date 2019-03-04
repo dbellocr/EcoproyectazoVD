@@ -74,18 +74,10 @@
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" CssClass="validaciones" ValidationExpression="[0-9]{8}" ControlToValidate="txtTelefono" runat="server" ErrorMessage="Error, el número de teléfono debe tener 8 dígitos" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
 
                         </div>
-                        <asp:Label ID="Label8" runat="server" Text="Rol"></asp:Label><br />
-                        <br />
-
-
-
+                     
                         <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
                         <asp:RadioButton ID="rbActivo" Checked="true" GroupName="estado" runat="server" Text="Activo" />
                         <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
-
-
-
-
 
                         <asp:Button ID="btnNuevo" Visible="false" runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />
 
