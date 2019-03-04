@@ -13,6 +13,15 @@ namespace Ecomonedas.Menus {
     public partial class MantenimientoUsuarios {
         
         /// <summary>
+        /// Control lblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -211,15 +220,6 @@ namespace Ecomonedas.Menus {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// Control ddlRol.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRol;
-        
-        /// <summary>
         /// Control Label7.
         /// </summary>
         /// <remarks>
@@ -272,5 +272,14 @@ namespace Ecomonedas.Menus {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvUsuarios;
+        
+        /// <summary>
+        /// Control hvUsuarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hvUsuarios;
     }
 }

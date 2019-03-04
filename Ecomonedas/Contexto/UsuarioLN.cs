@@ -9,7 +9,7 @@ namespace Contexto
     public class UsuarioLN
     {
 
-        public static int GuardarUsuario(string correoElectronico, string nombre, string apellidoPaterno, string apellidoMaterno, string direccion, string contrasenna, string telefono, string idRol, bool estado, string actualizar="")
+        public static int GuardarUsuario(string correoElectronico, string nombre, string apellidoPaterno, string apellidoMaterno, string direccion, string telefono, string idRol, bool estado, string contrasenna="" ,string actualizar="")
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
@@ -27,15 +27,24 @@ namespace Contexto
 
             }
 
+            if (contrasenna == "")
+            {
+                oUsuario.Contrasena = "adminAcopio";
+            }
+            else
+            {
+                oUsuario.Contrasena = contrasenna;
+            }
+
+            oUsuario.Nombre = nombre;
             oUsuario.Apellido_Materno = apellidoMaterno;
             oUsuario.Apellido_Paterno = apellidoPaterno;
-            oUsuario.Contrasena = contrasenna;
             oUsuario.Correo_Electronico = correoElectronico;
             oUsuario.Dirección = direccion;
             oUsuario.Estado = estado;
             oUsuario.ID_Rol = int.Parse(idRol);
             oUsuario.Telefono = Convert.ToDecimal(telefono);
-
+      
 
             if (id == 0 && !esEntero)
             {
@@ -55,7 +64,13 @@ namespace Contexto
 
         }
 
+        public static Usuario ObtenerUsuario(string correoElectronico)
+        {
 
+            EcomonedasContexto db = new EcomonedasContexto();
+            Usuario usuario = db.Usuario.Where(x => x.Correo_Electronico == correoElectronico).First<Usuario>();
+            return usuario;
+        }
 
     }
 }

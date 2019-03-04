@@ -66,7 +66,7 @@ namespace Contexto
         public String NombreCompleto{
             get
             {
-                return Nombre + Apellido_Paterno + Apellido_Materno;
+                return Nombre +" " +Apellido_Paterno + " "+ Apellido_Materno;
             }
 
         }
