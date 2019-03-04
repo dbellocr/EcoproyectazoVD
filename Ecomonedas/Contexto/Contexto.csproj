@@ -61,10 +61,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="Rol.cs" />
+    <Compile Include="RolLN.cs" />
     <Compile Include="sysdiagrams.cs" />
     <Compile Include="TipoMaterialLN.cs" />
     <Compile Include="Tipo_Material.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioLN.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
