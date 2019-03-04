@@ -9,10 +9,10 @@ namespace Contexto
    public class RolLN
     { 
 
-        public IQueryable ListaRoles()
+        public static IQueryable ListaRoles()
         {
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Rol;
+            return db.Rol.Where(x=> x.ID!=1);
         }
 
 

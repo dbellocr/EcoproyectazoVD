@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contexto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,19 @@ namespace Ecomonedas.Menus
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!IsPostBack)
+            {
+
+                ddlRol.DataSource = ((IEnumerable<Rol>)RolLN.ListaRoles()).ToList();
+                ddlRol.DataValueField = "ID";
+                ddlRol.DataTextField = "Descripcion";
+                ddlRol.DataBind();
+
+            }
+            
         }
+
+
+
     }
 }
