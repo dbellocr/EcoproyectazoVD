@@ -6,9 +6,11 @@
     <style>
         .boton {
             float: right;
+             margin-right:10px;
         }
-        .validaciones{
-            font-size:14px;
+
+        .validaciones {
+            font-size: 14px;
         }
     </style>
 
@@ -58,10 +60,10 @@
 
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Dirección"></asp:Label><br />
-                            <asp:TextBox ID="txtDireccion" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
+                            <asp:TextBox ID="txtDireccion" TextMode="MultiLine" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtDireccion" ErrorMessage="Error, debe digitar la dirección del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                             </div>
+                        </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label4" runat="server" Text="Teléfono"></asp:Label><br />
@@ -69,16 +71,24 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" CssClass="validaciones" ControlToValidate="txtTelefono" ErrorMessage="Error, debe digitar el teléfono del usuario" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" CssClass="validaciones" ValidationExpression="^\d+$" ControlToValidate="txtTelefono" runat="server" ErrorMessage="Error, el teléfono ingresado es inválido" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" CssClass="validaciones" ValidationExpression="[0-9]{8}" ControlToValidate="txtTelefono" runat="server" ErrorMessage="Error, el número de teléfono debe tener 8 dígitos" Display="Dynamic" ForeColor="Red" SetFocusOnError="true"> </asp:RegularExpressionValidator>
-                            
-                             </div>
+
+                        </div>
+                        <asp:Label ID="Label8" runat="server" Text="Rol"></asp:Label><br />
+
+                        <asp:DropDownList ID="ddlRol" CssClass="form-control" runat="server"></asp:DropDownList>
+                        <br />
+
+
+
                         <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
-                        <asp:RadioButton ID="rbActivo" GroupName="estado" runat="server" Text="Activo" />
+                        <asp:RadioButton ID="rbActivo" Checked="true" GroupName="estado" runat="server" Text="Activo" />
                         <asp:RadioButton ID="rbInactivo" GroupName="estado" runat="server" Text="Inactivo" /><br />
 
 
 
 
 
+                        <asp:Button ID="btnNuevo" Visible="false" runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />
 
                         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
@@ -88,12 +98,10 @@
 
                         <h3>Lista de Usuarios</h3>
 
-                        <asp:GridView ID="grCentrosAcopio" runat="server">
+                        <asp:GridView ID="gvUsuarios" runat="server">
                             <Columns>
-                                <asp:BoundField HeaderText="Nombre"></asp:BoundField>
+                                <asp:BoundField HeaderText=""></asp:BoundField>
                                 <asp:BoundField HeaderText="Provincia"></asp:BoundField>
-                                <asp:BoundField HeaderText="Direcci&#243;n"></asp:BoundField>
-                                <asp:BoundField HeaderText="Usuario Administrador"></asp:BoundField>
                             </Columns>
                         </asp:GridView>
 
