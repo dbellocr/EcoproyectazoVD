@@ -24,10 +24,7 @@ namespace Contexto
             {
 
                 oCentro = db.Centro_Acopio.Where(x => x.ID == id).First<Centro_Acopio>();
-
-
-
-
+                
 
             }
 
@@ -52,11 +49,11 @@ namespace Contexto
 
         }
 
-        public static IQueryable ListaCentrosAcopio()
+        public static List<Centro_Acopio> ListaCentrosAcopio()
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Centro_Acopio;
+            return ((List<Centro_Acopio>)db.Centro_Acopio.ToList());
 
         }
         public static Centro_Acopio ObtenerCentro(int id)
