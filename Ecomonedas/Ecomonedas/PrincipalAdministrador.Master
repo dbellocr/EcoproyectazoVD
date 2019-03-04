@@ -142,7 +142,7 @@
                             <a class="nav-link" href="/Menus/Administrador/MantenimientoCupones.aspx" style="color: white;">Cupones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Menus/Administrador/MantenimientoCupones.aspx" style="color: white;">Listado de Usuarios</a>
+                            <a class="nav-link" href="/Menus/Administrador/ListadoUsuario.aspx" style="color: white;">Listado de Usuarios</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>

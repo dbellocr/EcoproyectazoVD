@@ -27,7 +27,7 @@
                 </div>
 
                 <div style="margin-top: 50px; margin-bottom:180px; text-align: center; color:white;">
-
+                    <a class="btn btn-success" href="ListadoUsuario.aspx" style="width: 25%; height: 50px; margin-right:50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/listado2.png); background-size:contain; background-repeat:no-repeat; background-position:right;">Listado</a>
                     <a class="btn btn-success" href="MantenimientoCupones.aspx" style="width: 25%; height: 50px; margin-right:50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/cupones1.png); background-size:contain; background-repeat:no-repeat; background-position:right;">Cupones</a>
                     <a class="btn btn-success" href="CambiarContrasena.aspx" style="width: 25%; height: 50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/cuenta1.png); background-size:contain; background-repeat:no-repeat; background-position:right;">Mi Cuenta</a>
 

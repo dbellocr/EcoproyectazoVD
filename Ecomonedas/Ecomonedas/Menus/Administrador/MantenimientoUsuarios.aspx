@@ -28,7 +28,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 84px;">
                         <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
-                        <br />
+                        
                         <h3>Datos del Usuario</h3>
 
                         <div class="form-group">
@@ -92,12 +92,11 @@
                         <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
                     </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
+                    <div class="col-md-7" style="margin-top: 40px; margin-bottom: 50px;">
 
                         <h3>Lista de Usuarios</h3>
 
-                        <asp:GridView ID="gvUsuarios" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvUsuarios_SelectedIndexChanged" DataKeyNames="Correo_Electronico" runat="server" CssClass="table table-light" AutoGenerateColumns="false" HeaderStyle-CssClass="table table-success">
+                        <asp:GridView ID="gvUsuarios" Width="90%" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvUsuarios_SelectedIndexChanged" DataKeyNames="Correo_Electronico" runat="server" CssClass="table table-default" AutoGenerateColumns="false" HeaderStyle-CssClass="table table-success">
                             <Columns>
                                 <asp:BoundField HeaderText="Correo Electrónico" DataField="Correo_Electronico"></asp:BoundField>
                                 <asp:BoundField HeaderText="Nombre" DataField="NombreCompleto"></asp:BoundField>
