@@ -87,7 +87,7 @@ namespace Ecomonedas.Menus
             txtDireccionExacta.Text = "";
             //Asinga al dropdown list el primer elemento de la lista de colores
             ddlProvincia.SelectedValue = prov.First().ID.ToString();
-            ddlUsuario.SelectedValue = usu.First().Centro_Acopio.ToString();
+            ddlUsuario.SelectedValue = usu.First().Correo_Electronico.ToString();
             
             btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;

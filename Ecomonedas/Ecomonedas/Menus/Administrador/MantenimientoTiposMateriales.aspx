@@ -97,8 +97,8 @@
                     <asp:Button ID="btnNuevo" Visible="false"  runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />                    
 
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
+                <%--<div class="col-md-1"></div>--%>
+                <div class="col-md-7" style="margin-top: 40px; margin-bottom: 50px;">
 
                     <h3>Lista de Materiables Reciclables</h3>
 

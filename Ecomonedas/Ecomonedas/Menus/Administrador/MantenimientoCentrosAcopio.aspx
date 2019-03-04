@@ -6,6 +6,7 @@
     <style>
         .boton {
             float: right;
+            margin-right:10px;
         }
     </style>
 
@@ -55,7 +56,7 @@
 
                         <asp:Label ID="Label7" runat="server" Text="Estado"></asp:Label><br />
                         <div class="form-group">
-                            <asp:RadioButton ID="rbActivo" runat="server" GroupName="estado" Text="Activo" />
+                            <asp:RadioButton ID="rbActivo" Checked="true" runat="server" GroupName="estado" Text="Activo" />
                             <asp:RadioButton ID="rbInactivo" runat="server" GroupName="estado" Text="Inactivo" /><br />
                         </div>
                         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="btn btn-success boton" />
