@@ -46,6 +46,53 @@ namespace Ecomonedas.Menus
         protected void grCentrosAcopio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            int idCentro = Convert.ToInt32(grCentrosAcopio.DataKeys[grCentrosAcopio.SelectedIndex].Values[0]);
+            Centro_Acopio oCentro = Centro_AcopioLN.ObtenerCentro(idCentro);
+            txtNombre.Text = oCentro.Nombre;
+            txtDireccionExacta.Text = oCentro.Direccion_Exacta;
+            ddlProvincia.SelectedValue = oCentro.ID_Provincia.ToString();
+            ddlUsuario.SelectedValue = oCentro.ID_Usuario.ToString();
+            hvIdCentro.Value = idCentro.ToString();
+            btnGuardar.Text = "Actualizar";
+            btnNuevo.Visible = true;
+
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var centroAcopio = Centro_AcopioLN.ObtenerCentro(Convert.ToInt32(hvIdCentro.Value));
+
+                int cantRegistros = Centro_AcopioLN.GuardarCentroAcopio(txtNombre.Text, ddlProvincia.SelectedValue,txtDireccionExacta.Text,ddlUsuario.SelectedValue, rbActivo.Checked ? true : false, hvIdCentro.Value);
+
+                Response.Redirect("MantenimientoTiposMateriales.aspx?accion=guardar");
+
+            }
+            catch
+            {
+                lblMensaje.Visible = true;
+                lblMensaje.CssClass = "alert alert-dismissible alert-danger";
+                lblMensaje.Text = "Ha ocurrido un error al guardar el producto";
+            }
+        }
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+            IEnumerable<Provincia> prov = (IEnumerable<Provincia>)ProvinciaLN.ListaProvincia();
+            IEnumerable<Usuario> usu = (IEnumerable<Usuario>)UsuarioLN.ListaUsuarios();
+
+            hvIdCentro.Value = "";
+            txtNombre.Text = "";
+            txtDireccionExacta.Text = "";
+            //Asinga al dropdown list el primer elemento de la lista de colores
+            ddlProvincia.SelectedValue = prov.First().ID.ToString();
+            ddlUsuario.SelectedValue = usu.First().Centro_Acopio.ToString();
+            
+            btnGuardar.Text = "Guardar";
+            btnNuevo.Visible = false;
+
         }
     }
 }

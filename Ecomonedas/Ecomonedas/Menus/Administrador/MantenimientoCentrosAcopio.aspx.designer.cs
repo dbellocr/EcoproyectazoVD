@@ -85,13 +85,13 @@ namespace Ecomonedas.Menus {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// Control txtDireccion.
+        /// Control txtDireccionExacta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDireccion;
+        protected global::System.Web.UI.WebControls.TextBox txtDireccionExacta;
         
         /// <summary>
         /// Control RequiredFieldValidator3.
@@ -166,6 +166,15 @@ namespace Ecomonedas.Menus {
         protected global::System.Web.UI.WebControls.Button btnGuardar;
         
         /// <summary>
+        /// Control btnNuevo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNuevo;
+        
+        /// <summary>
         /// Control grCentrosAcopio.
         /// </summary>
         /// <remarks>
@@ -173,5 +182,14 @@ namespace Ecomonedas.Menus {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grCentrosAcopio;
+        
+        /// <summary>
+        /// Control hvIdCentro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hvIdCentro;
     }
 }
