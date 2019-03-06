@@ -25,7 +25,7 @@ namespace Ecomonedas
                 return;
             }
 
-            UsuarioLN.GuardarUsuario(txtCorreo1.Value, txtNombre.Value, txtPrimerApellido.Value, txtSegundoApellido.Value, txtDireccion.Value, txtTelefono.Value, "3", true);
+            UsuarioLN.GuardarUsuario(txtCorreo1.Value, txtNombre.Value, txtPrimerApellido.Value, txtSegundoApellido.Value, txtDireccion.Value, txtTelefono.Value, "3", true,txtConfirmarContrasenna.Value);
             Response.Redirect("~/Menus/Cliente/MenuPrincipal.aspx");
 
         }

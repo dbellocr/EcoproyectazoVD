@@ -72,7 +72,7 @@ namespace Ecomonedas.Menus.Administrador
                     //Aqui se manda a la capa lógica los valores todos los controles
 
 
-                    int cantRegistros = CuponLN.GuardarCupon(txtNombre.Text, txtDescripcion.Value, archivoImagen.FileName, txtPrecio.Text, hvIDCupon.Value);
+                    int cantRegistros = CuponLN.GuardarCupon(txtNombre.Text, txtDescripcion.Value, archivoImagen.FileName, txtPrecio.Text, rbActivo.Checked ,hvIDCupon.Value);
 
                     if (cantRegistros > 0)
                     {
@@ -112,7 +112,7 @@ namespace Ecomonedas.Menus.Administrador
             try
             {
                 var cupon = CuponLN.ObtenerCupon(Convert.ToInt32(hvIDCupon.Value));
-                int cantRegistros = CuponLN.GuardarCupon(txtNombre.Text, txtDescripcion.Value, cupon.ImagenPath, txtPrecio.Text, hvIDCupon.Value);
+                int cantRegistros = CuponLN.GuardarCupon(txtNombre.Text, txtDescripcion.Value, cupon.ImagenPath, txtPrecio.Text,rbActivo.Checked, hvIDCupon.Value);
                 Response.Redirect("MantenimientoCupones.aspx?accion=guardar");
             }
             catch

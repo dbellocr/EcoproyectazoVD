@@ -13,7 +13,7 @@ namespace Contexto
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Cupon;
+            return db.Cupon.Where(x=> x.Estado==true);
 
         }
         public static Cupon ObtenerCupon(int idCupon)
@@ -26,7 +26,7 @@ namespace Contexto
 
 
         }
-        public static int GuardarCupon(string nombre, string descripcion, string imagenPath, string precio, string idCupon = "")
+        public static int GuardarCupon(string nombre, string descripcion, string imagenPath, string precio, bool estado ,string idCupon = "")
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
@@ -47,6 +47,7 @@ namespace Contexto
             oCupon.Descripcion = descripcion;
             oCupon.ImagenPath = imagenPath;
             oCupon.Nombre = nombre;
+            oCupon.Estado = estado;
 
             if (id == 0 && !esEntero)
             {

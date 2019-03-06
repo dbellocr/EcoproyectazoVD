@@ -55,7 +55,7 @@ namespace Contexto
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Tipo_Material;
+            return db.Tipo_Material.Where(x=> x.Estado==1);
 
         }
         public static Tipo_Material ObtenerMaterial(int id)

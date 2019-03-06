@@ -53,7 +53,7 @@ namespace Contexto
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return ((List<Centro_Acopio>)db.Centro_Acopio.ToList());
+            return ((List<Centro_Acopio>)db.Centro_Acopio.Where(x=> x.Estado==true).ToList());
 
         }
         public static Centro_Acopio ObtenerCentro(int id)
