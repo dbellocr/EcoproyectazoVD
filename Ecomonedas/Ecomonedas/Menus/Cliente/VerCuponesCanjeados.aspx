@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalCliente.Master" AutoEventWireup="true" CodeBehind="MisCanjeosMateriales.aspx.cs" Inherits="Ecomonedas.Menus.Cliente.MisCanjeosMateriales" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalCliente.Master" AutoEventWireup="true" CodeBehind="VerCuponesCanjeados.aspx.cs" Inherits="Ecomonedas.Menus.Cliente.VerCuponesCanjeados" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,8 +18,8 @@
                         <div class="col-md-1"></div>
 
                         <div class="col-md-10" style="margin-top: 20px;">
-                            
-                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Historial de Canjeo de Materiales</h3>
+
+                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Historial de Cupones Canjeados</h3>
 
 
                             <asp:GridView ID="gvCanjeoMateriales" runat="server" HeaderStyle-CssClass="table table-primary" RowStyle-CssClass="table table-default"></asp:GridView>

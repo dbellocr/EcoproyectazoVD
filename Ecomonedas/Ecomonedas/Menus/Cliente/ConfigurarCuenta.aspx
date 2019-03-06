@@ -23,7 +23,7 @@
 
                         <div class="col-md-5" style="margin-top: 40px;">
 
-                            <h3>Mis datos</h3>
+                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Mis datos</h3>
 
                             <asp:Label ID="lblNombre" runat="server" Text="Digite su nombre completo" CssClass="etiqueta"></asp:Label>
                             <br />
@@ -52,7 +52,7 @@
 
                         <div class="col-md-5" style="margin-top: 40px;">
 
-                                    <h3>Cambiar Contraseña</h3>
+                                    <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px; width:60%">Cambiar Contraseña</h3>
                                     
                                     <asp:Label ID="Label3" runat="server" Text="Contraseña" CssClass="etiqueta"></asp:Label>
                                     <br />
