@@ -82,6 +82,7 @@
     <Content Include="Menus\Administrador\MantenimientoCentrosAcopio.aspx" />
     <Content Include="Menus\Administrador\MantenimientoUsuarios.aspx" />
     <Content Include="Menus\Administrador\MenuPrincipal.aspx" />
+    <Content Include="Menus\Cliente\MenuPrincipal.aspx" />
     <Content Include="MiCuenta.aspx" />
     <Content Include="packages.config" />
     <Content Include="Principal.Master" />
@@ -90,6 +91,7 @@
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="PrincipalAdministrador.Master" />
     <Content Include="PrincipalAdminCentroAcopio.Master" />
+    <Content Include="PrincipalCliente.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,6 +260,13 @@
     <Compile Include="Menus\Administrador\MenuPrincipal.aspx.designer.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Menus\Cliente\MenuPrincipal.aspx.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\Cliente\MenuPrincipal.aspx.designer.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MiCuenta.aspx.cs">
       <DependentUpon>MiCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,6 +294,13 @@
     </Compile>
     <Compile Include="PrincipalAdministrador.Master.designer.cs">
       <DependentUpon>PrincipalAdministrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalCliente.Master.cs">
+      <DependentUpon>PrincipalCliente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrincipalCliente.Master.designer.cs">
+      <DependentUpon>PrincipalCliente.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueHacemos.aspx.cs">
