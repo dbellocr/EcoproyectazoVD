@@ -248,14 +248,14 @@
                             <a href="/Menus/Cliente/MenuPrincipal.aspx">Mis Ecomonedas</a>
                         </li>
                         <li>
-                            <a href="#">Canjear Cupones</a>
+                            <a href="/Menus/Cliente/CanjearCupones.aspx">Canjear Cupones</a>
                         </li>
                         <li>
-                            <a href="#">Mis canjeos de Materiales</a>
+                            <a href="/Menus/Cliente/MisCanjeosMateriales.aspx">Mis canjeos de Materiales</a>
                         </li>
 
                         <li>
-                            <a href="#">Ver cupones canjeados</a>
+                            <a href="/Menus/Cliente/VerCuponesCanjeados.aspx">Ver cupones canjeados</a>
                         </li>
                         
                         <li>

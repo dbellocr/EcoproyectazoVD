@@ -82,9 +82,11 @@
     <Content Include="Menus\Administrador\MantenimientoCentrosAcopio.aspx" />
     <Content Include="Menus\Administrador\MantenimientoUsuarios.aspx" />
     <Content Include="Menus\Administrador\MenuPrincipal.aspx" />
+    <Content Include="Menus\Cliente\CanjearCupones.aspx" />
     <Content Include="Menus\Cliente\ConfigurarCuenta.aspx" />
     <Content Include="Menus\Cliente\MenuPrincipal.aspx" />
     <Content Include="Menus\Cliente\MisCanjeosMateriales.aspx" />
+    <Content Include="Menus\Cliente\VerCuponesCanjeados.aspx" />
     <Content Include="MiCuenta.aspx" />
     <Content Include="packages.config" />
     <Content Include="Principal.Master" />
@@ -262,6 +264,13 @@
     <Compile Include="Menus\Administrador\MenuPrincipal.aspx.designer.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Menus\Cliente\CanjearCupones.aspx.cs">
+      <DependentUpon>CanjearCupones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\Cliente\CanjearCupones.aspx.designer.cs">
+      <DependentUpon>CanjearCupones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Menus\Cliente\ConfigurarCuenta.aspx.cs">
       <DependentUpon>ConfigurarCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +291,13 @@
     </Compile>
     <Compile Include="Menus\Cliente\MisCanjeosMateriales.aspx.designer.cs">
       <DependentUpon>MisCanjeosMateriales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Cliente\VerCuponesCanjeados.aspx.cs">
+      <DependentUpon>VerCuponesCanjeados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\Cliente\VerCuponesCanjeados.aspx.designer.cs">
+      <DependentUpon>VerCuponesCanjeados.aspx</DependentUpon>
     </Compile>
     <Compile Include="MiCuenta.aspx.cs">
       <DependentUpon>MiCuenta.aspx</DependentUpon>

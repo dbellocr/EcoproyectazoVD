@@ -10,7 +10,7 @@
 namespace Ecomonedas.Menus.Cliente {
     
     
-    public partial class MisCanjeosMateriales {
+    public partial class VerCuponesCanjeados {
         
         /// <summary>
         /// Control gvCanjeoMateriales.
