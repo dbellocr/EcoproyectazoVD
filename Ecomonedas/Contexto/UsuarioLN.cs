@@ -63,7 +63,14 @@ namespace Contexto
 
 
         }
+        public static IQueryable ListaUsuariosAdmin()
+        {
+            EcomonedasContexto db = new EcomonedasContexto();
+            return db.Usuario;
 
+
+
+        }
         public static Usuario ObtenerUsuario(string correoElectronico)
         {
 

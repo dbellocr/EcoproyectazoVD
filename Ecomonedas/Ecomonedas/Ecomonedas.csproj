@@ -194,6 +194,7 @@
     <Compile Include="EcoProductos.aspx.designer.cs">
       <DependentUpon>EcoProductos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoginLN\Login.cs" />
     <Compile Include="Menus\AdminCentroAcopio\CambiarContrasenaCA.aspx.cs">
       <DependentUpon>CambiarContrasenaCA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
