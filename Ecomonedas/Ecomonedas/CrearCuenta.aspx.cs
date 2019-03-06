@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contexto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,21 @@ namespace Ecomonedas
         {
 
         }
+
+        protected void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+
+            if (txtContrasenna.Value != txtConfirmarContrasenna.Value)
+            {
+                lblMensaje.Visible = true;
+                lblMensaje.Text = "Error, las dos contraseñas deben ser iguales";
+                return;
+            }
+
+            UsuarioLN.GuardarUsuario(txtCorreo1.Value, txtNombre.Value, txtPrimerApellido.Value, txtSegundoApellido.Value, txtDireccion.Value, txtTelefono.Value, "3", true);
+            Response.Redirect("Default.aspx");
+
+        }
+        
     }
 }

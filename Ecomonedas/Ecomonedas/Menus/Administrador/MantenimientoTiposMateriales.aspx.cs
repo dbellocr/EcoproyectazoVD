@@ -211,5 +211,7 @@ namespace Ecomonedas
             btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;
         }
+
+
     }
 }

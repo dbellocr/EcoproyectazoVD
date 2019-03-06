@@ -13,6 +13,15 @@ namespace Ecomonedas.Menus.Administrador {
     public partial class MantenimientoCupones {
         
         /// <summary>
+        /// Control lblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -76,13 +85,22 @@ namespace Ecomonedas.Menus.Administrador {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// Control txtMonedasNecesarias.
+        /// Control txtPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMonedasNecesarias;
+        protected global::System.Web.UI.WebControls.TextBox txtPrecio;
+        
+        /// <summary>
+        /// Control RegularExpressionValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// Control RequiredFieldValidator3.
@@ -112,13 +130,13 @@ namespace Ecomonedas.Menus.Administrador {
         protected global::System.Web.UI.WebControls.FileUpload archivoImagen;
         
         /// <summary>
-        /// Control RequiredFieldValidator4.
+        /// Control CustomValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
         /// Control Label7.
@@ -148,6 +166,15 @@ namespace Ecomonedas.Menus.Administrador {
         protected global::System.Web.UI.WebControls.RadioButton rbInactivo;
         
         /// <summary>
+        /// Control btnNuevo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNuevo;
+        
+        /// <summary>
         /// Control btnGuardar.
         /// </summary>
         /// <remarks>
@@ -157,12 +184,21 @@ namespace Ecomonedas.Menus.Administrador {
         protected global::System.Web.UI.WebControls.Button btnGuardar;
         
         /// <summary>
-        /// Control grCentrosAcopio.
+        /// Control gvCupones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grCentrosAcopio;
+        protected global::System.Web.UI.WebControls.GridView gvCupones;
+        
+        /// <summary>
+        /// Control hvIDCupon.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hvIDCupon;
     }
 }

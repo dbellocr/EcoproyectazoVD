@@ -175,15 +175,6 @@ namespace Ecomonedas {
         protected global::System.Web.UI.WebControls.RadioButton rbInactivo;
         
         /// <summary>
-        /// Control btnGuardar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
-        
-        /// <summary>
         /// Control btnNuevo.
         /// </summary>
         /// <remarks>
@@ -191,6 +182,15 @@ namespace Ecomonedas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNuevo;
+        
+        /// <summary>
+        /// Control btnGuardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
         
         /// <summary>
         /// Control gvMateriales.
