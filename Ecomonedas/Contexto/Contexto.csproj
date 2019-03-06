@@ -57,6 +57,7 @@
     <Compile Include="Color.cs" />
     <Compile Include="ColorLN.cs" />
     <Compile Include="Cupon.cs" />
+    <Compile Include="CuponLN.cs" />
     <Compile Include="EcomonedasContexto.cs" />
     <Compile Include="Enc_CanjeoMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

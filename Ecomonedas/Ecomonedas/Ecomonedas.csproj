@@ -348,6 +348,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImagenesBD\Thumbs\" />
+    <Folder Include="Imagenes\Cupones\" />
     <Folder Include="Imagenes\TipoMateriales\" />
   </ItemGroup>
   <ItemGroup>
