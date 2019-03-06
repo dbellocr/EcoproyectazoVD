@@ -84,7 +84,7 @@
                                 <asp:BoundField HeaderText="Precio" DataFormatString="₡{0:N0}" DataField="Cantidad_Ecomonedas"></asp:BoundField>
                                 <asp:TemplateField HeaderText="Imagen">
                                     <ItemTemplate>
-                                        <asp:Image ID="imgProducto" ImageAlign="Middle" ImageUrl='<%# Eval("ImagenPath", "~/Imagenes/Cupones/{0}") %>' runat="server" />
+                                        <asp:Image ID="imgProducto" Width="200px" ImageAlign="Middle" ImageUrl='<%# Eval("ImagenPath", "~/Imagenes/Cupones/{0}") %>' runat="server" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>

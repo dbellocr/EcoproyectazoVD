@@ -22,7 +22,7 @@ namespace Contexto
         [StringLength(50)]
         public string Nombre { get; set; }
 
-        [StringLength(100)]
+        [StringLength(200)]
         public string Descripcion { get; set; }
 
         [StringLength(80)]
