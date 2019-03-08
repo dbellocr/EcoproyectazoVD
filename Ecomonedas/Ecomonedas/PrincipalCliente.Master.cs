@@ -16,7 +16,12 @@ namespace Ecomonedas
                 bool validarSesion = LoginLN.Login.ValidarSesion();
                 if (validarSesion)
                 {
+                    if(LoginLN.Login.Usuario.ID_Rol==3)
+
                     lblNombreCliente.Text = LoginLN.Login.Usuario.NombreCompleto;
+                    else
+                        Response.Redirect("~/MiCuenta.aspx?validacion=error");
+
                 }
                 else
                 {
@@ -24,6 +29,12 @@ namespace Ecomonedas
                 }
 
             }
+        }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            LoginLN.Login.CerrarSesion();
+            Response.Redirect("~/MiCuenta.aspx");
         }
     }
 }

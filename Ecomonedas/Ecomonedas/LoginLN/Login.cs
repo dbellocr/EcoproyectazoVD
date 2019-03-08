@@ -43,7 +43,8 @@ namespace Ecomonedas.LoginLN
         //Cierra la sesión del usuario 
         public static void CerrarSesion()
         {
-            HttpContext.Current.Session["usuario"] = null;
+            //Elimina la sesión
+            HttpContext.Current.Session.Contents.Remove("usuario");
         }
     }
     }
