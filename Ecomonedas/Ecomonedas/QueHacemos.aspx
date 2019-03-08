@@ -14,7 +14,7 @@
         }
         .fondo{
             
-            background-image: url("/imagenes/ho.jpg");
+            background-image: url("/imagenes/fondo1.png");
             background-size:cover;
             background-repeat:no-repeat;
             background-position:center;
