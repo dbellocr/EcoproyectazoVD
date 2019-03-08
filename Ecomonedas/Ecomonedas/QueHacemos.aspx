@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="QueHacemos.aspx.cs" Inherits="Ecomonedas.QueHacemos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+    <title>¿Que hacemos?</title>
     <style>
 
         h3{

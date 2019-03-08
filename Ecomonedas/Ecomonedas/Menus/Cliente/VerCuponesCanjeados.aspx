@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalCliente.Master" AutoEventWireup="true" CodeBehind="VerCuponesCanjeados.aspx.cs" Inherits="Ecomonedas.Menus.Cliente.VerCuponesCanjeados" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <title>Mis Cupones Canjeados</title>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 

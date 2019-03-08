@@ -1,8 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalAdministrador.Master" AutoEventWireup="true" CodeBehind="ListadoUsuario.aspx.cs" Inherits="Ecomonedas.Menus.Administrador.ListadoUsuario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <title>Listado de Usuarios</title>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    
     <div class="container-fluid">
 
         <div class="row">
