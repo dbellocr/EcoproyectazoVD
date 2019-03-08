@@ -15,7 +15,9 @@
         .fondo{
             
             background-image: url("/imagenes/ho.jpg");
-            background-size:contain;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
         }
 
     </style>
@@ -27,10 +29,10 @@
 
         <div class="row">
 
-            <div class="col-md-2"></div>
+           <%-- <div class="col-md-1"></div>--%>
 
 
-            <div class="col-md-8 fondo " style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
+            <div class="col-md-12 fondo " style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 158px;">
 
                 <div class="row" style="margin-bottom:30px; margin-top:30px;">
 
@@ -82,7 +84,7 @@
 
             </div>
 
-            <div class="col-md-2"></div>
+            <%--<div class="col-md-1"></div>--%>
 
 
         </div>

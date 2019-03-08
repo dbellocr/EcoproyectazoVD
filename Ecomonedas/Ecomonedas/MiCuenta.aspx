@@ -9,8 +9,12 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
     <style>
+
+        @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
         body {
-            font-family: 'Century Gothic';
+            font-family: 'Poppins', 'Century Gothic';
             background-color: #F3F3F4;
         }
 

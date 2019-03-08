@@ -42,10 +42,10 @@
 
                     <div class="titulos-Principal">
 
-                        <a style="color:black">Centros de Acopio</a>
+                        <a style="color:#676767">Centros de Acopio</a>
                         
                     </div>
-                    <p style="80%; margin-bottom:20px; border-bottom:1px solid #a0a0a0;">
+                    <p style=" margin-bottom:20px; border-bottom:1px solid #a0a0a0;">
                         Este es nuestro ecoCatálogo de marcas que reciben ecolones
                     </p> 
 
@@ -58,10 +58,10 @@
 
                     <div class="titulos-Principal">
 
-                        <a style="color:green">eco</a><a>Catálogo</a>
+                        <a style="color:green">eco</a><a style="color:#676767;">Catálogo</a>
                         
                     </div>
-                    <p style="80%; margin-bottom:20px; border-bottom:1px solid #a0a0a0;">
+                    <p style=" margin-bottom:20px; border-bottom:1px solid #a0a0a0;">
                         Este es nuestro ecoCatálogo de marcas que reciben ecolones
                     </p>   
                     

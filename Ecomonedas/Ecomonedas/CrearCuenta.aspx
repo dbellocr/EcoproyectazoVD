@@ -11,8 +11,13 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
     <style>
+
+
+        @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
         body {
-            font-family: 'Century Gothic';
+            font-family: 'Poppins', 'Century Gothic';
             background-color: #F3F3F4;
         }
 
@@ -100,7 +105,7 @@
                                 <div class="col-md-4">
                                     <asp:Label ID="lblCorreo" runat="server" Text="Correo" CssClass="etiqueta"></asp:Label>
                                     <br />
-                                    <input id="txtCorreo1" placeholder="Correo Electrónico" runat="server" type="text" style="width: 60%;" class="form-control" />
+                                    <input id="txtCorreo1" placeholder="Correo Electrónico" runat="server" type="text" style="width:75%;" class="form-control" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                     <br />
