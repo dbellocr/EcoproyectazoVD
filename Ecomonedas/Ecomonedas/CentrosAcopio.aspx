@@ -60,9 +60,9 @@
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
 
                 <h2 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Tipo de Materiales</h2>
-                <h5 style="margin-bottom: 40px; text-align: center;">(Descripción)</h5>
+                <h5 style="margin-bottom: 40px; text-align: center; margin-top:10px;">Estos son los tipos de materiales que puedes traer a nuestros centros de acopio</h5>
                 <div class="row">
-                    <div class="col-md-12" style="margin-top: 40px; text-align: center;">
+                    <div class="col-md-12" style="margin-top: 30px; text-align: center;">
 
 
 
@@ -126,8 +126,8 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-10" style="margin-top: 40px;">
 
-                        <h2 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 80%; margin: auto; margin-top: 40px;">Centro de Acopio</h2>
-                        <h5 style="margin-bottom: 40px; text-align: center;">(Descripción)</h5>
+                        <h2 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 85%; margin: auto; margin-top: 40px;">Centro de Acopio</h2>
+                        <h5 style="margin-bottom: 40px; text-align: center; margin-top:10px;">Estos son los centros de acopio a lo largo del país donde puedes canjear tus materiales</h5>
 
                         <ul class="nav nav-tabs" style="">
                             <li class="nav-item">
