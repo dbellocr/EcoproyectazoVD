@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <link rel="shortcut icon" href="/imagenes/iconos/LogoProvi3.ico" />
 
     <script src="Scripts/jquery-3.0.0.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -21,9 +21,6 @@
 
 
 */
-
-
-
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 

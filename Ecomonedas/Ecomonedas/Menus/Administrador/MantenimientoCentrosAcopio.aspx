@@ -8,6 +8,9 @@
             float: right;
             margin-right:10px;
         }
+        .tabla{
+
+        }
     </style>
 
 </asp:Content>
@@ -62,12 +65,12 @@
                         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="btn btn-success boton" />
                          <asp:Button ID="btnNuevo" Visible="false"  runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />                    
                     </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6" style="margin-top: 40px; margin-bottom: 50px;">
+                    <%--<div class="col-md-1"></div>--%>
+                    <div class="col-md-7" style="margin-top: 40px; margin-bottom: 50px;">
 
                         <h3>Lista de Centros de Acopio</h3>
 
-                        <asp:GridView ID="grCentrosAcopio" runat="server" AutoGenerateSelectButton="true" HeaderStyle-CssClass="table table-success" RowStyle-CssClass="table table-Deafult" OnSelectedIndexChanged="grCentrosAcopio_SelectedIndexChanged" DataKeyNames="ID" AutoGenerateColumns="False">
+                        <asp:GridView ID="grCentrosAcopio" runat="server" AutoGenerateSelectButton="true" HeaderStyle-CssClass="tabla table-success tabla" RowStyle-CssClass="table table-Deafult" OnSelectedIndexChanged="grCentrosAcopio_SelectedIndexChanged" DataKeyNames="ID" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
                                 <asp:BoundField HeaderText="Provincia" DataField="Provincia.Descripcion"></asp:BoundField>

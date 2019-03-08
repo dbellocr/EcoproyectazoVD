@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Crear Cuenta</title>
-
+    <link rel="shortcut icon" href="/imagenes/iconos/LogoProvi1.ico" />
     <script src="Scripts/jquery-3.0.0.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
@@ -126,12 +126,11 @@
 
                                     <asp:Label ID="lblMensaje" CssClass="alert alert-danger" Visible="False" runat="server" Text=""></asp:Label>
                                     <br />
-                                    <br />
 
 
                                 </div>
 
-                                <asp:Button CssClass="btn btn-success .boton" ID="btnRegistrarse" runat="server" Text="Registrarme" OnClick="btnRegistrarse_Click" Width="30%" />
+                                <asp:Button CssClass="btn btn-success boton" ID="btnRegistrarse" runat="server" Text="Registrarme" OnClick="btnRegistrarse_Click" Width="30%" />
 
                             </div>
 
