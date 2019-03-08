@@ -14,7 +14,7 @@ namespace Ecomonedas.LoginLN
         public static bool IniciarSesion(string correoElectronico, string contraseña, out Usuario usuario)
         {
 
-            Usuario = ((IEnumerable<Usuario>)UsuarioLN.ListaUsuariosAdmin()).Where(x => x.Correo_Electronico == x.Correo_Electronico && x.Contrasena == contraseña).FirstOrDefault();
+            Usuario = ((IEnumerable<Usuario>)UsuarioLN.ListaUsuariosAdmin()).Where(x => (x.Correo_Electronico == correoElectronico) && (x.Contrasena == contraseña)).FirstOrDefault();
             usuario = Usuario;
             if (Usuario != null)
             {

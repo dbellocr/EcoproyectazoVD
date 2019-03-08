@@ -26,6 +26,7 @@ namespace Ecomonedas
             }
             string contra = txtContrasenna.Value;
             UsuarioLN.GuardarUsuario(txtCorreo1.Value, txtNombre.Value, txtPrimerApellido.Value, txtSegundoApellido.Value, txtDireccion.Value, txtTelefono.Value, "3", true,"",txtContrasenna.Value);
+            LoginLN.Login.CrearSesion(txtCorreo1.Value);
             Response.Redirect("~/Menus/Cliente/MenuPrincipal.aspx");
 
         }
