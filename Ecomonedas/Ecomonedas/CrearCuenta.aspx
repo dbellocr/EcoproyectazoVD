@@ -44,6 +44,19 @@
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fcfcfc; border-bottom: 3px solid #A3D921; color: black; font-size: 18px; width: 100%;">
             <a href="Default.aspx">
                 <img style="margin-left: 40px;" src="/imagenes/LogoProvi1.png" width="40px" /></a><a style="color: green; font-weight: bold;">Eco</a><a>Monedas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNavDropdown" class="navbar-collapse collapse" style="color: black;">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown"></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Default.aspx" >Volver a la página principal</a>
+                        </li>
+                    </ul>
+                </div>
         </nav>
 
         <div class="container-fluid">
