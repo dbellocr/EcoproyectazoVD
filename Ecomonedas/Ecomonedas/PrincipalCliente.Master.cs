@@ -11,7 +11,19 @@ namespace Ecomonedas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                bool validarSesion = LoginLN.Login.ValidarSesion();
+                if (validarSesion)
+                {
+                    lblNombreCliente.Text = LoginLN.Login.Usuario.NombreCompleto;
+                }
+                else
+                {
+                    Response.Redirect("~/MiCuenta.aspx?validacion=error");
+                }
 
+            }
         }
     }
 }

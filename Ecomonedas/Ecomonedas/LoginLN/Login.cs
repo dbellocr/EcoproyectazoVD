@@ -11,13 +11,14 @@ namespace Ecomonedas.LoginLN
         public static Usuario Usuario { get; set; }
 
         // Valida que el correo y la contraseña sean correctas, crea una sesion para el usuario
-        public static bool IniciarSesion(string correoElectronico, string contraseña)
+        public static bool IniciarSesion(string correoElectronico, string contraseña, out Usuario usuario)
         {
 
             Usuario = ((IEnumerable<Usuario>)UsuarioLN.ListaUsuariosAdmin()).Where(x => x.Correo_Electronico == x.Correo_Electronico && x.Contrasena == contraseña).FirstOrDefault();
-            HttpContext.Current.Session["usuario"] = Usuario;
+            usuario = Usuario;
             if (Usuario != null)
             {
+                HttpContext.Current.Session["usuario"] = Usuario;
                 return true;
             }
             return false;
@@ -26,7 +27,6 @@ namespace Ecomonedas.LoginLN
         //Valida que el usuario esté logeado 
         public static bool ValidarSesion()
         {
-
             if (HttpContext.Current.Session["usuario"] != null)
                 return true;
             return false;

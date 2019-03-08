@@ -24,8 +24,8 @@ namespace Ecomonedas
                 lblMensaje.Text = "Error, las dos contraseñas deben ser iguales";
                 return;
             }
-
-            UsuarioLN.GuardarUsuario(txtCorreo1.Value, txtNombre.Value, txtPrimerApellido.Value, txtSegundoApellido.Value, txtDireccion.Value, txtTelefono.Value, "3", true,txtConfirmarContrasenna.Value);
+            string contra = txtContrasenna.Value;
+            UsuarioLN.GuardarUsuario(txtCorreo1.Value, txtNombre.Value, txtPrimerApellido.Value, txtSegundoApellido.Value, txtDireccion.Value, txtTelefono.Value, "3", true,"",txtContrasenna.Value);
             Response.Redirect("~/Menus/Cliente/MenuPrincipal.aspx");
 
         }
