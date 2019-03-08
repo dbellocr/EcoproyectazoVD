@@ -53,12 +53,12 @@
                         <a style="color: #676767">Centros de Acopio</a>
 
                     </div>
-                    <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0;">
+                    <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0; ">
                         Este es nuestro ecoCatálogo de marcas que reciben ecolones
                     </p>
 
-                    <a href="#">
-                        <img height="250px" width="90%" src="/imagenes/reciclaje.jpg" /></a>
+                    <a href="CentrosAcopio.aspx">
+                        <img height="250" width="85%" src="/imagenes/reciclaje.jpg" /></a>
 
                 </div>
 
@@ -77,18 +77,27 @@
                     <div>
                         <%--Espacio para el Slide--%>
 
-                        <div class="slider">
-                            <ul>
-                                <li>
-                                    <img height="300px" src="/imagenes/ejem1.png" alt="" />
-                                </li>
-                                <li>
-                                    <img height="300px" src="/imagenes/ejem2.png" alt="" />
-                                </li>
-                            </ul>
-                        </div>
 
-                        <button type="button" class="btn btn-success" style="width: 80%;">ir por los ecoProductos</button>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" style="height:300px; margin-top:40px;">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="/imagenes/ejem1.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/imagenes/ejem2.png" alt="Second slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                        <a class="btn btn-success" style="width: 80%;" href="/EcoProductos.aspx">ir por los ecoProductos</a>
 
                     </div>
 
