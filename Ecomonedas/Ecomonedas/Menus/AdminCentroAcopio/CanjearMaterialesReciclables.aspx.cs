@@ -13,15 +13,15 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
         {
             if (!IsPostBack)
             {
-                lstMateriales.Items.Add("Botella");
-                lstMateriales.Items.Add("Papel");
+                //lstMateriales.Items.Add("Botella");
+                //lstMateriales.Items.Add("Papel");
             }
 
         }
 
-        protected void lstMateriales_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtTotal.Text = "100";
-        }
+        //protected void lstMateriales_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    //txtTotal.Text = "100";
+        //}
     }
 }

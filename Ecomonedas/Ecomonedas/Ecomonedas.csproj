@@ -74,6 +74,7 @@
     <Content Include="EcoProductos.aspx" />
     <Content Include="Menus\AdminCentroAcopio\CambiarContrasenaCA.aspx" />
     <Content Include="Menus\AdminCentroAcopio\CanjearMaterialesReciclables.aspx" />
+    <Content Include="Menus\AdminCentroAcopio\ListadoCanjeosMateriales.aspx" />
     <Content Include="Menus\AdminCentroAcopio\MenuPrincipalCA.aspx" />
     <Content Include="Menus\Administrador\CambiarContrasena.aspx" />
     <Content Include="Menus\Administrador\ListadoUsuario.aspx" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="Menus\AdminCentroAcopio\CanjearMaterialesReciclables.aspx.designer.cs">
       <DependentUpon>CanjearMaterialesReciclables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\AdminCentroAcopio\ListadoCanjeosMateriales.aspx.cs">
+      <DependentUpon>ListadoCanjeosMateriales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\AdminCentroAcopio\ListadoCanjeosMateriales.aspx.designer.cs">
+      <DependentUpon>ListadoCanjeosMateriales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menus\AdminCentroAcopio\MenuPrincipalCA.aspx.cs">
       <DependentUpon>MenuPrincipalCA.aspx</DependentUpon>

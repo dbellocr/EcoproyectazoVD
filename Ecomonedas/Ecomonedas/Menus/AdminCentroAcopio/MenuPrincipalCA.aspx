@@ -19,7 +19,9 @@
 
 
                     <a class="btn btn-success" href="CanjearMaterialesReciclables.aspx" style="width: 25%; height: 40px; margin-right:70px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/canjear1.png); background-size:auto; background-repeat:no-repeat; background-position:right;">Canjear Materiales</a>
+                    <a class="btn btn-success" href="ListadoCanjeosMateriales.aspx" style="width: 25%; height: 40px; margin-right:70px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/listado2.png); background-size:auto; background-repeat:no-repeat; background-position:right;">Listado de Canjes</a>
                     <a class="btn btn-success" href="CambiarContrasenaCA.aspx" style="width: 25%; height: 40px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/cuenta1.png); background-size:auto; background-repeat:no-repeat; background-position:right;">Mi Cuenta</a>
+
                     
 
                 </div>

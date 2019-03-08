@@ -54,7 +54,7 @@
 
                     </div>
                     <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0; ">
-                        Este es nuestro ecoCatálogo de marcas que reciben ecolones
+                        Conoce nuestros centros de reciclaje
                     </p>
 
                     <a href="CentrosAcopio.aspx">
@@ -71,7 +71,7 @@
 
                     </div>
                     <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0;">
-                        Este es nuestro ecoCatálogo de marcas que reciben ecolones
+                        Este es nuestra lista de productos que puedes canjear con ecomonedas
                     </p>
 
                     <div>
@@ -97,7 +97,7 @@
                         </a>
                     </div>
 
-                        <a class="btn btn-success" style="width: 80%;" href="/EcoProductos.aspx">ir por los ecoProductos</a>
+                        <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">ir por los ecoProductos</a>
 
                     </div>
 

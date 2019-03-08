@@ -193,7 +193,6 @@
             <%--<asp:Label ID="lblCopyright" runat="server"--%>
             <%--Text="<%$ AppSettings: copyright %>"></asp:Label>--%>
             <br />
-            [Logo]
             Daniel Bello Ramírez y Victor Salazar Badilla -
             I Cuatrimestre 2019
        

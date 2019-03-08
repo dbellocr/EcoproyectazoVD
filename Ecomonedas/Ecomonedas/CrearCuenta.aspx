@@ -81,7 +81,9 @@
                                     <input id="txtSegundoApellido" autocomplete="off" placeholder="Segundo Apellido" runat="server" type="text" style="width: 30%; margin: auto; display: inline;" class="form-control" />
                                     <br />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" CssClass="validaciones" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar su nombre" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <br />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="validaciones" ControlToValidate="txtPrimerApellido" ErrorMessage="Error, debe digitar su primer apellido" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <br />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" CssClass="validaciones" ControlToValidate="txtSegundoApellido" ErrorMessage="Error, debe digitar su segundo apellido" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                     <br />
@@ -90,8 +92,9 @@
 
                                     <textarea id="txtDireccion" autocomplete="off" placeholder="Dirección" runat="server" class="form-control" style="width: 50%; margin-top: 10px;"></textarea>
 
-                                    <br />
+                                    
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="validaciones" ControlToValidate="txtDireccion" ErrorMessage="Error, debe digitar su dirección" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <br />
 
                                     <asp:Label ID="Label2" runat="server" Text="Teléfono"></asp:Label>
                                     <br />
@@ -121,7 +124,6 @@
                                     <asp:Label ID="Label5" runat="server" Text="Confirmar Contraseña" CssClass="etiqueta"></asp:Label>
                                     <br />
                                     <input id="txtConfirmarContrasenna" type="password" placeholder="Confirmar Contraseña" runat="server" style="width: 60%;" class="form-control" />
-                                    <br />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" CssClass="validaciones" ControlToValidate="txtConfirmarContrasenna" ErrorMessage="Error, debe confirmar su contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                     <asp:Label ID="lblMensaje" CssClass="alert alert-danger" Visible="False" runat="server" Text=""></asp:Label>
