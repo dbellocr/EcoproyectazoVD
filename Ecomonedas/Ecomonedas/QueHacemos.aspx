@@ -32,9 +32,9 @@
            <%-- <div class="col-md-1"></div>--%>
 
 
-            <div class="col-md-12 fondo " style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 158px;">
+            <div class="col-md-12 fondo " style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 75px;">
 
-                <div class="row" style="margin-bottom:30px; margin-top:30px;">
+                <div class="row" style="margin-bottom:30px; margin-top:115px;">
 
                     <div class="col-md-1"></div>
 
@@ -65,17 +65,18 @@
                     <div class="col-md-1"></div>
 
                     <div class="col-md-5">
-                        <h3>Misión</h3>
-                        Brindar un servicio innovador a nuestros clientes y a su vez fomentar la cultura de reciclaje en la población a través de incentivos llamados ecomonedas.
+                        
+                        <h3>Visión</h3>
+                        Ser una empresa con cobertura a nivel nacional, líder en la industria del manejo de reciclaje. Además que toda la población tanto, niños, jóvenes y adultos puedan hacer  conciencia sobre la necesidad del reciclaje de materiales. 
+
                     </div>
 
                     <div class="col-md-1"></div>
 
                     <div class="col-md-4">
-
-                        <h3>Visión</h3>
-                        Ser una empresa con cobertura a nivel nacional, líder en la industria del manejo de reciclaje. Además que toda la población tanto, niños, jóvenes y adultos puedan hacer  conciencia sobre la necesidad del reciclaje de materiales. 
-
+                        <h3>Misión</h3>
+                        Brindar un servicio innovador a nuestros clientes y a su vez fomentar la cultura de reciclaje en la población a través de incentivos llamados ecomonedas.
+                        
                     </div>
 
                     <div class="col-md-1"></div>
