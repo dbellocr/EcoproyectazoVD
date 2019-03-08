@@ -140,7 +140,7 @@
                             <a class="nav-link dropdown-toggle" style="color:white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/Menus/AdminCentroAcopio/CambiarContrasenaCA.aspx">Configuración</a>
-                                <asp:LinkButton ID="LinkButton1" CssClass="dropdown-item" runat="server">Cerrar Sesión</asp:LinkButton>
+                                <a class="dropdown-item" data-toggle="modal" href="#" data-target="#exampleModal">Cerrar Sesión</a>
                             </div>
                         </li>
 
@@ -152,7 +152,24 @@
 
 
         </header>
-
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Seguro que deseas salir?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Has clic en cerrar sesión si deseas finalizar tu sesión</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <asp:Button ID="btnCerrarSesion" CssClass="btn btn-success" runat="server" OnClick="btnCerrarSesion_Click" Text="Cerrar Sesión" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
