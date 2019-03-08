@@ -28,7 +28,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-10" style="margin-top: 40px; margin-bottom: 164px; text-align: center;">
 
-                        <h2>Configuración de la cuenta</h2>
+                        <h2 style=" color: #222222; border-bottom: 1px solid lightgray; width:60%; margin:auto;">Configuración de la cuenta</h2>
                         <br />
 
                         <div class="form-group">

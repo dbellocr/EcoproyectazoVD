@@ -29,9 +29,8 @@
                     <div class="col-md-4" style="margin-top: 40px; margin-bottom: 52px;">
 
                         <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
-                        <br />
 
-                        <h3>Datos del Centro de Acopio</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray;">Datos del Centro de Acopio</h3>
 
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
@@ -68,7 +67,7 @@
                     <%--<div class="col-md-1"></div>--%>
                     <div class="col-md-7" style="margin-top: 40px; margin-bottom: 50px;">
 
-                        <h3>Lista de Centros de Acopio</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:20px;">Lista de Centros de Acopio</h3>
 
                         <asp:GridView ID="grCentrosAcopio" runat="server" AutoGenerateSelectButton="true" HeaderStyle-CssClass="tabla table-success tabla" RowStyle-CssClass="table table-Deafult" OnSelectedIndexChanged="grCentrosAcopio_SelectedIndexChanged" DataKeyNames="ID" AutoGenerateColumns="False">
                             <Columns>

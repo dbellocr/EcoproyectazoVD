@@ -29,7 +29,7 @@
                     <div class="col-md-3" style="margin-top: 40px; margin-bottom: 84px;">
                         <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
                         
-                        <h3>Datos del Usuario</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray;">Datos del Usuario</h3>
 
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-md-8" style="margin-top: 40px; margin-bottom: 50px;">
 
-                        <h3>Lista de Usuarios</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:20px;">Lista de Usuarios</h3>
 
                         <asp:GridView ID="gvUsuarios" Width="80%" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvUsuarios_SelectedIndexChanged" DataKeyNames="Correo_Electronico" runat="server" CssClass="table table-default" AutoGenerateColumns="false" HeaderStyle-CssClass="table table-success">
                             <Columns>

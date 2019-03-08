@@ -31,9 +31,8 @@
 
 
                         <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
-                        <br />
 
-                        <h3>Datos del Material Reciclable</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray;">Datos del Material Reciclable</h3>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
                             <asp:TextBox ValidationGroup="guardar" ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
@@ -100,7 +99,7 @@
                 <%--<div class="col-md-1"></div>--%>
                 <div class="col-md-7" style="margin-top: 40px; margin-bottom: 50px;">
 
-                    <h3>Lista de Materiables Reciclables</h3>
+                    <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:20px;">Lista de Materiables Reciclables</h3>
 
                     <asp:GridView ID="gvMateriales" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvMateriales_SelectedIndexChanged" DataKeyNames="ID" CssClass="table" HeaderStyle-CssClass="table table-success" AutoGenerateColumns="false" runat="server">
                         <Columns>

@@ -131,8 +131,13 @@
                         <li class="nav-item">
                             <a class="nav-link" style="color:white;" href="/Menus/AdminCentroAcopio/MenuPrincipalCA.aspx">Inicio</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" style="color:white;" href="/Menus/AdminCentroAcopio/CanjearMaterialesReciclables.aspx">Canjear Materiales Reciclables</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="/Menus/AdminCentroAcopio/ListadoCanjeosMateriales.aspx">Listado de Canjes</a>
                         </li>
              
 
