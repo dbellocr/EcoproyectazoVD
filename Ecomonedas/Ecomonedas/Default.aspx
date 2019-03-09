@@ -22,7 +22,7 @@
                     <%--Espacio para el Slide--%>
 
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" style="height:300px; margin-top:40px; border:2px solid #ECECEC; border-radius:3px;">
+                        <div class="carousel-inner" style="height: 300px; margin-top: 40px; border: 2px solid #ECECEC; border-radius: 3px;">
                             <div class="carousel-item active">
                                 <img class="d-block w-100" src="/imagenes/recicla.jpg" alt="First slide">
                             </div>
@@ -53,12 +53,12 @@
                         <a style="color: #676767">Centros de Acopio</a>
 
                     </div>
-                    <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0; ">
+                    <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0;">
                         Conoce nuestros centros de reciclaje
                     </p>
 
                     <a href="CentrosAcopio.aspx">
-                        <img height="300" width="85%" style="border:2px solid #ECECEC; border-radius:3px;" src="/imagenes/reciclaje.jpg" /></a>
+                        <img height="300" width="85%" style="border: 2px solid #ECECEC; border-radius: 3px;" src="/imagenes/reciclaje.jpg" /></a>
 
                 </div>
 
@@ -71,7 +71,7 @@
 
                     </div>
                     <p style="margin-bottom: 20px; border-bottom: 1px solid #a0a0a0;">
-                        Este es nuestra lista de productos que puedes canjear con ecomonedas
+                        Este es nuestra lista de productos que puedes canjear con <a style="color: green">eco</a>monedas
                     </p>
 
                     <div>
@@ -79,25 +79,25 @@
 
 
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" style="height:300px; margin-top:40px;">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="/imagenes/ejem1.png" alt="First slide">
+                            <div class="carousel-inner" style="height: 300px; margin-top: 40px;">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="/imagenes/ejem1.png" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="/imagenes/ejem2.png" alt="Second slide">
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/ejem2.png" alt="Second slide">
-                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
 
-                        <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">ir por los ecoProductos</a>
+                        <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">Ir por los EcoProductos</a>
 
                     </div>
 
