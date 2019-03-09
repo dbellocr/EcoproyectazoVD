@@ -26,10 +26,10 @@
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
                 <div class="row">
                     <div class="col-md-1"></div>
-                    <div class="col-md-3" style="margin-top: 40px; margin-bottom: 84px;">
+                    <div class="col-md-4" style="margin-top: 40px; margin-bottom: 84px;">
                         <asp:Label ID="lblMensaje" runat="server" Visible="false" Width="100%" Text=""></asp:Label>
                         
-                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray;">Datos del Usuario</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray;">Datos del Administrador</h3>
 
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
@@ -84,9 +84,9 @@
                         <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" runat="server" Text="Guardar" CssClass="btn btn-success boton" />
 
                     </div>
-                    <div class="col-md-8" style="margin-top: 40px; margin-bottom: 50px;">
+                    <div class="col-md-7" style="margin-top: 40px; margin-bottom: 50px;">
 
-                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:20px;">Lista de Usuarios</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:20px;">Lista de Administradores de Centros de Acopio</h3>
 
                         <asp:GridView ID="gvUsuarios" Width="80%" AutoGenerateSelectButton="true" OnSelectedIndexChanged="gvUsuarios_SelectedIndexChanged" DataKeyNames="Correo_Electronico" runat="server" CssClass="table table-default" AutoGenerateColumns="false" HeaderStyle-CssClass="table table-success">
                             <Columns>

@@ -21,7 +21,7 @@
 
                     <a class="btn btn-success" href="MantenimientoCentrosAcopio.aspx" style="width: 25%; height: 50px; margin-right:50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/centro1.png); background-size:30%; background-repeat:no-repeat; background-position:right;">Centros de Acopio</a>
                     <a class="btn btn-success" href="MantenimientoTiposMateriales.aspx" style="width: 25%; height: 50px; margin-right:50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/materiales1.png); background-size:contain; background-repeat:no-repeat; background-position:right;">Tipo de Materiales</a>
-                    <a class="btn btn-success" href="MantenimientoUsuarios.aspx" style="width: 25%; height: 50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/usuarios1.png); background-size:contain; background-repeat:no-repeat; background-position:right;">Usuarios</a>
+                    <a class="btn btn-success" href="MantenimientoUsuarios.aspx" style="width: 25%; height: 50px; padding-top:50px; padding-bottom:40px; padding-right:40px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/usuarios1.png); background-size:contain; background-repeat:no-repeat; background-position:right;">Administradores CA</a>
                     
 
                 </div>

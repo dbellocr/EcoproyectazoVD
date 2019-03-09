@@ -108,6 +108,11 @@
             border-radius: 3px;
             color: white;
         }
+
+        .dropdown-item:active{
+            background-color:#1F7B31;
+        }
+
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -139,7 +144,7 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/Menus/Administrador/MantenimientoCentrosAcopio.aspx">Centros de Acopio</a>
                                 <a class="dropdown-item" href="/Menus/Administrador/MantenimientoTiposMateriales.aspx">Tipos de Materiales Reciclables</a>
-                                <a class="dropdown-item" href="/Menus/Administrador/MantenimientoUsuarios.aspx">Usuarios</a>
+                                <a class="dropdown-item" href="/Menus/Administrador/MantenimientoUsuarios.aspx">Administradores de Centro de Acopio</a>
                             </div>
                         </li>
 

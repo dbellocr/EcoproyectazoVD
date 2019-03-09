@@ -91,11 +91,12 @@
                             <div class="form-group">
                                 <div class="input-group mb-3">
                                     <input id="txtCorreo1" placeholder="Debe Confirmar al usuario con el botón buscar" runat="server" type="text" style="width: 60%;" class="form-control" autocomplete="off" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    
                                     <div class="input-group-append">
                                         <asp:Button ID="btnBuscar" runat="server" CssClass="boton btn btn-primary" Text="Buscar" />
                                     </div>
                                 </div>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                         </div>
 
@@ -199,7 +200,7 @@
 
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <h3 style="text-align: center; color: #222222; border-bottom: 1px solid white; width: 70%; margin: auto; margin-top: 40px;">Registro de Materiales a Canjear</h3>
+                        <h3 style="text-align: center; color: #222222; border-bottom: 1px solid white; width: 70%; margin: auto; margin-top: 40px;">Materiales a Canjear</h3>
 
                         <div class="card mb-3">
                             <div class="card-body">

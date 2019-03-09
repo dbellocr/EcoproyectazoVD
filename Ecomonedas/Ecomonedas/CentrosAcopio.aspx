@@ -180,7 +180,7 @@
                                 </asp:GridView>
                             </div>
                             <div class="tab-pane fade" id="car">
-                                <div style="text-align: center">
+                                <div>
                                     <asp:GridView ID="gvCentrosCartago" AutoGenerateColumns="False" runat="server" HeaderStyle-CssClass="table table-success" RowStyle-CssClass="table table-default">
                                         <Columns>
                                             <asp:BoundField DataField="Nombre" HeaderText="Nombre"></asp:BoundField>

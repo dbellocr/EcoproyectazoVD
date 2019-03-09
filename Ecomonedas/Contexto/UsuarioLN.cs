@@ -58,7 +58,7 @@ namespace Contexto
         public static IQueryable ListaUsuarios()
         {
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Usuario.Where(x => x.Correo_Electronico != "ecoadmin");
+            return db.Usuario.Where(x => x.Correo_Electronico != "ecoadmin@ecomonedas.cr");
 
 
 

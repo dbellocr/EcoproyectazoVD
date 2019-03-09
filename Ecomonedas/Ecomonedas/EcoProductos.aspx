@@ -70,7 +70,7 @@
                                     </li>
                                 </ul>
                                 <div class="card-footer text-muted" style="text-align: center;">
-                                    <asp:Button ID="btnCanjear" Text="Canjear" runat="server" CssClass="btn btn-primary boton" />
+                                    <asp:Button ID="btnCanjear" Text="Ver Producto" runat="server" CssClass="btn btn-primary boton" />
                                 </div>
                             </div>
 
