@@ -35,24 +35,24 @@
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label><br />
                             <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Error, debe digitar el nombre del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                         </div>
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Provincia"></asp:Label><br />
                             <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="form-control"></asp:DropDownList><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlProvincia" ErrorMessage="Error, debe seleccionar la provincia en donde se encuetra el centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlProvincia" ErrorMessage="Error, debe seleccionar la provincia en donde se encuetra el centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label3" runat="server" Text="Dirección Exacta"></asp:Label><br />
                             <asp:TextBox ID="txtDireccionExacta" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccionExacta" ErrorMessage="Error, debe digitar la dirección exacta del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccionExacta" ErrorMessage="Error, debe digitar la dirección exacta del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-gruop">
                             <asp:Label ID="Label4" runat="server" Text="Usuario Administrador"></asp:Label><br />
                             <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="form-control"></asp:DropDownList><br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlUsuario" ErrorMessage="Error, debe seleccionar un usuario administrador del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlUsuario" ErrorMessage="Error, debe seleccionar un usuario administrador del centro de acopio" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
 
 
@@ -61,7 +61,7 @@
                             <asp:RadioButton ID="rbActivo" Checked="true" runat="server" GroupName="estado" Text="Activo" />
                             <asp:RadioButton ID="rbInactivo" runat="server" GroupName="estado" Text="Inactivo" /><br />
                         </div>
-                        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="btn btn-success boton" />
+                        <asp:Button ID="btnGuardar" ValidationGroup="guardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="btn btn-success boton" />
                          <asp:Button ID="btnNuevo" Visible="false"  runat="server" Text="Nuevo" CssClass="btn btn-success boton" OnClick="btnNuevo_Click" />                    
                     </div>
                     <%--<div class="col-md-1"></div>--%>
