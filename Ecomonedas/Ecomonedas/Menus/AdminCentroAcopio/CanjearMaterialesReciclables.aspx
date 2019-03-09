@@ -96,7 +96,7 @@
                                         <asp:Button ID="btnBuscar" runat="server" CssClass="boton btn btn-primary" Text="Buscar" />
                                     </div>
                                 </div>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                         </div>
 
