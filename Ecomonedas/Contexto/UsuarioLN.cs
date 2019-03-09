@@ -63,6 +63,17 @@ namespace Contexto
 
 
         }
+        public static IQueryable ListaClientes()
+        {
+            EcomonedasContexto db = new EcomonedasContexto();
+            return db.Usuario.Where(x => x.ID_Rol==3);
+
+
+
+        }
+
+
+
         public static IQueryable ListaUsuariosAdmin()
         {
             EcomonedasContexto db = new EcomonedasContexto();
