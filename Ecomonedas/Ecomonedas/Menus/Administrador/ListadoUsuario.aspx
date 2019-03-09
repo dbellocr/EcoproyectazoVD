@@ -18,17 +18,14 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-10" style="margin-top: 40px; margin-bottom: 52px;">
 
-                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:30px;">Lista de Usuarios</h3>
+                        <h3 style=" color: #222222; border-bottom: 1px solid lightgray; margin-bottom:30px;">Lista de Clientes</h3>
 
-                        <asp:GridView ID="gvUsuarios" runat="server" RowStyle-CssClass="table table-default" HeaderStyle-CssClass="table table-success"  AutoGenerateColumns="False">
+                        <asp:GridView ID="gvUsuarios" Width="100%" runat="server" RowStyle-CssClass="table table-default" HeaderStyle-CssClass="table table-success"  AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField HeaderText="Correo Electr&#243;nico" DataField="Correo_Electronico"></asp:BoundField>
-                                <asp:BoundField HeaderText="Nombre" DataField="Nombre"></asp:BoundField>
-                                <asp:BoundField HeaderText="Primer Apellido" DataField="Apellido_Paterno"></asp:BoundField>
-                                <asp:BoundField HeaderText="Segundo Apellido" DataField="Apellido_Materno"></asp:BoundField>
+                                <asp:BoundField HeaderText="Nombre Completo" DataField="NombreCompleto"></asp:BoundField>
                                 <asp:BoundField DataField="Direcci&#243;n" HeaderText="Direcci&#243;n"></asp:BoundField>
                                 <asp:BoundField DataField="Telefono" HeaderText="Tel&#233;fono"></asp:BoundField>
-                                <asp:BoundField DataField="Rol.Descripcion" HeaderText="Rol"></asp:BoundField>
                             </Columns>
                         </asp:GridView>
                         <asp:HiddenField ID="hvIdUsuario" runat="server" />

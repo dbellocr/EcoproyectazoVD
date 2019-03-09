@@ -50,7 +50,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <div class="container-fluid">
+    <div class="container-fluid">
 
         <div class="row">
 
@@ -65,10 +65,28 @@
                     <div class="col-md-12" style="margin-top: 30px; text-align: center;">
 
 
+                        <asp:Repeater ID="repeaterMateriales" runat="server">
+
+                            <HeaderTemplate>
+                                <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>' >
+
+<%--                                <div class="card text-white mb-3"  runat="server" style=" background-color:<%# Eval("ID_Color")%>; max-width: 100%;" id="divAcopio"  >--%>
+                                    <div class="card-header" style="width: 100%;"><%# Eval("Nombre") %> </div>
+                                    <div class="card-body" style="background-image:url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>');  background-position: center; background-repeat: no-repeat; height: 110px;">
+                                    </div>
+                                </div>
+
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </div>
+                            </FooterTemplate>
+                        </asp:Repeater>
 
 
-
-                        <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
+                        <%--   <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
 
                             <div class="card text-white pap mb-3" style="max-width: 100%;">
                                 <div class="card-header" style="width: 100%;">Papel</div>
@@ -113,7 +131,7 @@
                                 <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/latas.png); background-position: center; background-repeat: no-repeat; height: 110px;">
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
                         <br />
 
                     </div>

@@ -13,6 +13,15 @@ namespace Ecomonedas {
     public partial class CentrosAcopio {
         
         /// <summary>
+        /// Control repeaterMateriales.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterMateriales;
+        
+        /// <summary>
         /// Control gvCentrosSanJose.
         /// </summary>
         /// <remarks>

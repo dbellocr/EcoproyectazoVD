@@ -32,9 +32,12 @@ namespace Ecomonedas
                 gvCentrosPuntarenas.DataBind();
                 gvCentrosLimon.DataBind();
 
+                repeaterMateriales.DataSource = ((IEnumerable<Tipo_Material>) TipoMaterialLN.ListaMateriales()).ToList();
+                repeaterMateriales.DataBind();
 
+              
             }
-
+            
         }
     }
 }

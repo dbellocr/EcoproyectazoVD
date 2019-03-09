@@ -15,7 +15,7 @@ namespace Ecomonedas.Menus.Administrador
 
             if (!IsPostBack)
             {
-                gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaUsuarios()).ToList();
+                gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaClientes()).ToList();
                 gvUsuarios.DataBind();
             }
 
