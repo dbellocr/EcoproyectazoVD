@@ -61,9 +61,14 @@
                         <asp:ListView ID="listaCupones" runat="server" GroupItemCount="3">
 
                             <EmptyDataTemplate>
-                                <p>No hay datos</p>
+                                <div class="row">
+                                    <p>No hay datos</p>
+                                    <div class="row">
                             </EmptyDataTemplate>
-                        
+                            <EmptyItemTemplate>
+                                <div class="col-lg-4">
+                                </div>
+                            </EmptyItemTemplate>
                             <GroupTemplate>
                                 <div class="row">
                                     <asp:PlaceHolder ID="itemPlaceHolder" runat="server"></asp:PlaceHolder>
@@ -100,14 +105,20 @@
                                     </div>
                             </ItemTemplate>
 
-
+                            <LayoutTemplate>
+                                <div class="container">
+                                    <asp:PlaceHolder ID="groupPlaceHolder" runat="server"></asp:PlaceHolder>
+                                </div>
+                            </LayoutTemplate>
                         </asp:ListView>
 
                     </div>
 
-                      <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
                 </div>
             </div>
+
+            <div class="col-md-1"></div>
         </div>
     </div>
 
