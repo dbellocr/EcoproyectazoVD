@@ -71,15 +71,14 @@
 
     <div class="container-fluid">
 
+
         <div class="row">
 
             <div class="col-md-1"></div>
 
-
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
 
                 <h2 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Canjeo de Materiales Reciclables</h2>
-
 
                 <div class="row" style="margin-top: 50px;">
 
@@ -115,10 +114,10 @@
                 </div>
 
                 <div class="row">
+
                     <h3 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Registre la cantidad de Materiales Reciclables</h3>
 
                     <div class="col-md-12" style="margin-top: 30px; text-align: center;">
-
 
 
                         <asp:Repeater ID="repeaterMateriales" runat="server">
@@ -139,136 +138,123 @@
                             </ItemTemplate>
                             <FooterTemplate>
                                 </div>
-                                
                             </FooterTemplate>
                         </asp:Repeater>
 
 
-
-                        <%--       <div class="card text-white lat mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Latas</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/latas.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                                <div class="card-footer text-muted" style="text-align: center;">
-                                    <asp:TextBox ID="txtCantidadLatas" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>--%>
                     </div>
-                    <br />
+
+
+                    <div style="margin: auto; text-align: center;">
+                        <asp:Button ID="btnFormalizar" runat="server" Text="Preliminar" CssClass="btn btn-success" />
+                    </div>
+
+                </div>
+
+                <div class="row" style="margin-top: 40px;">
+
+
+
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <h3 style="text-align: center; color: #222222; border-bottom: 1px solid white; width: 70%; margin: auto; margin-top: 40px;">Materiales a Canjear</h3>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr class="table table-success">
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Column heading</th>
+                                            <th scope="col">Column heading</th>
+                                            <th scope="col">Column heading</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-default">
+                                            <th scope="row">Active</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Default</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Primary</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Secondary</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Success</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Danger</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Warning</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Info</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Light</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                        <tr class="table-default">
+                                            <th scope="row">Dark</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted" style="float: right;">
+                                <label>Total de ganancias: 50.</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-1"></div>
 
                 </div>
 
                 <div style="margin: auto; text-align: center;">
-                    <asp:Button ID="btnFormalizar" runat="server" Text="Preliminar" CssClass="btn btn-success" />
+                    <asp:Button ID="btnCanje" runat="server" Text="Formalizar" CssClass="btn btn-success" />
                 </div>
 
+
+
             </div>
 
 
-            <div class="row" style="margin-top: 40px;">
-
-
-
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h3 style="text-align: center; color: #222222; border-bottom: 1px solid white; width: 70%; margin: auto; margin-top: 40px;">Materiales a Canjear</h3>
-
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr class="table table-success">
-                                        <th scope="col">Type</th>
-                                        <th scope="col">Column heading</th>
-                                        <th scope="col">Column heading</th>
-                                        <th scope="col">Column heading</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="table-default">
-                                        <th scope="row">Active</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Default</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Primary</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Secondary</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Success</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Danger</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Warning</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Info</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Light</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                    <tr class="table-default">
-                                        <th scope="row">Dark</th>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="card-footer text-muted" style="float: right;">
-                            <label>Total de ganancias: 50.</label>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-1"></div>
-
-            </div>
-
-            <div style="margin: auto; text-align: center;">
-                <asp:Button ID="btnCanje" runat="server" Text="Formalizar" CssClass="btn btn-success" />
-            </div>
-
-
+            <div class="col-md-1"></div>
+            <%--cierre del row principal--%>
         </div>
-
-
-
-    <div class="col-md-1"></div>
-    </div>
-    </div>
-
+        </div><%--cierre de container--%>
 </asp:Content>

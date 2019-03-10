@@ -18,13 +18,19 @@
 
         .valor2 {
             width: 50%;
-            text-align: center;
             font-size: 22px;
             float: right;
         }
 
         .card:hover {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .img{
+            background-image: url(/Imagenes/iconos/canjear2.png);
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:contain;
         }
     </style>
 
@@ -63,7 +69,7 @@
                                             <asp:Label ID="lblPrecioReal" runat="server" CssClass="valor1" Text="‎₡ 100.000"></asp:Label>
 
                                             <%--<span><img src="/imagenes/Precio.png" width="35" style="float:right; display:inline;"/></span>--%>
-                                            <asp:Label ID="lblPrecioEco" runat="server" CssClass="valor2" Text="25"></asp:Label>
+                                            <asp:Label ID="lblPrecioEco" runat="server" CssClass="valor2 img" Text="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp25000" ></asp:Label>
 
                                         </div>
 
