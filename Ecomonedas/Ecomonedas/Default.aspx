@@ -4,6 +4,42 @@
 
     <title>Inicio</title>
 
+    <style>
+        .boton {
+            width: 80%;
+            background-color: #63A324;
+            color: white;
+        }
+
+            .boton:hover {
+                background-color: #3D8A24;
+                color: white;
+            }
+
+        .valor1 {
+            width: 50%;
+            border-right: 1px solid lightgray;
+            text-align: center;
+            font-size: 16px;
+            float: left;
+        }
+
+        .valor2 {
+            width: 50%;
+            text-align: center;
+            font-size: 16px;
+            float: right;
+        }
+
+        .card {
+            border: 1px solid #A3D921;
+        }
+
+            .card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -78,7 +114,7 @@
                         <%--Espacio para el Slide--%>
 
 
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <%--<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" style="height: 300px; margin-top: 40px;">
                                 <div class="carousel-item active">
                                     <img class="d-block w-100" src="/imagenes/ejem1.png" alt="First slide">
@@ -95,7 +131,50 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div>
+                        </div>--%>
+
+                        <asp:Repeater ID="repeaterCupones" runat="server">
+
+
+                            <HeaderTemplate>
+                                <div class="row">
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <div class="col-lg-3">
+                                    <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
+                                        <h3 class="card-header" style="text-align: center; font-size: 18px;"><%# Eval("Nombre") %></h3>
+                                        <img style="height: 150px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
+
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item" style="text-align: center">Valor del Producto</li>
+                                            <li class="list-group-item" style="text-align: center; display: inline;">
+
+                                                <div class="">
+
+
+                                                    <div class="valor1">
+                                                        <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                    </div>
+
+                                                    <div class="valor2">
+                                                        <img src="/Imagenes/moneda.png" width="25" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+
+                                        <div class="card-footer text-muted" style="text-align: center;">
+                                            <%--<asp:Button ID="btnCanjear"  Text="Ver Producto" runat="server" CssClass="btn btn-success" />--%>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </div>
+                   
+                            </FooterTemplate>
+                        </asp:Repeater>
 
                         <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">Ir por los EcoProductos</a>
 

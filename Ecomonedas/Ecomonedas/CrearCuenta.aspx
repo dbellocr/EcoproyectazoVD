@@ -140,7 +140,6 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" CssClass="validaciones" ControlToValidate="txtConfirmarContrasenna" ErrorMessage="Error, debe confirmar su contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                     <asp:Label ID="lblMensaje" CssClass="alert alert-danger" Visible="False" runat="server" Text=""></asp:Label>
-                                    <br />
 
 
                                 </div>

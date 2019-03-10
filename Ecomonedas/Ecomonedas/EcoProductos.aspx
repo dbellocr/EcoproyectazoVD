@@ -5,12 +5,12 @@
     <style>
         .boton {
             width: 80%;
-            background-color: #A3D921;
+            background-color: #63A324;
             color: white;
         }
 
             .boton:hover {
-                background-color: #90C123;
+                background-color: #3D8A24;
                 color: white;
             }
 
