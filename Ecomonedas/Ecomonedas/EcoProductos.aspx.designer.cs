@@ -13,30 +13,12 @@ namespace Ecomonedas {
     public partial class EcoProductos {
         
         /// <summary>
-        /// Control lblPrecioReal.
+        /// Control listaCupones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecioReal;
-        
-        /// <summary>
-        /// Control lblPrecioEco.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecioEco;
-        
-        /// <summary>
-        /// Control btnCanjear.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCanjear;
+        protected global::System.Web.UI.WebControls.ListView listaCupones;
     }
 }
