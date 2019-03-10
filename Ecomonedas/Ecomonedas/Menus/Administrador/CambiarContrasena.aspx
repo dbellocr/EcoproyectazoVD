@@ -11,6 +11,9 @@
         .campo {
             margin: auto;
         }
+             .color{
+            color:forestgreen;
+        }
     </style>
 
 </asp:Content>
@@ -28,22 +31,28 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-10" style="margin-top: 40px; margin-bottom: 164px; text-align: center;">
 
-                        <h2 style=" color: #222222; border-bottom: 1px solid lightgray; width:60%; margin:auto;">Configuración de la cuenta</h2>
+                        <h2 style="color: #222222; border-bottom: 1px solid lightgray; width: 60%; margin: auto;">Configuración de la cuenta</h2>
                         <br />
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Ingrese su nueva contraseña"></asp:Label>
                             <asp:TextBox ID="txtCambiarContraseña" runat="server" TextMode="Password" CssClass="form-control campo" Width="40%"></asp:TextBox>
                             <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCambiarContraseña" ErrorMessage="Error, debe digitar una contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            <br /><br />
+                            <br />
+                            <br />
                         </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Confirmar nueva contraseña"></asp:Label>
                             <asp:TextBox ID="txtConfirmarContraseña" runat="server" TextMode="Password" CssClass="form-control campo" Width="40%"></asp:TextBox>
-                            <asp:RequiredFieldValidator ValidationGroup="guardar"  ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmarContraseña" ErrorMessage="Error, debe confirmar su contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmarContraseña" ErrorMessage="Error, debe confirmar su contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <br />
                         </div>
-                        <asp:Button ID="btnCambiarContrasena" ValidationGroup="guardar"  runat="server" Text="Cambiar Contraseña" CssClass="btn btn-success" />
+                        <asp:Button ID="btnCambiarContrasena" OnClick="btnCambiarContrasena_Click" ValidationGroup="guardar" runat="server" Text="Cambiar Contraseña" CssClass="btn btn-success" />
+                        <br />
+                        <br />
+                        <asp:Label ID="lblMensaje" CssClass="color" Font-Bold="true" runat="server" Visible="false" Text=""></asp:Label>
+
+
                     </div>
                 </div>
             </div>

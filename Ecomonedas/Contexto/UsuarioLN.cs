@@ -43,8 +43,12 @@ namespace Contexto
             oUsuario.Dirección = direccion;
             oUsuario.Estado = estado;
             oUsuario.ID_Rol = int.Parse(idRol);
-            oUsuario.Telefono = Convert.ToDecimal(telefono);
-      
+            if (oUsuario.ID_Rol != 1)
+            {
+                oUsuario.Telefono = Convert.ToDecimal(telefono);
+
+            }
+
 
             if (id == 0 && !esEntero)
             {

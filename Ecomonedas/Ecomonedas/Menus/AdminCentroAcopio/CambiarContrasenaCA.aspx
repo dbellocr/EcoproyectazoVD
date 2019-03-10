@@ -11,6 +11,9 @@
         .campo {
             margin: auto;
         }
+         .color{
+            color:forestgreen;
+        }
     </style>
 
 </asp:Content>
@@ -28,7 +31,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-10" style="margin-top: 40px; margin-bottom: 164px; text-align: center;">
 
-                        <h2 style=" color: #222222; border-bottom: 1px solid lightgray; width:60%; margin:auto;">Configuración de la cuenta</h2>
+                        <h2 style="color: #222222; border-bottom: 1px solid lightgray; width: 60%; margin: auto;">Configuración de la cuenta</h2>
                         <br />
 
                         <div class="form-group">
@@ -50,7 +53,10 @@
                             <br />
 
                         </div>
-                        <asp:Button ID="btnCambiarContrasena" ValidationGroup="guardar" runat="server" Text="Cambiar Contraseña" CssClass="btn btn-success" />
+                        <asp:Button ID="btnCambiarContrasena" OnClick="btnCambiarContrasena_Click" ValidationGroup="guardar" runat="server" Text="Cambiar Contraseña" CssClass="btn btn-success" />
+                        <br /><br />
+                        <asp:Label ID="lblMensaje" CssClass="color" Font-Bold="true" runat="server" Visible="false" Text=""></asp:Label>
+
 
                     </div>
                 </div>

@@ -22,31 +22,31 @@ namespace Ecomonedas.Menus.Cliente {
         protected global::System.Web.UI.WebControls.Label lblNombre;
         
         /// <summary>
-        /// Control Text2.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNombre;
         
         /// <summary>
-        /// Control Text3.
+        /// Control txtPrimerApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrimerApellido;
         
         /// <summary>
-        /// Control Text4.
+        /// Control txtSegundoApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text4;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSegundoApellido;
         
         /// <summary>
         /// Control Label1.
@@ -118,7 +118,16 @@ namespace Ecomonedas.Menus.Cliente {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtContrasenna;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtContrasenna;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// Control Label5.
@@ -130,13 +139,22 @@ namespace Ecomonedas.Menus.Cliente {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Control Text5.
+        /// Control txtConfirmarContrasenna.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text5;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtConfirmarContrasenna;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// Control btnConfirmar.
@@ -146,5 +164,14 @@ namespace Ecomonedas.Menus.Cliente {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnConfirmar;
+        
+        /// <summary>
+        /// Control lblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
     }
 }
