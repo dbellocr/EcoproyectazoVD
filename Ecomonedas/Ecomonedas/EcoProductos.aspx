@@ -50,7 +50,7 @@
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
 
 
-                <h3 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;"><a style="color: ##222222">Estos son nuestros </a><a style="color: green">eco</a><a style="color: #222222;">Productos</a></h3>
+                <h3 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;"><a style="color: #222222">Estos son nuestros </a><a style="color: green">eco</a><a style="color: #222222;">Productos</a></h3>
 
                 <div class="row">
 
@@ -58,7 +58,52 @@
                     <div class="col-md-10" style="margin-top: 40px">
 
 
-                        <asp:ListView ID="listaCupones" runat="server" GroupItemCount="3">
+                <asp:Repeater ID="repeaterCupones" runat="server">
+
+
+                    <HeaderTemplate>
+                        <div class="row">
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                         <div class="col-lg-4">
+                                    <div class="card mb-10" style="max-width: 100%; margin-bottom:30px">
+                                        <h3 class="card-header" style="text-align:center"><%# Eval("Nombre") %></h3>
+                                        <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
+
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item" style="text-align: center">Valor del Producto</li>
+                                            <li class="list-group-item" style="text-align: center; display: inline;">
+
+                                                <div class="">
+
+
+                                                    <div class="valor1">
+                                                        <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                    </div>
+
+                                                    <div class="valor2">
+                                                        <img src="/Imagenes/moneda.png" width="35" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+
+                                        <div class="card-footer text-muted" style="text-align: center;">
+                                            <asp:Button ID="btnCanjear" Text="Ver Producto" runat="server" CssClass="btn boton" />
+                                        </div>
+                                    </div>
+                             </div>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        </div>
+                    </FooterTemplate>
+                </asp:Repeater>
+
+
+
+
+<%--                        <asp:ListView ID="listaCupones" runat="server" GroupItemCount="3">
 
                             <EmptyDataTemplate>
                                 <div class="row">
@@ -110,7 +155,7 @@
                                     <asp:PlaceHolder ID="groupPlaceHolder" runat="server"></asp:PlaceHolder>
                                 </div>
                             </LayoutTemplate>
-                        </asp:ListView>
+                        </asp:ListView>--%>
 
                     </div>
 

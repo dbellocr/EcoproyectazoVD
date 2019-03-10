@@ -131,7 +131,7 @@
                                     <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
                                     </div>
                                     <div class="card-footer text-muted" style="text-align: center;">
-                                        <asp:TextBox ID="txtCantidad" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtCantidad"  OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
 

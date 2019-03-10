@@ -15,8 +15,8 @@ namespace Ecomonedas
             if (!IsPostBack)
             {
 
-                listaCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).ToList();
-                listaCupones.DataBind();
+                repeaterCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).ToList();
+                repeaterCupones.DataBind();
 
             }
         }

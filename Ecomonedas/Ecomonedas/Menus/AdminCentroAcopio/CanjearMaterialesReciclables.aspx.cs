@@ -25,5 +25,9 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
 
         }
 
+        protected void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
