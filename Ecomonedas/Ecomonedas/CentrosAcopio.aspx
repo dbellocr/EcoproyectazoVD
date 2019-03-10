@@ -71,11 +71,11 @@
                                 <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
                             </HeaderTemplate>
                             <ItemTemplate>
-                                <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>' >
+                                <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>'>
 
-<%--                                <div class="card text-white mb-3"  runat="server" style=" background-color:<%# Eval("ID_Color")%>; max-width: 100%;" id="divAcopio"  >--%>
+                                    <%--                                <div class="card text-white mb-3"  runat="server" style=" background-color:<%# Eval("ID_Color")%>; max-width: 100%;" id="divAcopio"  >--%>
                                     <div class="card-header" style="width: 100%;"><%# Eval("Nombre") %> </div>
-                                    <div class="card-body" style="background-image:url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>');  background-position: center; background-repeat: no-repeat; height: 110px;">
+                                    <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
                                     </div>
                                 </div>
 
@@ -85,53 +85,6 @@
                             </FooterTemplate>
                         </asp:Repeater>
 
-
-                        <%--   <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
-
-                            <div class="card text-white pap mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Papel</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/papel.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-                            <div class="card text-white vid mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Vidrio</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/vidrio.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-                            <div class="card text-white pla mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Plásticos</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/plasticos.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-
-
-                            <div class="card text-white alu mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Aluminio</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/aluminio.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-
-
-
-                            <div class="card text-white limp mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Químicos</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/limpieza.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-
-
-
-                            <div class="card text-white tet mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Tetrabrick</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/tetra.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-                            <div class="card text-white lat mb-3" style="max-width: 100%;">
-                                <div class="card-header" style="width: 100%;">Latas</div>
-                                <div class="card-body" style="background-image: url(/Imagenes/TipoMateriales/latas.png); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                </div>
-                            </div>
-                        </div>--%>
                         <br />
 
                     </div>

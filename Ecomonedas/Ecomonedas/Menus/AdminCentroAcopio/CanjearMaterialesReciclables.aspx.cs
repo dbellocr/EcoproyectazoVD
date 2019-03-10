@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contexto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,15 +14,16 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
         {
             if (!IsPostBack)
             {
-                //lstMateriales.Items.Add("Botella");
-                //lstMateriales.Items.Add("Papel");
+
+
+
+                repeaterMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales()).ToList();
+                repeaterMateriales.DataBind();
+
+
             }
 
         }
 
-        //protected void lstMateriales_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    //txtTotal.Text = "100";
-        //}
     }
 }

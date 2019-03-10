@@ -33,17 +33,17 @@
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Ingrese su nueva contraseña"></asp:Label>
                             <asp:TextBox ID="txtCambiarContraseña" runat="server" TextMode="Password" CssClass="form-control campo" Width="40%"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCambiarContraseña" ErrorMessage="Error, debe digitar una contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCambiarContraseña" ErrorMessage="Error, debe digitar una contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <br /><br />
                         </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Confirmar nueva contraseña"></asp:Label>
                             <asp:TextBox ID="txtConfirmarContraseña" runat="server" TextMode="Password" CssClass="form-control campo" Width="40%"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmarContraseña" ErrorMessage="Error, debe confirmar su contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ValidationGroup="guardar"  ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmarContraseña" ErrorMessage="Error, debe confirmar su contraseña" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <br />
                         </div>
-                        <asp:Button ID="btnCambiarContrasena" runat="server" Text="Cambiar Contraseña" CssClass="btn btn-success" />
+                        <asp:Button ID="btnCambiarContrasena" ValidationGroup="guardar"  runat="server" Text="Cambiar Contraseña" CssClass="btn btn-success" />
                     </div>
                 </div>
             </div>
