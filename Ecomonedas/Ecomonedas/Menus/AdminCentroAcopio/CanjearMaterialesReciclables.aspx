@@ -256,5 +256,6 @@
             <div class="col-md-1"></div>
             <%--cierre del row principal--%>
         </div>
-        </div><%--cierre de container--%>
+    </div>
+    <%--cierre de container--%>
 </asp:Content>
