@@ -33,8 +33,8 @@
             background-size: contain;
         }
 
-        .card{
-            border:1px solid orange;
+        .card {
+            border: 1px solid orange;
         }
     </style>
 
@@ -49,7 +49,7 @@
             </div>
             <div class="col-md-10">
 
-                <div style="border: 1px solid #EFEFF0; background-color: white;width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
+                <div style="border: 1px solid #EFEFF0; background-color: white; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
 
                     <div class="row">
 
@@ -59,48 +59,61 @@
 
                             <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Cupones disponibles para canjear (pdf)</h3>
                             <br />
-                            <asp:Repeater ID="repeaterCupones" runat="server">
 
 
-                                <HeaderTemplate>
-                                    <div class="row">
-                                </HeaderTemplate>
-                                <ItemTemplate>
-                                    <div class="col-lg-4">
-                                        <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                            <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3>
-                                            <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
+                            <div class="row">
+                                <asp:ListView ID="lvCupones" runat="server">
+                                    <EmptyDataTemplate>
 
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center">Valor del Cupón</li>
-                                                <li class="list-group-item" style="text-align: center; display: inline;">
+                                        <p>No hay datos</p>
 
-                                                    <div class="">
+                                    </EmptyDataTemplate>
+                                    <EmptyItemTemplate>
+                                        <div class="col-lg-4">
+                                        </div>
+                                    </EmptyItemTemplate>
+                                    <GroupTemplate>
+
+                                        <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
+
+                                    </GroupTemplate>
+                                    <ItemTemplate>
+                                        <div class="col-lg-4">
+                                            <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
+                                                <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3>
+                                                <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
+
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item" style="text-align: center">Valor del Cupón</li>
+                                                    <li class="list-group-item" style="text-align: center; display: inline;">
+
+                                                        <div class="">
 
 
-                                                        <div class="valor1">
-                                                            <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                            <div class="valor1">
+                                                                <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                            </div>
+
+                                                            <div class="valor2">
+                                                                <img src="/Imagenes/moneda.png" width="35" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
+                                                            </div>
                                                         </div>
 
-                                                        <div class="valor2">
-                                                            <img src="/Imagenes/moneda.png" width="35" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
-                                                        </div>
-                                                    </div>
+                                                    </li>
+                                                </ul>
 
-                                                </li>
-                                            </ul>
-
-                                            <div class="card-footer text-muted" style="text-align: center;">
-                                                <asp:Button ID="btnCanjear" Text="Canjear" runat="server" CssClass="btn boton" />
+                                                <div class="card-footer text-muted" style="text-align: center;">
+                                                    <asp:Button ID="btnCanjear" Text="Canjear" runat="server" CssClass="btn boton" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </ItemTemplate>
-                                <FooterTemplate>
-                                    </div>
-                   
-                                </FooterTemplate>
-                            </asp:Repeater>
+                                    </ItemTemplate>
+
+
+                                </asp:ListView>
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -114,6 +127,5 @@
 
     </div>
 
-    </div>
 
 </asp:Content>

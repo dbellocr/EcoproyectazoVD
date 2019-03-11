@@ -16,8 +16,8 @@ namespace Ecomonedas.Menus.Cliente
             if (!IsPostBack)
             {
 
-                repeaterCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).ToList();
-                repeaterCupones.DataBind();
+                lvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).ToList();
+                lvCupones.DataBind();
 
             }
 
