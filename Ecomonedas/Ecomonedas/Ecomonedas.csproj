@@ -71,6 +71,7 @@
     <Content Include="CentrosAcopio.aspx" />
     <Content Include="Contacto.aspx" />
     <Content Include="CrearCuenta.aspx" />
+    <Content Include="detalleProducto.aspx" />
     <Content Include="EcoProductos.aspx" />
     <Content Include="Menus\AdminCentroAcopio\CambiarContrasenaCA.aspx" />
     <Content Include="Menus\AdminCentroAcopio\CanjearMaterialesReciclables.aspx" />
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalleProducto.aspx.cs">
+      <DependentUpon>detalleProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalleProducto.aspx.designer.cs">
+      <DependentUpon>detalleProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="EcoProductos.aspx.cs">
       <DependentUpon>EcoProductos.aspx</DependentUpon>
