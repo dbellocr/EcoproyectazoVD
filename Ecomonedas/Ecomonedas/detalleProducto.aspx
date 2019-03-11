@@ -29,53 +29,25 @@
         <div class="row">
 
             <div class="col-md-1"></div>
-            <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 122px;">
+            <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 117px;">
 
 
-                <%--<div class="form-group" style="margin: auto; text-align: center; margin-top:40px;">
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-
-                                <div class="card text-white bg-primary mb-3" style="max-width: 50%;">
-                                    <div class="card-header">Header</div>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Primary card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                    <div class="input-group-append">
-
-
-                        <div class="card text-white bg-secondary mb-3" style="max-width: 50%;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h4 class="card-title">Secondary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                        </div>
-                    </div>
-                </div>--%>
+               
                 <asp:FormView ID="fvCupones" runat="server">
 
                     <HeaderTemplate>
                         <div class=" card card-group" style="margin-top: 50px; border: 1px solid white;">
                     </HeaderTemplate>
+                    
                     <ItemTemplate>
-                       
+                        <div class="card-group">
                         <div class="card mb-3" style="border: 1px solid white;">
 
-                            <img class="imagen" style="height: 50%; width: 50%; display: block; border: 4px solid #8ECA21; border-radius: 4px;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>" />
+                            <img class="imagen" style="height: 90%; width: 90%; display: block; border: 4px solid #8ECA21; border-radius: 4px;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>" />
 
                         </div>
 
-                        <div class="card mb-3"  style="border-left: 1px solid lightgray;">
+                        <div class="card mb-3" style="border-left: 1px solid lightgray;">
                             <h2 class="card-header" style="color: #72B112;"><%# Eval("Nombre") %></h2>
                             <div class="card-body">
                                 <h3 class="card-title" style="color: #626262;">Descripción</h3>
@@ -107,6 +79,7 @@
                         </div>
 
                         </div>
+                   </div>
                     </ItemTemplate>
                     <FooterTemplate>
                         </div>

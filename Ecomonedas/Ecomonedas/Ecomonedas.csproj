@@ -91,6 +91,7 @@
     <Content Include="Menus\Cliente\VerCuponesCanjeados.aspx" />
     <Content Include="MiCuenta.aspx" />
     <Content Include="packages.config" />
+    <Content Include="PantallaError.aspx" />
     <Content Include="Principal.Master" />
     <Content Include="QueHacemos.aspx" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
@@ -322,6 +323,13 @@
     </Compile>
     <Compile Include="MiCuenta.aspx.designer.cs">
       <DependentUpon>MiCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaError.aspx.cs">
+      <DependentUpon>PantallaError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PantallaError.aspx.designer.cs">
+      <DependentUpon>PantallaError.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
