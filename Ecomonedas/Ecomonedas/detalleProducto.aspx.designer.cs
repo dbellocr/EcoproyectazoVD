@@ -13,21 +13,12 @@ namespace Ecomonedas {
     public partial class detalleProducto {
         
         /// <summary>
-        /// Control lblPrecioReal.
+        /// Control fvCupones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecioReal;
-        
-        /// <summary>
-        /// Control lblPrecioEco.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecioEco;
+        protected global::System.Web.UI.WebControls.FormView fvCupones;
     }
 }

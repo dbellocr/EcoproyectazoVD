@@ -36,6 +36,10 @@
             .card:hover {
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             }
+            .link:link{
+                 color: #222222;
+            }
+
     </style>
 
 </asp:Content>
@@ -58,16 +62,16 @@
                     <div class="col-md-10" style="margin-top: 40px">
 
 
-                <asp:Repeater ID="repeaterCupones" runat="server">
+                        <asp:Repeater ID="repeaterCupones" runat="server">
 
 
-                    <HeaderTemplate>
-                        <div class="row">
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                         <div class="col-lg-4">
-                                    <div class="card mb-10" style="max-width: 100%; margin-bottom:30px">
-                                        <h3 class="card-header" style="text-align:center"><%# Eval("Nombre") %></h3>
+                            <HeaderTemplate>
+                                <div class="row">
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <div class="col-lg-4">
+                                    <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
+                                       <a href="<%# "DetalleProducto.aspx?producto="+ Eval("ID") %>" class="link">  <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3></a>
                                         <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
                                         <ul class="list-group list-group-flush">
@@ -90,73 +94,16 @@
                                         </ul>
 
                                         <div class="card-footer text-muted" style="text-align: center;">
-                                            <asp:Button ID="btnCanjear" Text="Ver Producto" runat="server" CssClass="btn boton" />
+                                            <a href="<%# "DetalleProducto.aspx?producto="+ Eval("ID") %>"" class="btn boton">Ver Producto</a>
                                         </div>
                                     </div>
-                             </div>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        </div>
-                    </FooterTemplate>
-                </asp:Repeater>
-
-
-
-
-<%--                        <asp:ListView ID="listaCupones" runat="server" GroupItemCount="3">
-
-                            <EmptyDataTemplate>
-                                <div class="row">
-                                    <p>No hay datos</p>
-                                    <div class="row">
-                            </EmptyDataTemplate>
-                            <EmptyItemTemplate>
-                                <div class="col-lg-4">
                                 </div>
-                            </EmptyItemTemplate>
-                            <GroupTemplate>
-                                <div class="row">
-                                    <asp:PlaceHolder ID="itemPlaceHolder" runat="server"></asp:PlaceHolder>
-                                </div>
-                            </GroupTemplate>
-                            <ItemTemplate>
-                                <div class="col-lg-4">
-                                    <div class="card mb-10" style="max-width: 100%;">
-                                        <h3 class="card-header"><%# Eval("Nombre") %></h3>
-                                        <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
-
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item" style="text-align: center">Valor del Producto</li>
-                                            <li class="list-group-item" style="text-align: center; display: inline;">
-
-                                                <div class="">
-
-
-                                                    <div class="valor1">
-                                                        <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
-                                                    </div>
-
-                                                    <div class="valor2">
-                                                        <img src="/Imagenes/moneda.png" width="35" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%#  Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10 %>'></asp:Label>
-                                                    </div>
-                                                </div>
-
-                                            </li>
-                                        </ul>
-
-                                        <div class="card-footer text-muted" style="text-align: center;">
-                                            <asp:Button ID="btnCanjear" Text="Ver Producto" runat="server" CssClass="btn boton" />
-                                        </div>
-                                    </div>
                             </ItemTemplate>
-
-                            <LayoutTemplate>
-                                <div class="container">
-                                    <asp:PlaceHolder ID="groupPlaceHolder" runat="server"></asp:PlaceHolder>
+                            <FooterTemplate>
                                 </div>
-                            </LayoutTemplate>
-                        </asp:ListView>--%>
-
+                   
+                            </FooterTemplate>
+                        </asp:Repeater>
                     </div>
 
                     <div class="col-md-1"></div>

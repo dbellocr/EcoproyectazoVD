@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contexto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,23 @@ namespace Ecomonedas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                string idCupon = Request.QueryString["producto"];
+                int id;
+                bool esNumero = int.TryParse(idCupon, out id);
 
+                if (esNumero)
+                {
+
+                    fvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).Where(x => x.ID==id && x.Estado==true);
+                    fvCupones.DataBind();
+                }
+
+
+
+
+            }
         }
     }
 }
