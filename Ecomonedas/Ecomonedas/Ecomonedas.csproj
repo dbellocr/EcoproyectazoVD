@@ -73,6 +73,7 @@
     <Content Include="CrearCuenta.aspx" />
     <Content Include="DetalleProducto.aspx" />
     <Content Include="EcoProductos.aspx" />
+    <Content Include="Imagenes\ErrorP.png" />
     <Content Include="Menus\AdminCentroAcopio\CambiarContrasenaCA.aspx" />
     <Content Include="Menus\AdminCentroAcopio\CanjearMaterialesReciclables.aspx" />
     <Content Include="Menus\AdminCentroAcopio\ListadoCanjeosMateriales.aspx" />
