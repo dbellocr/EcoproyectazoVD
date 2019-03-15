@@ -22,6 +22,8 @@ namespace Contexto
 
         [Column(TypeName = "numeric")]
         public decimal? Cantidad { get; set; }
+        [Column(TypeName = "numeric")]
+        public int? CantidadMaterial { get; set; }
 
         public DateTime? Fecha { get; set; }
 

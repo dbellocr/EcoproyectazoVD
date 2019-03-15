@@ -90,9 +90,17 @@ namespace Contexto
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            Usuario usuario = db.Usuario.Where(x => x.Correo_Electronico == correoElectronico).First<Usuario>();
+            Usuario usuario = db.Usuario.Where(x => x.Correo_Electronico == correoElectronico).FirstOrDefault<Usuario>();
             return usuario;
         }
+        public static Usuario ObtenerCliente(string correoElectronico)
+        {
 
+            EcomonedasContexto db = new EcomonedasContexto();
+            Usuario usuario = db.Usuario.Where(x => x.Correo_Electronico == correoElectronico && x.ID_Rol==2).FirstOrDefault<Usuario>();
+
+            return usuario; 
+
+        }
     }
 }
