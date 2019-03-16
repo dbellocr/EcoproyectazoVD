@@ -42,4 +42,17 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
         {
             oUsuario = UsuarioLN.ObtenerCliente(txtCorreo1.Value);
             if (oUsuario != null)
-           
+            {
+                lblMensajeNoEncontrado.Visible = false;
+                txtNombre.Text = oUsuario.NombreCompleto;
+            }
+
+            else
+            {
+                lblMensajeNoEncontrado.Visible = true;
+                lblMensajeNoEncontrado.Text = "Error, el usuario con el correo ingresado no existe";
+
+            }
+        }
+    }
+}
