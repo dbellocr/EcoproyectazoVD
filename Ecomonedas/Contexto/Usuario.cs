@@ -31,7 +31,15 @@ namespace Contexto
         public Nullable<decimal> Telefono { get; set; }
         public Nullable<decimal> ID_Rol { get; set; }
         public bool Estado { get; set; }
-    
+        public String NombreCompleto
+        {
+            get
+            {
+                return Nombre + " " + Apellido_Paterno + " " + Apellido_Materno;
+            }
+
+        }
+
         public virtual Billetera_Virtual Billetera_Virtual { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Centro_Acopio> Centro_Acopio { get; set; }
