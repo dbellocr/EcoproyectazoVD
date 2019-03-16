@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="435d4492d81a4c29adcde241f473f188" Name="Diagram1">
+        <EntityTypeShape EntityType="EcomonedasContexto.Billetera_Virtual" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Centro_Acopio" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Color" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Cupon" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Det_CanjeoMaterial" Width="1.5" PointX="12.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Enc_CanjeoMaterial" Width="1.5" PointX="10.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Provincia" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Rol" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Tipo_Material" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcomonedasContexto.Usuario" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Billetera_Virtual_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Centro_Acopio_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Centro_Acopio_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Enc_CanjeoMaterial_Centro_Acopio" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Tipo_Material_Color" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Det_CanjeoMaterial_Enc_CanjeoMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Det_CanjeoMaterial_Tipo_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Enc_CanjeoMaterial_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.FK_Usuario_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="EcomonedasContexto.Canjeo_Cupon" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

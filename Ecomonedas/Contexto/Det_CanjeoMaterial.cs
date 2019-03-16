@@ -12,13 +12,13 @@ namespace Contexto
     using System;
     using System.Collections.Generic;
     
-    public partial class Billetera_Virtual
+    public partial class Det_CanjeoMaterial
     {
-        public string ID_Usuario { get; set; }
-        public Nullable<decimal> EcoMonedas_Disponibles { get; set; }
-        public Nullable<decimal> EcoMonedas_Canjeadas { get; set; }
-        public Nullable<decimal> EcoMonedas_Totales { get; set; }
+        public decimal ID_Canjeo { get; set; }
+        public decimal Cantidad { get; set; }
+        public decimal ID_Material { get; set; }
     
-        public virtual Usuario Usuario { get; set; }
+        public virtual Enc_CanjeoMaterial Enc_CanjeoMaterial { get; set; }
+        public virtual Tipo_Material Tipo_Material { get; set; }
     }
 }
