@@ -94,12 +94,11 @@
                                     <input id="txtCorreo1" placeholder="Debe Confirmar al usuario con el botón buscar" runat="server" type="text" style="width: 60%;" class="form-control" autocomplete="off" />
 
                                     <div class="input-group-append">
-                                        <asp:Button ID="btnBuscar" runat="server" CssClass="boton btn btn-primary" Text="Buscar" OnClick="btnBuscar_Click" />
+                                        <asp:Button ID="btnBuscar" runat="server" CssClass="boton btn btn-primary" Text="Buscar" />
                                     </div>
                                 </div>
                                 <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                          <asp:Label ID="lblMensajeNoEncontrado" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>
-                                  </div>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -116,7 +115,7 @@
 
                 <div class="row">
 
-                    <h3 style="text-align:  center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Registre la cantidad de Materiales Reciclables</h3>
+                    <h3 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Registre la cantidad de Materiales Reciclables</h3>
 
                     <div class="col-md-12" style="margin-top: 30px; text-align: center;">
 
@@ -132,10 +131,10 @@
                                     <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
                                     </div>
                                     <div class="card-footer text-muted" style="text-align: center;">
-                                        <asp:TextBox ID="txtCantidad"  AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtCantidad"  OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
-                    <asp:HiddenField ID="hvIDMaterial" Value='<%# Eval("ID") %>' runat="server" />
+
                             </ItemTemplate>
                             <FooterTemplate>
                                 </div>
@@ -147,12 +146,12 @@
 
 
                     <div style="margin: auto; text-align: center;">
-                        <asp:Button ID="btnPreliminar" OnClick="btnPreliminar_Click" runat="server" Text="Preliminar" CssClass="btn btn-success" />
+                        <asp:Button ID="btnFormalizar" runat="server" Text="Preliminar" CssClass="btn btn-success" />
                     </div>
 
                 </div>
 
-                <div class="row" id="divCanjeo" runat="server" visible="false" style="margin-top: 40px;">
+                <div class="row" style="margin-top: 40px;">
 
 
 
@@ -246,7 +245,7 @@
                 </div>
 
                 <div style="margin: auto; text-align: center;">
-                    <asp:Button ID="btnCanje" Visible="false" runat="server" Text="Formalizar" CssClass="btn btn-success" />
+                    <asp:Button ID="btnCanje" runat="server" Text="Formalizar" CssClass="btn btn-success" />
                 </div>
 
 
