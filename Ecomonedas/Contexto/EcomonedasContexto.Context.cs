@@ -16,7 +16,7 @@ namespace Contexto
     public partial class EcomonedasContexto : DbContext
     {
         public EcomonedasContexto()
-            : base("name=Entities")
+            : base("name=EcomonedasContexto")
         {
         }
     
