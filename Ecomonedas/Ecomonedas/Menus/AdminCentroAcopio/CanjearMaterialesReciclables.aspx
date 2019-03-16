@@ -94,10 +94,12 @@
                                     <input id="txtCorreo1" placeholder="Debe Confirmar al usuario con el botón buscar" runat="server" type="text" style="width: 60%;" class="form-control" autocomplete="off" />
 
                                     <div class="input-group-append">
-                                        <asp:Button ID="btnBuscar" runat="server" CssClass="boton btn btn-primary" Text="Buscar" />
+                                        <asp:Button ID="btnBuscar" OnClick="btnBuscar_Click" runat="server" CssClass="boton btn btn-primary" Text="Buscar" />
                                     </div>
                                 </div>
                                 <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:Label ID="lblMensajeNoEncontrado" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>
+
                             </div>
                         </div>
 
@@ -131,15 +133,16 @@
                                     <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
                                     </div>
                                     <div class="card-footer text-muted" style="text-align: center;">
-                                        <asp:TextBox ID="txtCantidad"  OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtCantidad" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
-
+                                <asp:HiddenField ID="hvIDMaterial" Value='<%# Eval("ID") %>' runat="server" />
                             </ItemTemplate>
                             <FooterTemplate>
                                 </div>
                             </FooterTemplate>
                         </asp:Repeater>
+
 
 
                     </div>
