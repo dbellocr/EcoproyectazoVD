@@ -22,7 +22,7 @@ namespace Contexto
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            
         }
     
         public virtual DbSet<Billetera_Virtual> Billetera_Virtual { get; set; }
@@ -36,5 +36,8 @@ namespace Contexto
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tipo_Material> Tipo_Material { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+
+        public void FixEProviderServicesProblem() { var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance; }
+
     }
 }
