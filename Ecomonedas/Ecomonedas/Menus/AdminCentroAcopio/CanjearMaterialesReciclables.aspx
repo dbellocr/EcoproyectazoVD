@@ -127,34 +127,43 @@
                                 <asp:Repeater ID="repeaterMateriales" runat="server">
 
                                     <HeaderTemplate>
-                                        <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
+                                        <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 73%; margin: auto;">
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <asp:UpdatePanel class="card-group card-group-toggle" style="width: 15%; margin: auto;  margin-right:0;" data-toggle="buttons"  runat="server">
+                                        <asp:UpdatePanel class="card-group card-group-toggle" style=" margin: auto;" data-toggle="buttons" runat="server">
                                             <ContentTemplate>
-                                        <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>'>
-                                            <div class="card-header" style="width: 100%;"><%# Eval("Nombre") %> </div>
-                                            <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                            </div>
-                                            <div class="card-footer text-muted" style="text-align: center;">
-                                                <asp:TextBox ID="txtCantidad" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <asp:HiddenField ID="hvIDMaterial" Value='<%# Eval("ID") %>' runat="server" />
-                                                 
-                                          </ContentTemplate>
+
+                                                <div   style="margin:auto; width:128px;" >
+
+
+
+                                                    <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>'>
+                                                        <div class="card-header" style="width: 100%;"><%# Eval("Nombre") %> </div>
+                                                        <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
+                                                        </div>
+                                                        <div class="card-footer text-muted" style="text-align: center;">
+                                                            <asp:TextBox ID="txtCantidad" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <asp:HiddenField ID="hvIDMaterial" Value='<%# Eval("ID") %>' runat="server" />
+
+                                            </ContentTemplate>
                                             <Triggers>
                                                 <asp:AsyncPostBackTrigger ControlID="txtCantidad" EventName="TextChanged" />
                                             </Triggers>
-                                                  </asp:UpdatePanel>
-                                        
+                                        </asp:UpdatePanel>
+
                                     </ItemTemplate>
                                     <FooterTemplate>
                                         </div>
+                                   
                                     </FooterTemplate>
                                 </asp:Repeater>
                             </ContentTemplate>
-                           
+
 
                         </asp:UpdatePanel>
                     </div>
