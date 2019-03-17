@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Billetera_Virtual.cs" />
+    <Compile Include="CanjeoLN.cs" />
     <Compile Include="Centro_Acopio.cs" />
     <Compile Include="Centro_AcopioLN.cs" />
     <Compile Include="Color.cs" />

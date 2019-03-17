@@ -64,6 +64,13 @@ namespace Contexto
 
 
         }
+        public static Centro_Acopio ObtenerCentroAcopioAdministrador(string correoElectronico)
+        {
 
+            EcomonedasContexto db = new EcomonedasContexto();
+            return db.Centro_Acopio.Where(x => x.ID_Usuario == correoElectronico).FirstOrDefault<Centro_Acopio>();
+
+
+        }
     }
 }

@@ -11,15 +11,15 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
     public partial class CanjearMaterialesReciclables : System.Web.UI.Page
     {
         private static Usuario oUsuario;
-        private static Enc_CanjeoMaterial encabezadoCanjeo;
+        private static List<Det_CanjeoMaterial> listaDetalle; 
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
 
-
-                encabezadoCanjeo = new Enc_CanjeoMaterial();
+                listaDetalle = new List<Det_CanjeoMaterial>();
+         
 
                 CargarRepeater();
 
@@ -52,7 +52,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
             detalle.Cantidad = cantidad;
             detalle.ID_Material = Convert.ToInt32(hvIDMaterial.Value);
             detalle.Tipo_Material = tipoMaterial;
-            encabezadoCanjeo.Det_CanjeoMaterial.Add(detalle);
+            listaDetalle.Add(detalle);
 
 
         }
@@ -75,14 +75,14 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
         }
         private void CargarGRID()
         {
-            gvMaterialesPreliminar.DataSource = ((IEnumerable<Det_CanjeoMaterial>)encabezadoCanjeo.Det_CanjeoMaterial).ToList();
+            gvMaterialesPreliminar.DataSource = ((IEnumerable<Det_CanjeoMaterial>)listaDetalle).ToList();
             gvMaterialesPreliminar.DataBind();
 
 
         }
         protected void btnPreliminar_Click(object sender, EventArgs e)
         {
-            decimal? totalEcomonedas=0;
+            decimal? totalEcomonedas = 0;
             if (oUsuario != null)
             {
                 btnCanje.Visible = true;
@@ -94,7 +94,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
                 repeaterMateriales.Visible = false;
                 tituloMateriales.Style.Add("margin-top", "5px");
 
-                foreach (var detalle in encabezadoCanjeo.Det_CanjeoMaterial )
+                foreach (var detalle in listaDetalle)
                 {
                     decimal? det = detalle.Tipo_Material.Precio;
                     decimal? cantidad = Convert.ToDecimal(detalle.Cantidad);
@@ -110,7 +110,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
                 lblMensajeNoEncontrado.Visible = true;
                 lblMensajeNoEncontrado.Text = "Error, debe ingresar el correo electrónico del cliente para efectuar el canjeo";
             }
-         
+
         }
 
         protected void btnNuevoCanjeo_Click(object sender, EventArgs e)
@@ -123,10 +123,50 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
             repeaterMateriales.DataSource = null;
             CargarRepeater();
             repeaterMateriales.Visible = true;
-            encabezadoCanjeo.Det_CanjeoMaterial.Clear();
+            listaDetalle.Clear();
             txtCorreo1.Value = "";
             txtNombre.Text = "";
             oUsuario = null;
         }
+
+        protected void btnCanje_Click(object sender, EventArgs e)
+        {
+            Enc_CanjeoMaterial encabezadoCanejo = new Enc_CanjeoMaterial();
+            encabezadoCanejo.ID_Usuario = oUsuario.Correo_Electronico;
+            encabezadoCanejo.Fecha = DateTime.Now;
+            encabezadoCanejo.ID_CentroAcopio = Centro_AcopioLN.ObtenerCentroAcopioAdministrador(LoginLN.Login.Usuario.Correo_Electronico).ID;
+
+            EcomonedasContexto contexto = new EcomonedasContexto();
+            contexto.Enc_CanjeoMaterial.Add(encabezadoCanejo);
+            contexto.SaveChanges();
+            decimal id = encabezadoCanejo.ID;
+
+
+            EcomonedasContexto contexto1 = new EcomonedasContexto();
+
+
+            foreach (var detalle in listaDetalle )
+            {
+
+                Det_CanjeoMaterial det = new Det_CanjeoMaterial();
+                det.Cantidad = det.Cantidad;
+                det.ID_Canjeo = id;
+                det.ID_Material = det.ID_Material;
+                contexto1.Det_CanjeoMaterial.Add(det);
+
+            }
+            contexto1.SaveChanges();
+
+
+
+         
+
+            
+
+
+
+        }
+
+        
     }
 }

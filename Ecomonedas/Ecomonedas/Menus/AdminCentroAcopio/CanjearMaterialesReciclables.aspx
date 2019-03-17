@@ -98,17 +98,23 @@
                                     </div>
                                 </div>
                                 <asp:RequiredFieldValidator ValidationGroup="guardar" ID="RequiredFieldValidator5" runat="server" CssClass="validaciones" ControlToValidate="txtCorreo1" ErrorMessage="Error, debe digitar su correo" ForeColor="red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                                <asp:Label ID="lblMensajeNoEncontrado" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>
 
                             </div>
                         </div>
+                        <asp:UpdatePanel runat="Server">
+                            <ContentTemplate>
+                                <asp:Label ID="lblMensajeNoEncontrado" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>
 
-                        <div class="form-group">
-                            <asp:Label ID="Label1" runat="server" Text="Nombre del Cliente"></asp:Label><br />
-                            <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" Enabled="false" placeholder="Nombre del Cliente" CssClass="form-control"></asp:TextBox>
+                                <div class="form-group">
+                                    <asp:Label ID="Label1" runat="server" Text="Nombre del Cliente"></asp:Label><br />
+                                    <asp:TextBox ID="txtNombre" AutoCompleteType="Disabled" runat="server" Enabled="false" placeholder="Nombre del Cliente" CssClass="form-control"></asp:TextBox>
 
-                        </div>
-
+                                </div>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="btnBuscar" EventName="Click" />
+                            </Triggers>
+                        </asp:UpdatePanel>
                     </div>
 
                     <div class="col-md-2"></div>
@@ -130,10 +136,10 @@
                                         <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 73%; margin: auto;">
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <asp:UpdatePanel class="card-group card-group-toggle" style=" margin: auto;" data-toggle="buttons" runat="server">
+                                        <asp:UpdatePanel class="card-group card-group-toggle" style="margin: auto;" data-toggle="buttons" runat="server">
                                             <ContentTemplate>
 
-                                                <div   style="margin:auto; width:128px;" >
+                                                <div style="margin: auto; width: 128px;">
 
 
 
@@ -159,6 +165,7 @@
                                     </ItemTemplate>
                                     <FooterTemplate>
                                         </div>
+                                   
                                    
                                     </FooterTemplate>
                                 </asp:Repeater>
@@ -211,7 +218,7 @@
                 </div>
 
                 <div style="margin: auto; text-align: center;">
-                    <asp:Button ID="btnCanje" Visible="false" runat="server" Text="Formalizar" CssClass="btn btn-success" />
+                    <asp:Button ID="btnCanje" OnClick="btnCanje_Click" Visible="false" runat="server" Text="Formalizar" CssClass="btn btn-success" />
                     <asp:Button ID="btnNuevoCanjeo" OnClick="btnNuevoCanjeo_Click" Visible="false" runat="server" Text="Nuevo Canjeo" CssClass="btn btn-success" />
 
                 </div>
