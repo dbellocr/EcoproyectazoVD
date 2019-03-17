@@ -51,85 +51,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Billetera_Virtual.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Centro_Acopio.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Billetera_Virtual.cs" />
+    <Compile Include="Centro_Acopio.cs" />
     <Compile Include="Centro_AcopioLN.cs" />
-    <Compile Include="Color.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Color.cs" />
     <Compile Include="ColorLN.cs" />
-    <Compile Include="Cupon.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Cupon.cs" />
     <Compile Include="CuponLN.cs" />
-    <Compile Include="Det_CanjeoMaterial.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EcomonedasContexto.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EcomonedasContexto.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EcomonedasContexto.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EcomonedasContexto.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EcomonedasContexto.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Enc_CanjeoMaterial.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Det_CanjeoMaterial.cs" />
+    <Compile Include="EcomonedasContexto.cs" />
+    <Compile Include="Enc_CanjeoMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provincia.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Provincia.cs" />
     <Compile Include="ProvinciaLN.cs" />
-    <Compile Include="Rol.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Rol.cs" />
     <Compile Include="RolLN.cs" />
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="sysdiagrams.cs" />
     <Compile Include="TipoMaterialLN.cs" />
-    <Compile Include="Tipo_Material.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario.cs">
-      <DependentUpon>EcomonedasContexto.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Tipo_Material.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioLN.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="EcomonedasContexto.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EcomonedasContexto.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="EcomonedasContexto.edmx.diagram">
-      <DependentUpon>EcomonedasContexto.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="EcomonedasContexto.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EcomonedasContexto.edmx</DependentUpon>
-      <LastGenOutput>EcomonedasContexto.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EcomonedasContexto.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EcomonedasContexto.edmx</DependentUpon>
-      <LastGenOutput>EcomonedasContexto.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
