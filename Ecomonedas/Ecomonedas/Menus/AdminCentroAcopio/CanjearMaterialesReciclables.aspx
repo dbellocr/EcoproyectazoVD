@@ -78,7 +78,7 @@
 
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
 
-                <h2 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Canjeo de Materiales Reciclables</h2>
+                <h2 runat="server" style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Canjeo de Materiales Reciclables</h2>
 
                 <div class="row" style="margin-top: 50px;">
 
@@ -117,128 +117,82 @@
 
                 <div class="row">
 
-                    <h3 style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Registre la cantidad de Materiales Reciclables</h3>
+                    <h3 id="tituloCanejo" runat="Server" style="text-align: center; color: #222222; border-bottom: 1px solid lightgray; width: 70%; margin: auto; margin-top: 40px;">Registre la cantidad de Materiales Reciclables</h3>
 
                     <div class="col-md-12" style="margin-top: 30px; text-align: center;">
 
 
-                        <asp:Repeater ID="repeaterMateriales" runat="server">
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:Repeater ID="repeaterMateriales" runat="server">
 
-                            <HeaderTemplate>
-                                <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>'>
-                                    <div class="card-header" style="width: 100%;"><%# Eval("Nombre") %> </div>
-                                    <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
-                                    </div>
-                                    <div class="card-footer text-muted" style="text-align: center;">
-                                        <asp:TextBox ID="txtCantidad" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <asp:HiddenField ID="hvIDMaterial" Value='<%# Eval("ID") %>' runat="server" />
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                </div>
-                            </FooterTemplate>
-                        </asp:Repeater>
+                                    <HeaderTemplate>
+                                        <div class="card-group card-group-toggle" data-toggle="buttons" style="width: 70%; margin: auto;">
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <asp:UpdatePanel class="card-group card-group-toggle" style="width: 15%; margin: auto;  margin-right:0;" data-toggle="buttons"  runat="server">
+                                            <ContentTemplate>
+                                        <div class="card text-white mb-3" style='<%# "background-color:" + Eval("ID_Color") + "; max-width: 100%;" %>'>
+                                            <div class="card-header" style="width: 100%;"><%# Eval("Nombre") %> </div>
+                                            <div class="card-body" style="background-image: url('/Imagenes/TipoMateriales/<%# Eval("Imagen_Path") %>'); background-position: center; background-repeat: no-repeat; height: 110px;">
+                                            </div>
+                                            <div class="card-footer text-muted" style="text-align: center;">
+                                                <asp:TextBox ID="txtCantidad" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="0" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <asp:HiddenField ID="hvIDMaterial" Value='<%# Eval("ID") %>' runat="server" />
+                                                 
+                                          </ContentTemplate>
+                                            <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="txtCantidad" EventName="TextChanged" />
+                                            </Triggers>
+                                                  </asp:UpdatePanel>
+                                        
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                        </div>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </ContentTemplate>
+                           
 
-
-
+                        </asp:UpdatePanel>
                     </div>
 
 
                     <div style="margin: auto; text-align: center;">
-                        <asp:Button ID="btnFormalizar" runat="server" Text="Preliminar" CssClass="btn btn-success" />
+                        <asp:Button ID="btnPreliminar" OnClick="btnPreliminar_Click" runat="server" Text="Preliminar" CssClass="btn btn-success" />
                     </div>
 
                 </div>
 
-                <div class="row" style="margin-top: 40px;">
+                <div class="row" runat="server" visible="false" id="divTabla" style="margin-top: 40px;">
 
 
 
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <h3 style="text-align: center; color: #222222; border-bottom: 1px solid white; width: 70%; margin: auto; margin-top: 40px;">Materiales a Canjear</h3>
+                        <h3 runat="server" id="tituloMateriales" style="text-align: center; color: #222222; border-bottom: 1px solid white; width: 70%; margin: auto; margin-top: 40px;">Materiales a Canjear</h3>
 
                         <div class="card mb-3">
                             <div class="card-body">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr class="table table-success">
-                                            <th scope="col">Type</th>
-                                            <th scope="col">Column heading</th>
-                                            <th scope="col">Column heading</th>
-                                            <th scope="col">Column heading</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="table-default">
-                                            <th scope="row">Active</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Default</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Primary</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Secondary</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Success</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Danger</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Warning</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Info</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Light</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                        <tr class="table-default">
-                                            <th scope="row">Dark</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <asp:GridView ID="gvMaterialesPreliminar" CssClass="table table-hover" HeaderStyle-CssClass="table table-success" runat="server" AutoGenerateColumns="False">
+                                    <Columns>
+                                        <asp:BoundField DataField="Tipo_Material.Nombre" HeaderText="Material"></asp:BoundField>
+                                        <asp:BoundField DataField="Cantidad" HeaderText="Cantidad"></asp:BoundField>
+                                        <asp:TemplateField HeaderText="Ecomonedas obtenidas por el material">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblTotalObtenido" runat="server" Text='<%# ((Convert.ToInt32(Eval("Cantidad")))* (Convert.ToInt32(Eval("Tipo_Material.Precio")))) %>'></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+
+                                    </Columns>
+
+                                </asp:GridView>
                             </div>
                             <div class="card-footer text-muted" style="float: right;">
-                                <label>Total de ganancias: 50.</label>
+                                <asp:Label ID="Label2" runat="server" Text="Total de ecomonedas obtenidas: "></asp:Label>
+                                <asp:Label ID="lblTotalObtenido" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
 
@@ -248,7 +202,9 @@
                 </div>
 
                 <div style="margin: auto; text-align: center;">
-                    <asp:Button ID="btnCanje" runat="server" Text="Formalizar" CssClass="btn btn-success" />
+                    <asp:Button ID="btnCanje" Visible="false" runat="server" Text="Formalizar" CssClass="btn btn-success" />
+                    <asp:Button ID="btnNuevoCanjeo" OnClick="btnNuevoCanjeo_Click" Visible="false" runat="server" Text="Nuevo Canjeo" CssClass="btn btn-success" />
+
                 </div>
 
 

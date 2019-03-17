@@ -56,9 +56,27 @@ namespace Contexto
 
             }
 
-            return db.SaveChanges();
+             db.SaveChanges();
+            CrearBilleteraVirtual(oUsuario.Correo_Electronico);
+            return 1;
+        }
+        public static void CrearBilleteraVirtual(string correoElectronico)
+        {
+
+
+            EcomonedasContexto db = new EcomonedasContexto();
+            Billetera_Virtual billetera = new Billetera_Virtual();
+            billetera.EcoMonedas_Canjeadas = 0;
+            billetera.EcoMonedas_Disponibles = 0;
+            billetera.EcoMonedas_Totales = 0;
+            billetera.ID_Usuario = correoElectronico;
+            db.Billetera_Virtual.Add(billetera);
+
+            db.SaveChanges();
+
 
         }
+
         public static IQueryable ListaUsuarios()
         {
             EcomonedasContexto db = new EcomonedasContexto();
@@ -97,7 +115,7 @@ namespace Contexto
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            Usuario usuario = db.Usuario.Where(x => x.Correo_Electronico == correoElectronico && x.ID_Rol == 2).FirstOrDefault<Usuario>();
+            Usuario usuario = db.Usuario.Where(x => x.Correo_Electronico == correoElectronico && x.ID_Rol == 3).FirstOrDefault<Usuario>();
 
             return usuario;
 

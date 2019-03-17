@@ -48,7 +48,7 @@ namespace Contexto
         public string NombreCompleto { get
             {
 
-                return Nombre+ " " + Apellido_Materno+" " + Apellido_Paterno;
+                return Nombre+ " " + Apellido_Paterno +" " + Apellido_Materno;
             }
         }
 
