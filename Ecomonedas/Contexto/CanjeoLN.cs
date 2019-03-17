@@ -10,28 +10,39 @@ namespace Contexto
   public  class CanjeoLN
     {
 
-        //public static int GuardarEncabezado(Enc_CanjeoMaterial encabezado)
-        //{
-        //    EcomonedasContexto contexto = new EcomonedasContexto();
-        //    contexto.Enc_CanjeoMaterial.Add(encabezado);
-        //    GuardarDetalle(encabezado, encabezado.ID);
-        // return contexto.SaveChanges();
-
-        //}
-        //public static void GuardarDetalle(Enc_CanjeoMaterial detalle, decimal id)
-        //{
-
-        //    EcomonedasContexto contexto = new EcomonedasContexto();
-
-        //    foreach (var item in detalle.Det_CanjeoMaterial)
-        //    {
-        //        item.ID_Canjeo = id;
-        //        contexto.Det_CanjeoMaterial.Add(item);
-
-        //    }
-        //    contexto.SaveChanges();
+        public static decimal GuardarEncabezado(string idUsuario, string idAdminAcopio, decimal totalEcomonedas)
+        {
+            EcomonedasContexto contexto = new EcomonedasContexto();
+            Enc_CanjeoMaterial encabezado = new Enc_CanjeoMaterial();
+            encabezado.ID_CentroAcopio = Centro_AcopioLN.ObtenerCentroAcopioAdministrador(idAdminAcopio).ID;
+            encabezado.ID_Usuario = idUsuario;
+            encabezado.Fecha = DateTime.Now;
+            encabezado.Cantidad_Total = totalEcomonedas;
+            contexto.Enc_CanjeoMaterial.Add(encabezado);
+            contexto.SaveChanges();
+            return encabezado.ID;
 
 
-        //}
+        }
+        public static void GuardarDetalle(List<Det_CanjeoMaterial> listaDetalle, decimal id)
+        {
+
+            EcomonedasContexto contexto = new EcomonedasContexto();
+
+            foreach (var detalle in listaDetalle)
+            {
+
+                Det_CanjeoMaterial nuevoDetalle = new Det_CanjeoMaterial();
+                nuevoDetalle.Cantidad = detalle.Cantidad;
+                nuevoDetalle.ID_Canjeo = id;
+                nuevoDetalle.ID_Material = detalle.ID_Material;
+               
+                contexto.Det_CanjeoMaterial.Add(nuevoDetalle);
+
+            }
+            contexto.SaveChanges();
+
+
+        }
     }
 }

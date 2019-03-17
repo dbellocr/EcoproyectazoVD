@@ -11,7 +11,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
     public partial class CanjearMaterialesReciclables : System.Web.UI.Page
     {
         private static Usuario oUsuario;
-        private static List<Det_CanjeoMaterial> listaDetalle; 
+        private static List<Det_CanjeoMaterial> listaDetalle;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +19,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
             {
 
                 listaDetalle = new List<Det_CanjeoMaterial>();
-         
+
 
                 CargarRepeater();
 
@@ -94,15 +94,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
                 repeaterMateriales.Visible = false;
                 tituloMateriales.Style.Add("margin-top", "5px");
 
-                foreach (var detalle in listaDetalle)
-                {
-                    decimal? det = detalle.Tipo_Material.Precio;
-                    decimal? cantidad = Convert.ToDecimal(detalle.Cantidad);
-                    totalEcomonedas += det * cantidad;
-
-
-
-                }
+                totalEcomonedas = CalcularTotal();
                 lblTotalObtenido.Text = String.Format("{0:N0}", totalEcomonedas);
             }
             else
@@ -113,7 +105,28 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
 
         }
 
+        private static int CalcularTotal()
+        {
+            decimal totalEcomonedas = 0;
+            foreach (var detalle in listaDetalle)
+            {
+                decimal det = detalle.Tipo_Material.Precio;
+              
+                totalEcomonedas += det * detalle.Cantidad;
+
+
+
+            }
+
+            return Convert.ToInt32(totalEcomonedas);
+        }
+
         protected void btnNuevoCanjeo_Click(object sender, EventArgs e)
+        {
+            NuevoCanjeo();
+        }
+
+        private void NuevoCanjeo()
         {
             btnCanje.Visible = false;
             tituloCanejo.Visible = true;
@@ -131,42 +144,25 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
 
         protected void btnCanje_Click(object sender, EventArgs e)
         {
-            Enc_CanjeoMaterial encabezadoCanejo = new Enc_CanjeoMaterial();
-            encabezadoCanejo.ID_Usuario = oUsuario.Correo_Electronico;
-            encabezadoCanejo.Fecha = DateTime.Now;
-            encabezadoCanejo.ID_CentroAcopio = Centro_AcopioLN.ObtenerCentroAcopioAdministrador(LoginLN.Login.Usuario.Correo_Electronico).ID;
-
-            EcomonedasContexto contexto = new EcomonedasContexto();
-            contexto.Enc_CanjeoMaterial.Add(encabezadoCanejo);
-            contexto.SaveChanges();
-            decimal id = encabezadoCanejo.ID;
-
-
-            EcomonedasContexto contexto1 = new EcomonedasContexto();
-
-
-            foreach (var detalle in listaDetalle )
-            {
-
-                Det_CanjeoMaterial det = new Det_CanjeoMaterial();
-                det.Cantidad = det.Cantidad;
-                det.ID_Canjeo = id;
-                det.ID_Material = det.ID_Material;
-                contexto1.Det_CanjeoMaterial.Add(det);
-
-            }
-            contexto1.SaveChanges();
 
 
 
-         
+            decimal id = CanjeoLN.GuardarEncabezado(oUsuario.Correo_Electronico, LoginLN.Login.Usuario.Correo_Electronico, CalcularTotal());
+            CanjeoLN.GuardarDetalle(listaDetalle, id);
+            lblModalTitle.Text = "Registro exitoso";
+            lblModalBody.Text = "Se ha registrado el canjeo";
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#myModal').modal();", true);
+            upModal.Update();
+            Billetera_Virtual_LN.ActualizarBilletera(oUsuario.Correo_Electronico, CalcularTotal(), 0);
+            NuevoCanjeo();
 
-            
+
+
 
 
 
         }
 
-        
+
     }
 }

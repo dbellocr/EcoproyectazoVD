@@ -25,7 +25,7 @@ namespace Contexto
         public string Imagen_Path { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? Precio { get; set; }
+        public decimal Precio { get; set; }
 
         [StringLength(10)]
         public string ID_Color { get; set; }

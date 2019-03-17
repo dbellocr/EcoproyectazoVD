@@ -110,8 +110,7 @@
                 .HasPrecision(10, 0);
 
             modelBuilder.Entity<Det_CanjeoMaterial>()
-                .Property(e => e.Cantidad)
-                .HasPrecision(4, 0);
+                .Property(e => e.Cantidad);
 
             modelBuilder.Entity<Det_CanjeoMaterial>()
                 .Property(e => e.ID_Material)
@@ -140,8 +139,8 @@
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Provincia>()
-                .Property(e => e.ID)
-                .HasPrecision(2, 0);
+                .Property(e => e.ID);
+              
 
             modelBuilder.Entity<Provincia>()
                 .Property(e => e.Descripcion)
