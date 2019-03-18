@@ -60,7 +60,7 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner" style="height: 300px; margin-top: 40px; border: 2px solid #ECECEC; border-radius: 3px;">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="/imagenes/BannerEco2.png" alt="First slide">
+                                <img class="d-block w-100" style="" src="/imagenes/Banner3.png" alt="First slide">
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide">
@@ -94,7 +94,8 @@
                     </p>
 
                     <a href="CentrosAcopio.aspx">
-                        <img height="300" width="85%" style="border: 2px solid #ECECEC; border-radius: 3px;" src="/imagenes/reciclaje.jpg" /></a>
+                        <img height="300" width="85%" style="border: 2px solid #ECECEC; border-radius: 3px;" src="/imagenes/BannerEco2.png" />
+                    </a>
 
                 </div>
 
