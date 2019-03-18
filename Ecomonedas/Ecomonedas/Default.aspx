@@ -60,10 +60,10 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner" style="height: 300px; margin-top: 40px; border: 2px solid #ECECEC; border-radius: 3px;">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="/imagenes/recicla.jpg" alt="First slide">
+                                <img class="d-block w-100" src="/imagenes/BannerEco2.png" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/reciclaje.jpg" alt="Second slide">
+                                <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide">
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="/imagenes/desarrolloSostenible2.png" alt="Third slide">
