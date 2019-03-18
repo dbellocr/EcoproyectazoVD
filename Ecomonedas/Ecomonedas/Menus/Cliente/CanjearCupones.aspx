@@ -57,7 +57,7 @@
 
                         <div class="col-md-10" style="margin-top: 20px;">
 
-                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Cupones disponibles para canjear (pdf)</h3>
+                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Cupones disponibles para canjear</h3>
                             <br />
 
 

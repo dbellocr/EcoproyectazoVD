@@ -44,5 +44,14 @@ namespace Contexto
 
 
         }
+        public static List<Enc_CanjeoMaterial> ObtenerCanjeos(string idUsuario)
+        {
+
+            EcomonedasContexto contexto = new EcomonedasContexto();
+            List<Enc_CanjeoMaterial> lista = contexto.Enc_CanjeoMaterial.Where(x => x.ID_Usuario == idUsuario).ToList();
+            return lista;    
+
+
+        }
     }
 }

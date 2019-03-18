@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contexto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,21 @@ namespace Ecomonedas.Menus.Cliente
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                {
+                    Usuario objUsuario = LoginLN.Login.Usuario;
+                    if (objUsuario != null)
+                    {
 
+                        gvCanjeoMateriales.DataSource = CanjeoLN.ObtenerCanjeos(objUsuario.Correo_Electronico);
+                        gvCanjeoMateriales.DataBind();
+                    }
+
+
+
+                }
+            }
         }
     }
 }

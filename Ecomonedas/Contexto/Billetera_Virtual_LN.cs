@@ -24,7 +24,15 @@ namespace Contexto
 
 
         }
+        public static List<Billetera_Virtual> ObtenerBilletera(string idUsuario)
+        {
 
+            EcomonedasContexto contexto = new EcomonedasContexto();
+           List<Billetera_Virtual> billetera= contexto.Billetera_Virtual.Where(x => x.ID_Usuario == idUsuario).ToList();
+
+            return billetera;
+
+        }
 
     }
 }
