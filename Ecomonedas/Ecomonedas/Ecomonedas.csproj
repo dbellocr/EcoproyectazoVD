@@ -87,11 +87,13 @@
     <Content Include="Menus\Administrador\MenuPrincipal.aspx" />
     <Content Include="Menus\Cliente\CanjearCupones.aspx" />
     <Content Include="Menus\Cliente\ConfigurarCuenta.aspx" />
+    <Content Include="Menus\Cliente\Detalle_ProductoCliente.aspx" />
     <Content Include="Menus\Cliente\MenuPrincipal.aspx" />
     <Content Include="Menus\Cliente\MisCanjeosMateriales.aspx" />
     <Content Include="Menus\Cliente\VerCuponesCanjeados.aspx" />
     <Content Include="MiCuenta.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Pag_Error.aspx" />
     <Content Include="Principal.Master" />
     <Content Include="QueHacemos.aspx" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
@@ -296,6 +298,13 @@
     <Compile Include="Menus\Cliente\ConfigurarCuenta.aspx.designer.cs">
       <DependentUpon>ConfigurarCuenta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Menus\Cliente\Detalle_ProductoCliente.aspx.cs">
+      <DependentUpon>Detalle_ProductoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\Cliente\Detalle_ProductoCliente.aspx.designer.cs">
+      <DependentUpon>Detalle_ProductoCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Menus\Cliente\MenuPrincipal.aspx.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -323,6 +332,13 @@
     </Compile>
     <Compile Include="MiCuenta.aspx.designer.cs">
       <DependentUpon>MiCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pag_Error.aspx.cs">
+      <DependentUpon>Pag_Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pag_Error.aspx.designer.cs">
+      <DependentUpon>Pag_Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>

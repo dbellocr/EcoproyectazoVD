@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
+    <title>Producto</title>
+
     <style>
         .valor1 {
             width: 50%;

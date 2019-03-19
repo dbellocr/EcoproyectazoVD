@@ -217,16 +217,16 @@
             background: #FA5818;
             / Gecko Browsers /;
         }
-        .boton{
+
+        .boton {
             background-color: #FA5818;
-            color:white;
+            color: white;
         }
-        .boton:hover{
 
-            background-color:#CC4713;
-            color:white;
-
-        }
+            .boton:hover {
+                background-color: #CC4713;
+                color: white;
+            }
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -249,7 +249,8 @@
                     <ul class="list-unstyled components">
                         <li>
                             <p id="txtNombreCliente" runat="server">
-                                <asp:Label ID="lblNombreCliente" runat="server" Text=""></asp:Label></p>
+                                <asp:Label ID="lblNombreCliente" runat="server" Text=""></asp:Label>
+                            </p>
                         </li>
                         <li>
                             <a href="/Menus/Cliente/MenuPrincipal.aspx">Mis Ecomonedas</a>
@@ -264,15 +265,13 @@
                         <li>
                             <a href="/Menus/Cliente/VerCuponesCanjeados.aspx">Ver cupones canjeados</a>
                         </li>
-                        
+
                         <li>
                             <a href="/Menus/Cliente/ConfigurarCuenta.aspx">Configurar mi cuenta</a>
                         </li>
+                        <hr />
                         <li>
                             <a href="#" data-toggle="modal" data-target="#exampleModal">Cerrar Sesión</a>
-                        </li>
-                        <li>
-                            <a href="/Default.aspx">←  Volver a la página de inicio</a>
                         </li>
 
 
@@ -282,26 +281,27 @@
                 </nav>
 
             </div>
-             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">¿Seguro que deseas salir?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Has clic en cerrar sesión si deseas finalizar tu sesión</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                        <asp:Button ID="btnCerrarSesion" CssClass="btn boton"  runat="server" OnClick="btnCerrarSesion_Click" Text="Cerrar Sesión" />
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">¿Seguro que deseas salir?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Has clic en cerrar sesión si deseas finalizar tu sesión</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                            <asp:Button ID="btnCerrarSesion" CssClass="btn boton" runat="server" OnClick="btnCerrarSesion_Click" Text="Cerrar Sesión" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </form>
 </body>

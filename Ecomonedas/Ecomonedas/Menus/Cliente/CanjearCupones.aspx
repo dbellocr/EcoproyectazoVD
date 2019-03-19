@@ -36,6 +36,10 @@
         .card {
             border: 1px solid orange;
         }
+
+        .nombreProducto:hover {
+            color: #FA5818;
+        }
     </style>
 
 </asp:Content>
@@ -65,7 +69,7 @@
                                 <asp:ListView ID="lvCupones" runat="server">
                                     <EmptyDataTemplate>
 
-                                        <p>Lo sentimos, no tienes cupones disponibles para canjear debido a que la cantidad de ecomonedas que tienes es insuficiente. Sigue canjeado materiales para obtener cupones. </p>
+                                        <p>No hay datos</p>
 
                                     </EmptyDataTemplate>
                                     <EmptyItemTemplate>
@@ -80,7 +84,9 @@
                                     <ItemTemplate>
                                         <div class="col-lg-4">
                                             <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                                <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3>
+                                                <a href="<%# "Detalle_ProductoCliente.aspx?producto="+ Eval("ID") %>" class="link">
+                                                    <h3 class="card-header nombreProducto" style="text-align: center"><%# Eval("Nombre") %></h3>
+                                                </a>
                                                 <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
                                                 <ul class="list-group list-group-flush">
@@ -103,28 +109,9 @@
                                                 </ul>
 
                                                 <div class="card-footer text-muted" style="text-align: center;">
-                                                    <%--<asp:Button ID="btnConfirmar" Text="Canjear" runat="server" CssClass="btn boton" />--%>
-                                                    <a href="#" class="btn boton" data-toggle="modal" data-target="#canjeoCupon">Canjear</a>
+                                                    <asp:Button ID="btnCanjear" Text="Canjear" runat="server" CssClass="btn boton" />
                                                 </div>
-                                                <div class="modal fade" id="canjeoCupon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">¿Segur@ que deseas canjear este cupon?</h5>
-                                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">×</span>
-                                                                </button>
-                                                            </div>
-                                                          
-                                                            <div class="modal-footer">
-                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                                                <asp:Button ID="btnCanjear" CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                </div>
+                                            </div>
                                         </div>
                                     </ItemTemplate>
 

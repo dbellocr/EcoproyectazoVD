@@ -68,7 +68,7 @@
             </div>
             <div class="col-md-10">
 
-                <div style="border: 1px solid #EFEFF0; background-color: white; padding-bottom: 400px; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
+                <div style="border: 1px solid #EFEFF0; background-color: white; padding-bottom: 100px; margin-bottom: 20px; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
 
                     <div class="row">
 
@@ -99,7 +99,7 @@
                                                     <div class="card-header" style="background-color: #27A243;">Ecomonedas Canjeadas</div>
                                                     <div class="can" style="background-color: #24973E;">
                                                         <img src="/Imagenes/moneda.png" class="can" style="margin-top: 12px; margin-left: 20px;" width="35" />
-                                                        <asp:Label CssClass="cant" runat="server" ID="txtCantCanjeadas"  Text='<%# string.Format("{0:N0}", Eval("EcoMonedas_Canjeadas")) %>'></asp:Label>
+                                                        <asp:Label CssClass="cant" runat="server" ID="txtCantCanjeadas" Text='<%# string.Format("{0:N0}", Eval("EcoMonedas_Canjeadas")) %>'></asp:Label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,7 +109,7 @@
                                                     <div class="card-header" style="background-color: #D53343;">Ecomonedas Total</div>
                                                     <div class="can" style="background-color: #C72F3E;">
                                                         <img src="/Imagenes/moneda.png" class="can" style="margin-top: 12px; margin-left: 20px;" width="35" />
-                                                        <asp:Label CssClass="cant" runat="server" ID="txtCantTotal"  Text='<%# string.Format("{0:N0}", Eval("EcoMonedas_Totales")) %>'></asp:Label>
+                                                        <asp:Label CssClass="cant" runat="server" ID="txtCantTotal" Text='<%# string.Format("{0:N0}", Eval("EcoMonedas_Totales")) %>'></asp:Label>
                                                     </div>
                                                 </div>
                                             </div>
