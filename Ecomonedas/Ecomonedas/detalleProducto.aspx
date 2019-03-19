@@ -2,8 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Producto</title>
-
     <style>
         .valor1 {
             width: 50%;
@@ -41,7 +39,7 @@
                         <div class=" card card-group" style="margin-top: 50px; border: 1px solid white;">
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <div class=" card card-group" style="border: 1px solid white;">
+                        <div class=" card card-group" style=" border: 1px solid white;">
 
 
 
@@ -96,5 +94,4 @@
 
             </div>
         </div>
-    </div>
 </asp:Content>

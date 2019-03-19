@@ -268,9 +268,11 @@
                         <li>
                             <a href="/Menus/Cliente/ConfigurarCuenta.aspx">Configurar mi cuenta</a>
                         </li>
-                        <hr />
                         <li>
                             <a href="#" data-toggle="modal" data-target="#exampleModal">Cerrar Sesión</a>
+                        </li>
+                        <li>
+                            <a href="/Default.aspx">←  Volver a la página de inicio</a>
                         </li>
 
 

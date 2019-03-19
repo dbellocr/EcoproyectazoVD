@@ -46,16 +46,6 @@
             .botonAcopio:hover {
                 background-color: #96C81E;
             }
-
-            .tras{
-                opacity:0;
-            }
-            .tras:active{
-                opacity:0;
-            }
-            .tras:hover{
-                opacity:0;
-            }
     </style>
 
 </asp:Content>
@@ -78,20 +68,20 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner" style="height: 300px; margin-top: 40px; border: 2px solid #ECECEC; border-radius: 3px;">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" style="" src="/imagenes/Banner3.png" alt="First slide"/>
+                                <img class="d-block w-100" style="" src="/imagenes/Banner3.png" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide"/>
+                                <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/EcoBanner.png" alt="Third slide"/>
+                                <img class="d-block w-100" src="/imagenes/EcoBanner.png" alt="Third slide">
                             </div>
                         </div>
-                        <a class="carousel-control-prev tras" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next tras" href="#carouselExampleControls" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>

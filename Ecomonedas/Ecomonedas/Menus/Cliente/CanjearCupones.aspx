@@ -36,11 +36,6 @@
         .card {
             border: 1px solid orange;
         }
-
-        .nombreProducto:hover{
-            color:#FA5818;
-        }
-
     </style>
 
 </asp:Content>
@@ -70,7 +65,7 @@
                                 <asp:ListView ID="lvCupones" runat="server">
                                     <EmptyDataTemplate>
 
-                                        <p>No hay datos</p>
+                                        <p>Lo sentimos, no tienes cupones disponibles para canjear debido a que la cantidad de ecomonedas que tienes es insuficiente. Sigue canjeado materiales para obtener cupones. </p>
 
                                     </EmptyDataTemplate>
                                     <EmptyItemTemplate>
@@ -85,7 +80,7 @@
                                     <ItemTemplate>
                                         <div class="col-lg-4">
                                             <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                                 <a href="<%# "DetalleProductoCliente.aspx?producto="+ Eval("ID") %>" class="link"> <h3 class="card-header nombreProducto" style="text-align: center"><%# Eval("Nombre") %></h3></a>
+                                                <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3>
                                                 <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
                                                 <ul class="list-group list-group-flush">

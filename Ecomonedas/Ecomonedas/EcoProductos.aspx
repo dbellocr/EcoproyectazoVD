@@ -38,13 +38,7 @@
             }
             .link:link{
                  color: #222222;
-                 text-decoration:none;
             }
-
-            .link:hover{
-                text-decoration:none;
-            color:#A3D921;
-        }
 
     </style>
 
@@ -77,7 +71,7 @@
                             <ItemTemplate>
                                 <div class="col-lg-4">
                                     <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                       <a href="<%# "DetalleProducto.aspx?producto="+ Eval("ID") %>" class="link">  <h3 class="card-header nombreProducto" style="text-align: center"><%# Eval("Nombre") %></h3></a>
+                                       <a href="<%# "DetalleProducto.aspx?producto="+ Eval("ID") %>" class="link">  <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3></a>
                                         <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
                                         <ul class="list-group list-group-flush">

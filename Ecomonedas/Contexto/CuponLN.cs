@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Contexto
 {
-   public class CuponLN
+    public class CuponLN
     {
 
         public static IQueryable ListaCupones()
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Cupon.Where(x=> x.Estado==true);
+            return db.Cupon.Where(x => x.Estado == true);
 
         }
         public static Cupon ObtenerCupon(int idCupon)
@@ -26,7 +26,23 @@ namespace Contexto
 
 
         }
-        public static int GuardarCupon(string nombre, string descripcion, string imagenPath, string precio, bool estado ,string idCupon = "")
+        public static IQueryable ListaCuponesAutorizados(string idCliente)
+        {
+
+            EcomonedasContexto db = new EcomonedasContexto();
+            var billetera = db.Billetera_Virtual.Where(x => x.ID_Usuario == idCliente).FirstOrDefault<Billetera_Virtual>();
+
+            decimal? ecomonedasDisponibles = billetera.EcoMonedas_Disponibles;
+
+
+            return db.Cupon.Where(x => x.Cantidad_Ecomonedas <= ecomonedasDisponibles);
+
+
+
+
+
+        }
+        public static int GuardarCupon(string nombre, string descripcion, string imagenPath, string precio, bool estado, string idCupon = "")
         {
 
             EcomonedasContexto db = new EcomonedasContexto();

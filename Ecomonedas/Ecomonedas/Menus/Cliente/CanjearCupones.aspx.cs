@@ -15,9 +15,15 @@ namespace Ecomonedas.Menus.Cliente
 
             if (!IsPostBack)
             {
+                Usuario oUsuario = LoginLN.Login.Usuario;
+                if (oUsuario != null)
+                {
+                    lvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCuponesAutorizados(oUsuario.Correo_Electronico)).ToList();
+                    lvCupones.DataBind();
+                }
+                  
 
-                lvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).ToList();
-                lvCupones.DataBind();
+             
 
             }
 
