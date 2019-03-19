@@ -21,7 +21,7 @@ namespace Ecomonedas.Menus
                 ddlProvincia.DataTextField = "Descripcion";
                 ddlProvincia.DataBind();
 
-                ddlUsuario.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaUsuarios()).ToList();
+                ddlUsuario.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaAdminCentroAcopio()).ToList();
                 ddlUsuario.DataValueField = "Correo_Electronico";
                 ddlUsuario.DataTextField = "NombreCompleto";
                 ddlUsuario.DataBind();

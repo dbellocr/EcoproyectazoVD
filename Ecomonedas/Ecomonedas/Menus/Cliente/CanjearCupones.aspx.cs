@@ -28,5 +28,10 @@ namespace Ecomonedas.Menus.Cliente
             }
 
         }
+
+        protected void btnCanjear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -93,7 +93,14 @@ namespace Contexto
 
 
         }
+        public static IQueryable ListaAdminCentroAcopio()
+        {
+            EcomonedasContexto db = new EcomonedasContexto();
+            return db.Usuario.Where(x => x.ID_Rol==2);
 
+
+
+        }
 
 
         public static IQueryable ListaUsuariosAdmin()

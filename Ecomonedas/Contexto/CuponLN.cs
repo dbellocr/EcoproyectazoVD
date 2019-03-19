@@ -33,9 +33,9 @@ namespace Contexto
             var billetera = db.Billetera_Virtual.Where(x => x.ID_Usuario == idCliente).FirstOrDefault<Billetera_Virtual>();
 
             decimal? ecomonedasDisponibles = billetera.EcoMonedas_Disponibles;
+            var precioEcomoneda = ecomonedasDisponibles * 10;
 
-
-            return db.Cupon.Where(x => x.Cantidad_Ecomonedas <= ecomonedasDisponibles);
+            return db.Cupon.Where(x => x.Cantidad_Ecomonedas <= precioEcomoneda);
 
 
 
