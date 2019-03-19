@@ -38,6 +38,14 @@
             .card:hover {
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             }
+
+        .botonAcopio {
+            background-color: #A3D921;
+        }
+
+            .botonAcopio:hover {
+                background-color: #96C81E;
+            }
     </style>
 
 </asp:Content>
@@ -66,7 +74,7 @@
                                 <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/desarrolloSostenible2.png" alt="Third slide">
+                                <img class="d-block w-100" src="/imagenes/EcoBanner.png" alt="Third slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -93,9 +101,16 @@
                         Conoce nuestros centros de reciclaje
                     </p>
 
-                    <a href="CentrosAcopio.aspx">
-                        <img height="300" width="85%" style="border: 2px solid #ECECEC; border-radius: 3px;" src="/imagenes/BannerEco2.png" />
-                    </a>
+                    <%--<div>
+                        <a href="CentrosAcopio.aspx">
+                            <img height="300" width="85%" style="border: 2px solid #ECECEC; border-radius: 3px;" src="/imagenes/BannerEco2.png" />
+                        </a>
+                    </div>--%>
+
+                        <div style="margin: auto; text-align: center; background-image: url(/Imagenes/BannerEco2.png); width: 85%; height: 300px; border: 2px solid #ECECEC; border-radius: 3px;">
+                            <a class="btn botonAcopio text-white" href="CentrosAcopio.aspx" style="float: right; margin-right: 26px; width: 32%; margin-top: 250px;">Ver Centros de Acopio
+                            </a>
+                        </div>
 
                 </div>
 
@@ -115,24 +130,7 @@
                         <%--Espacio para el Slide--%>
 
 
-                        <%--<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner" style="height: 300px; margin-top: 40px;">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/imagenes/ejem1.png" alt="First slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/imagenes/ejem2.png" alt="Second slide">
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>--%>
+
 
                         <asp:Repeater ID="repeaterCupones" runat="server">
 
