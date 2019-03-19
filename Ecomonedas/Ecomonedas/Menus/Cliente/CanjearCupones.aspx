@@ -36,6 +36,11 @@
         .card {
             border: 1px solid orange;
         }
+
+        .nombreProducto:hover{
+            color:#FA5818;
+        }
+
     </style>
 
 </asp:Content>
@@ -80,7 +85,7 @@
                                     <ItemTemplate>
                                         <div class="col-lg-4">
                                             <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                                <h3 class="card-header" style="text-align: center"><%# Eval("Nombre") %></h3>
+                                                 <a href="<%# "DetalleProductoCliente.aspx?producto="+ Eval("ID") %>" class="link"> <h3 class="card-header nombreProducto" style="text-align: center"><%# Eval("Nombre") %></h3></a>
                                                 <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
                                                 <ul class="list-group list-group-flush">

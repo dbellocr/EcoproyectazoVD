@@ -68,7 +68,7 @@
             </div>
             <div class="col-md-10">
 
-                <div style="border: 1px solid #EFEFF0; background-color: white; padding-bottom: 400px; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
+                <div style="border: 1px solid #EFEFF0; background-color: white; padding-bottom: 100px; margin-bottom:20px; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
 
                     <div class="row">
 
