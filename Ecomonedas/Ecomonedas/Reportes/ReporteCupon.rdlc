@@ -36,12 +36,12 @@
       </Textbox>
       <Image Name="Image4">
         <Source>Database</Source>
-        <Value>=Parameters!barrasCupon.Value</Value>
-        <MIMEType>image/jpeg</MIMEType>
-        <Sizing>FitProportional</Sizing>
-        <Top>6.28933cm</Top>
-        <Left>5.5372cm</Left>
-        <Height>1.5cm</Height>
+        <Value>=System.Convert.FromBase64String(Parameters!barrasCupon.Value)</Value>
+        <MIMEType>image/png</MIMEType>
+        <Sizing>Fit</Sizing>
+        <Top>6.2964cm</Top>
+        <Left>6.2357cm</Left>
+        <Height>4.37867cm</Height>
         <Width>4.929cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -189,7 +189,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Utilice el siguiente código de barras a la hora de utilizar el cupón </Value>
+                <Value>--Utilice el siguiente código QR a la hora de utilizar el cupón-- </Value>
                 <Style>
                   <FontFamily>century Gothic</FontFamily>
                   <FontSize>11pt</FontSize>
@@ -202,7 +202,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>5.02342cm</Top>
-        <Left>1.57903cm</Left>
+        <Left>2.34103cm</Left>
         <Height>0.6cm</Height>
         <Width>13.78183cm</Width>
         <ZIndex>6</ZIndex>
@@ -283,7 +283,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.19167in</Height>
+    <Height>4.21667in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -371,7 +371,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>3.6195cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -424,6 +424,8 @@
   <ReportParameters>
     <ReportParameter Name="barrasCupon">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="nombreProductoServicio">

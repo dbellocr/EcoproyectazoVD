@@ -198,7 +198,7 @@
                                         <asp:BoundField DataField="Cantidad" HeaderText="Cantidad"></asp:BoundField>
                                         <asp:TemplateField HeaderText="Ecomonedas obtenidas por el material">
                                             <ItemTemplate>
-                                                <asp:Label ID="lblTotalObtenido" runat="server" Text='<%# ((Convert.ToInt32(Eval("Cantidad")))* (Convert.ToInt32(Eval("Tipo_Material.Precio")))) %>'></asp:Label>
+                                                <asp:Label ID="lblTotalObtenido" runat="server" Text='<%# ((Convert.ToInt32(Eval("Cantidad")))* (Convert.ToInt32(Eval("Tipo_Material.Precio"))))+" ecomonedas" %>'></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>
 

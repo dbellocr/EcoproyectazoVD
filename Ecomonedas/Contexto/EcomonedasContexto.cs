@@ -13,6 +13,7 @@
         }
 
         public virtual DbSet<Billetera_Virtual> Billetera_Virtual { get; set; }
+        public virtual DbSet<Canjeo_Cupon> Canjeo_Cupon { get; set; }
         public virtual DbSet<Centro_Acopio> Centro_Acopio { get; set; }
         public virtual DbSet<Color> Color { get; set; }
         public virtual DbSet<Cupon> Cupon { get; set; }
@@ -41,6 +42,14 @@
             modelBuilder.Entity<Billetera_Virtual>()
                 .Property(e => e.EcoMonedas_Totales)
                 .HasPrecision(8, 0);
+
+            modelBuilder.Entity<Canjeo_Cupon>()
+                .Property(e => e.ID_Usuario)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Canjeo_Cupon>()
+                .Property(e => e.ID_Cupon)
+                .HasPrecision(4, 0);
 
             modelBuilder.Entity<Centro_Acopio>()
                 .Property(e => e.ID)
@@ -101,16 +110,18 @@
                 .HasPrecision(6, 0);
 
             modelBuilder.Entity<Cupon>()
-                .HasMany(e => e.Usuario)
-                .WithMany(e => e.Cupon)
-                .Map(m => m.ToTable("Canjeo_Cupon").MapLeftKey("ID_Cupon").MapRightKey("ID_Usuario"));
+                .HasMany(e => e.Canjeo_Cupon)
+                .WithRequired(e => e.Cupon)
+                .HasForeignKey(e => e.ID_Cupon)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Det_CanjeoMaterial>()
+                .Property(e => e.ID_Detalle)
+                .HasPrecision(18, 0);
 
             modelBuilder.Entity<Det_CanjeoMaterial>()
                 .Property(e => e.ID_Canjeo)
                 .HasPrecision(10, 0);
-
-            modelBuilder.Entity<Det_CanjeoMaterial>()
-                .Property(e => e.Cantidad);
 
             modelBuilder.Entity<Det_CanjeoMaterial>()
                 .Property(e => e.ID_Material)
@@ -139,8 +150,8 @@
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Provincia>()
-                .Property(e => e.ID);
-              
+                .Property(e => e.ID)
+                .HasPrecision(2, 0);
 
             modelBuilder.Entity<Provincia>()
                 .Property(e => e.Descripcion)
@@ -227,6 +238,12 @@
                 .WithRequired(e => e.Usuario);
 
             modelBuilder.Entity<Usuario>()
+                .HasMany(e => e.Canjeo_Cupon)
+                .WithRequired(e => e.Usuario)
+                .HasForeignKey(e => e.ID_Usuario)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Usuario>()
                 .HasMany(e => e.Centro_Acopio)
                 .WithOptional(e => e.Usuario)
                 .HasForeignKey(e => e.ID_Usuario);
@@ -237,6 +254,6 @@
                 .HasForeignKey(e => e.ID_Usuario);
         }
         public void FixEProviderServicesProblem() { var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance; }
-    }
 
+    }
 }

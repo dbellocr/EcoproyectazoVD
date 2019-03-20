@@ -18,7 +18,6 @@ namespace Contexto
 
         public int Cantidad { get; set; }
 
-
         [Column(TypeName = "numeric")]
         public decimal ID_Material { get; set; }
 

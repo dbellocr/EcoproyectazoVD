@@ -12,9 +12,9 @@ namespace Contexto
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario()
         {
+            Canjeo_Cupon = new HashSet<Canjeo_Cupon>();
             Centro_Acopio = new HashSet<Centro_Acopio>();
             Enc_CanjeoMaterial = new HashSet<Enc_CanjeoMaterial>();
-            Cupon = new HashSet<Cupon>();
         }
 
         [Key]
@@ -45,14 +45,10 @@ namespace Contexto
 
         public bool Estado { get; set; }
 
-        public string NombreCompleto { get
-            {
-
-                return Nombre+ " " + Apellido_Paterno +" " + Apellido_Materno;
-            }
-        }
-
         public virtual Billetera_Virtual Billetera_Virtual { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Canjeo_Cupon> Canjeo_Cupon { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Centro_Acopio> Centro_Acopio { get; set; }
@@ -61,8 +57,14 @@ namespace Contexto
         public virtual ICollection<Enc_CanjeoMaterial> Enc_CanjeoMaterial { get; set; }
 
         public virtual Rol Rol { get; set; }
+        public string NombreCompleto
+        {
+            get
+            {
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cupon> Cupon { get; set; }
+                return Nombre + " " + Apellido_Paterno + " " + Apellido_Materno;
+            }
+        }
+
     }
 }

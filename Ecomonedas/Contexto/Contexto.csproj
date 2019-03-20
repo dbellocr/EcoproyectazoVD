@@ -54,6 +54,7 @@
     <Compile Include="Billetera_Virtual.cs" />
     <Compile Include="Billetera_Virtual_LN.cs" />
     <Compile Include="CanjeoLN.cs" />
+    <Compile Include="Canjeo_Cupon.cs" />
     <Compile Include="Centro_Acopio.cs" />
     <Compile Include="Centro_AcopioLN.cs" />
     <Compile Include="Color.cs" />

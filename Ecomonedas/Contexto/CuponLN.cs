@@ -26,20 +26,40 @@ namespace Contexto
 
 
         }
-        public static IQueryable ListaCuponesAutorizados(string idCliente)
+        public static List<Cupon> ListaCuponesAutorizados(string idCliente)
         {
 
+
+
             EcomonedasContexto db = new EcomonedasContexto();
+
+
             var billetera = db.Billetera_Virtual.Where(x => x.ID_Usuario == idCliente).FirstOrDefault<Billetera_Virtual>();
 
             decimal? ecomonedasDisponibles = billetera.EcoMonedas_Disponibles;
             var precioEcomoneda = ecomonedasDisponibles * 10;
 
-            return db.Cupon.Where(x => x.Cantidad_Ecomonedas <= precioEcomoneda);
+
+
+            List<Cupon> lista = db.Cupon.Where(x => x.Cantidad_Ecomonedas <= precioEcomoneda).ToList();
+
+            foreach (var cupon in lista)
+            {
 
 
 
+                foreach (var canejo in db.Canjeo_Cupon.ToList())
+                {
 
+                    if (canejo.ID_Cupon == cupon.ID && canejo.ID_Usuario == idCliente)
+                    {
+                        lista.Remove(cupon);
+               
+                    }
+                }
+                if (lista.Count == 0) break;
+            }
+            return lista;
 
         }
         public static int GuardarCupon(string nombre, string descripcion, string imagenPath, string precio, bool estado, string idCupon = "")
@@ -71,6 +91,19 @@ namespace Contexto
 
             }
             return db.SaveChanges();
+        }
+        public static void ConsumirCupon(string idUsuario, decimal idCupon)
+        {
+
+            EcomonedasContexto contexto = new EcomonedasContexto();
+            Canjeo_Cupon oCanjeo = new Canjeo_Cupon()
+            {
+                ID_Usuario = idUsuario,
+                ID_Cupon = idCupon,
+            };
+            contexto.Canjeo_Cupon.Add(oCanjeo);
+            contexto.SaveChanges();
+
         }
     }
 }
