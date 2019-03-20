@@ -132,7 +132,7 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-10" style="margin-top: 40px;">
 
-                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px; text-align: center;">Pasos para canjear tus ecomonedas</h3>
+                            <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px; ">Pasos para canjear tus ecomonedas</h3>
 
                             <div style="margin: auto; text-align: center;">
 
