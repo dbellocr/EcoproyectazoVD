@@ -152,6 +152,9 @@
                             <a class="nav-link" href="/Menus/Administrador/MantenimientoCupones.aspx" style="color: white;">Cupones</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/Menus/Administrador/ReporteEcomonedasCA.aspx" style="color: white;">Reporte de Ecomonedas</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/Menus/Administrador/ListadoUsuario.aspx" style="color: white;">Listado de Usuarios</a>
                         </li>
                         <li class="nav-item dropdown">
