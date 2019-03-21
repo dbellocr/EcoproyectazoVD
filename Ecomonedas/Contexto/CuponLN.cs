@@ -43,23 +43,32 @@ namespace Contexto
 
             List<Cupon> lista = db.Cupon.Where(x => x.Cantidad_Ecomonedas <= precioEcomoneda).ToList();
 
-            foreach (var cupon in lista)
-            {
+            //foreach (var cupon in lista)
+            //{
 
 
 
-                foreach (var canejo in db.Canjeo_Cupon.ToList())
-                {
+            //    foreach (var canejo in db.Canjeo_Cupon.ToList())
+            //    {
 
-                    if (canejo.ID_Cupon == cupon.ID && canejo.ID_Usuario == idCliente)
-                    {
-                        lista.Remove(cupon);
-               
-                    }
-                }
-                if (lista.Count == 0) break;
-            }
-            return lista;
+            //        if (canejo.ID_Cupon == cupon.ID && canejo.ID_Usuario == idCliente)
+            //        {
+            //            lista.Remove(cupon);
+
+            //        }
+            //    }
+            //    if (lista.Count == 0) break;
+            //}
+
+            var query =
+    from c in lista 
+    where !(from o in db.Canjeo_Cupon
+            select o.ID_Cupon)
+           .Contains(c.ID)
+    select c;
+
+
+            return query.ToList();
 
         }
         public static int GuardarCupon(string nombre, string descripcion, string imagenPath, string precio, bool estado, string idCupon = "")

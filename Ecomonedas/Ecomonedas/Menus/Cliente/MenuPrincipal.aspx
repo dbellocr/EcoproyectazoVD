@@ -106,7 +106,7 @@
 
                                             <div class="column">
                                                 <div class="card text-white bg-danger" style="width: 300px; max-height: 125px; margin-right: 25px;">
-                                                    <div class="card-header" style="background-color: #D53343;">Ecomonedas Total</div>
+                                                    <div class="card-header" style="background-color: #D53343;">Ecomonedas Totales</div>
                                                     <div class="can" style="background-color: #C72F3E;">
                                                         <img src="/Imagenes/moneda.png" class="can" style="margin-top: 12px; margin-left: 20px;" width="35" />
                                                         <asp:Label CssClass="cant" runat="server" ID="txtCantTotal" Text='<%# string.Format("{0:N0}", Eval("EcoMonedas_Totales")) %>'></asp:Label>

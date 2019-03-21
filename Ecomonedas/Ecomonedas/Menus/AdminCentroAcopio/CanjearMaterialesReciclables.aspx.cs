@@ -46,13 +46,23 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
                 return;
 
             }
-
-
             Det_CanjeoMaterial detalle = new Det_CanjeoMaterial();
-            detalle.Cantidad = cantidad;
-            detalle.ID_Material = Convert.ToInt32(hvIDMaterial.Value);
-            detalle.Tipo_Material = tipoMaterial;
-            listaDetalle.Add(detalle);
+         
+            if (listaDetalle.Where(x=> x.ID_Material==tipoMaterial.ID).FirstOrDefault()==null)
+            {
+                detalle.Cantidad = cantidad;
+                detalle.ID_Material = Convert.ToInt32(hvIDMaterial.Value);
+                detalle.Tipo_Material = tipoMaterial;
+                listaDetalle.Add(detalle);
+            }
+            else
+            {
+
+                var detalleBuscar = listaDetalle.FirstOrDefault(x => x.ID_Material == tipoMaterial.ID);
+                if (detalleBuscar != null) detalleBuscar.Cantidad = cantidad;
+            }
+
+         
 
 
         }

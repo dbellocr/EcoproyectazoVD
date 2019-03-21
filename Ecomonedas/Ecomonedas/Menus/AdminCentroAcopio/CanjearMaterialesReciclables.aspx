@@ -91,7 +91,7 @@
                             <asp:Label ID="lblCorreo" runat="server" Text="Correo" CssClass="etiqueta"></asp:Label>
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input id="txtCorreo1" placeholder="Debe Confirmar al usuario con el botón buscar" runat="server" type="text" style="width: 60%;" class="form-control" autocomplete="off" />
+                                    <input id="txtCorreo1" placeholder="Ingrese el correo electrónico del cliente y presione en el botón Buscar" runat="server" type="text" style="width: 60%;" class="form-control" autocomplete="off" />
 
                                     <div class="input-group-append">
                                         <asp:Button ID="btnBuscar" OnClick="btnBuscar_Click" runat="server" CssClass="boton btn btn-primary" Text="Buscar" />
@@ -195,7 +195,7 @@
                                 <asp:GridView ID="gvMaterialesPreliminar" CssClass="table table-hover" HeaderStyle-CssClass="table table-success" runat="server" AutoGenerateColumns="False">
                                     <Columns>
                                         <asp:BoundField DataField="Tipo_Material.Nombre" HeaderText="Material"></asp:BoundField>
-                                        <asp:BoundField DataField="Cantidad" HeaderText="Cantidad"></asp:BoundField>
+                                        <asp:BoundField DataField="Cantidad" HeaderText="Cantidad a canjear"></asp:BoundField>
                                         <asp:TemplateField HeaderText="Ecomonedas obtenidas por el material">
                                             <ItemTemplate>
                                                 <asp:Label ID="lblTotalObtenido" runat="server" Text='<%# ((Convert.ToInt32(Eval("Cantidad")))* (Convert.ToInt32(Eval("Tipo_Material.Precio"))))+" ecomonedas" %>'></asp:Label>

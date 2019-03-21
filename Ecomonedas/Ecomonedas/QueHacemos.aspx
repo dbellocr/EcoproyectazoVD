@@ -19,7 +19,14 @@
             background-repeat:no-repeat;
             background-position:center;
         }
+        .link-consulta:link{
 
+                color:#539E23;
+        }
+        .link-consulta:hover{
+
+                color:#1F7B31;
+        }
     </style>
 
 </asp:Content>
@@ -55,7 +62,7 @@
                         
                         <h3>¿Dónde canjear los materiales?</h3>
                         Cada persona debe registrarse en nuestro sitio web , una vez creada su cuenta puede dirigirse a su centro de acopio más cercano con material reciclable y recibir ecomonedas a cambio. 
-                        Consulte aquí nuestros centros de acopio.
+                      Consulte aquí nuestros centros de acopio.
 
                     </div>
                     <div class="col-md-1"></div>
