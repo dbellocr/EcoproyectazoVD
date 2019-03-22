@@ -13,12 +13,12 @@ namespace Ecomonedas.Menus.Cliente {
     public partial class VerCuponesCanjeados {
         
         /// <summary>
-        /// Control gvCanjeoMateriales.
+        /// Control lvCupones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCanjeoMateriales;
+        protected global::System.Web.UI.WebControls.ListView lvCupones;
     }
 }
