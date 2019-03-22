@@ -11,7 +11,17 @@ namespace Ecomonedas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //Guarda la página anterior en una variable view state
+            
+            }
+        }
 
+        protected void linkVolver_Click(object sender, EventArgs e)
+        {
+
+        
         }
     }
 }

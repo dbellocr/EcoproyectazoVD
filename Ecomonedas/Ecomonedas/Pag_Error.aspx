@@ -91,9 +91,8 @@
                     <div class="row">
 
                         <div class="col-md-12" style="text-align:center; margin-top:50px;">
-
-                            <asp:Label runat="server" ID="lblVolver" Text="Regresar a la página anterior" CssClass="regr"/>
-
+                          
+                            <a class="regr" href='javascript:history.go(-1)'>Regresar a la página anterior</a>
                         </div>
 
                     </div>
