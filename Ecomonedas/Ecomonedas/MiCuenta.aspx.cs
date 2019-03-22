@@ -34,11 +34,35 @@ namespace Ecomonedas
                 if (usuario.ID_Rol == 1)
                     Response.Redirect("~/Menus/Administrador/MenuPrincipal.aspx");
                 else if (usuario.ID_Rol == 2)
-                    Response.Redirect("~/Menus/AdminCentroAcopio/MenuPrincipalCA.aspx");
+                {
+                    var centroAcopio = Centro_AcopioLN.ObtenerCentroAcopioAdministrador(usuario.Correo_Electronico);
+                    if (!usuario.Estado || centroAcopio.Estado==false)
+                    {
+                        lblMensaje.Visible = true;
+                        lblMensaje.Text = "Lo sentimos no puedes iniciar sesión ya que tu cuenta o tu centro de acopio se encuentra inactivo, contacta al administrador. ";
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Menus/AdminCentroAcopio/MenuPrincipalCA.aspx");
+
+                    }
+                }
                 else
-                    Response.Redirect("~/Menus/Cliente/MenuPrincipal.aspx");
+                {
+                    if (!usuario.Estado)
+                    {
+                        lblMensaje.Visible = true;
+                        lblMensaje.Text = "Lo sentimos no puedes iniciar sesión ya que tu cuenta se encuentra inactiva, contacta al administrador. ";
+                    }else
+                    {
+                        Response.Redirect("~/Menus/Cliente/MenuPrincipal.aspx");
+
+                    }
+
+                }
             }
 
+          
             else
             {
                 lblMensaje.Visible = true;

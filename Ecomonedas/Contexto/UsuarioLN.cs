@@ -9,7 +9,7 @@ namespace Contexto
     public class UsuarioLN
     {
 
-        public static int GuardarUsuario(string correoElectronico, string nombre, string apellidoPaterno, string apellidoMaterno, string direccion, string telefono, string idRol, bool estado, string actualizar = "",string contrasenna="" )
+        public static int GuardarUsuario(string correoElectronico, string nombre, string apellidoPaterno, string apellidoMaterno, string direccion, string telefono, string idRol, bool estado, string actualizar = "", string contrasenna = "")
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
@@ -56,7 +56,7 @@ namespace Contexto
 
             }
 
-             db.SaveChanges();
+            db.SaveChanges();
             CrearBilleteraVirtual(oUsuario.Correo_Electronico);
             return 1;
         }
@@ -88,7 +88,7 @@ namespace Contexto
         public static IQueryable ListaClientes()
         {
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Usuario.Where(x => x.ID_Rol==3);
+            return db.Usuario.Where(x => x.ID_Rol == 3);
 
 
 
@@ -96,8 +96,23 @@ namespace Contexto
         public static IQueryable ListaAdminCentroAcopio()
         {
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Usuario.Where(x => x.ID_Rol==2);
+            return db.Usuario.Where(x => x.ID_Rol == 2);
 
+
+
+        }
+        public static Usuario AdminCentroAcopioDisponibles(string correoElectronico)
+        {
+
+            EcomonedasContexto db = new EcomonedasContexto();
+
+            var query =
+from c in db.Usuario.Where(x => x.Estado == true && x.ID_Rol==2)
+where (from o in db.Centro_Acopio select o.ID_Usuario).Contains(c.Correo_Electronico)
+select c;
+
+
+            return query.Where(x=> x.Correo_Electronico==correoElectronico).FirstOrDefault<Usuario>();
 
 
         }

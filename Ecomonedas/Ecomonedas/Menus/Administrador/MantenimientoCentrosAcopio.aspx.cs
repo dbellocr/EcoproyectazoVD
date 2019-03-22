@@ -10,6 +10,8 @@ namespace Ecomonedas.Menus
 {
     public partial class MantenimientoCentrosAcopio : System.Web.UI.Page
     {
+
+        private static Usuario usuarioSeleccionado;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -55,6 +57,7 @@ namespace Ecomonedas.Menus
             hvIdCentro.Value = idCentro.ToString();
             btnGuardar.Text = "Actualizar";
             btnNuevo.Visible = true;
+            usuarioSeleccionado = UsuarioLN.ObtenerUsuario(oCentro.ID_Usuario);
 
         }
 
@@ -62,10 +65,33 @@ namespace Ecomonedas.Menus
         {
             try
             {
+                var usuario= UsuarioLN.AdminCentroAcopioDisponibles(ddlUsuario.SelectedValue);
 
-                int cantRegistros = Centro_AcopioLN.GuardarCentroAcopio(txtNombre.Text, ddlProvincia.SelectedValue,txtDireccionExacta.Text,ddlUsuario.SelectedValue, rbActivo.Checked ? true : false, hvIdCentro.Value);
 
-                Response.Redirect("MantenimientoCentrosAcopio.aspx?accion=guardar");
+
+                if (usuarioSeleccionado.Correo_Electronico== ddlUsuario.SelectedValue)
+                {
+
+                    int cantRegistros = Centro_AcopioLN.GuardarCentroAcopio(txtNombre.Text, ddlProvincia.SelectedValue, txtDireccionExacta.Text, ddlUsuario.SelectedValue, rbActivo.Checked ? true : false, hvIdCentro.Value);
+
+                    Response.Redirect("MantenimientoCentrosAcopio.aspx?accion=guardar");
+
+
+                } else if(usuario!=null)
+                {
+                    lblMensaje.Visible = true;
+                    lblMensaje.CssClass = "alert alert-dismissible alert-danger";
+                    lblMensaje.Text = "Ha ocurrido un error a la hora de guardar el centro de acopio ya que el usuario administrador seleccionado ya tiene un centro de acopio asignado";
+
+                }else
+                {
+                    int cantRegistros = Centro_AcopioLN.GuardarCentroAcopio(txtNombre.Text, ddlProvincia.SelectedValue, txtDireccionExacta.Text, ddlUsuario.SelectedValue, rbActivo.Checked ? true : false, hvIdCentro.Value);
+
+                    Response.Redirect("MantenimientoCentrosAcopio.aspx?accion=guardar");
+                }
+              
+
+
 
             }
             catch
@@ -89,6 +115,8 @@ namespace Ecomonedas.Menus
             ddlProvincia.SelectedValue = prov.First().ID.ToString();
             ddlUsuario.SelectedValue = usu.First().Correo_Electronico.ToString();
             
+
+
             btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;
 

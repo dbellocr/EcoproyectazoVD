@@ -21,7 +21,7 @@ namespace Ecomonedas.Menus
                 //ddlRol.DataTextField = "Descripcion";
                 //ddlRol.DataBind();
 
-                gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaUsuarios()).ToList();
+                gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaAdminCentroAcopio()).ToList();
                 gvUsuarios.DataBind();
             }
             string accion = Request.QueryString["accion"];
