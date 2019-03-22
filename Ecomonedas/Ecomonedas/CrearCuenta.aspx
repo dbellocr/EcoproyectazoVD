@@ -67,7 +67,7 @@
 
                 <div class="col-md-10">
 
-                    <div style="margin-top: 40px; width: 100%; background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; border-bottom: 1px solid #ACACAC; padding-bottom: 50px;">
+                    <div style="margin-top: 20px; width: 100%; background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; border-bottom: 1px solid #ACACAC; padding-bottom: 50px;">
 
 
                         <div class="form-group">

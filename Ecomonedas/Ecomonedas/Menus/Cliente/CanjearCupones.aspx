@@ -49,11 +49,11 @@
 
         <div class="row">
 
-            <div class="col-md-2">
-            </div>
+            <div class="col-md-2"></div>
+
             <div class="col-md-10">
 
-                <div style="border: 1px solid #EFEFF0; background-color: white; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4">
+                <div style="border: 1px solid #EFEFF0; background-color: white; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4; padding-bottom:100px;">
 
                     <div class="row">
 
@@ -67,20 +67,24 @@
 
                             <div class="row">
                                 <asp:ListView ID="lvCupones" runat="server">
+
                                     <EmptyDataTemplate>
 
-                                        <p>Lo sentimos, no tienes cupones disponibles para canjear debido a que la cantidad de ecomonedas que tienes es insuficiente o debido a que ya has canjeado algunos de ellos. Sigue canjeando materiales para obtener más cupones</p>
+                                        <p style="color: black;">Lo sentimos, no tienes cupones disponibles para canjear debido a que la cantidad de ecomonedas que tienes es insuficiente o debido a que ya has canjeado algunos de ellos. Sigue canjeando materiales para obtener más cupones</p>
 
                                     </EmptyDataTemplate>
+
                                     <EmptyItemTemplate>
                                         <div class="col-lg-4">
                                         </div>
                                     </EmptyItemTemplate>
+
                                     <GroupTemplate>
 
                                         <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
 
                                     </GroupTemplate>
+
                                     <ItemTemplate>
                                         <div class="col-lg-4">
                                             <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
@@ -109,9 +113,10 @@
                                                 </ul>
 
                                                 <div class="card-footer text-muted" style="text-align: center;">
-                                               
-                                                   <a href="#" class="btn boton" data-toggle="modal" data-target="#canjeoCupon">Canjear</a>
+
+                                                    <a href="#" class="btn boton" data-toggle="modal" data-target="#canjeoCupon">Canjear</a>
                                                 </div>
+
                                                 <div class="modal fade" id="canjeoCupon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
@@ -121,7 +126,7 @@
                                                                     <span aria-hidden="true">×</span>
                                                                 </button>
                                                             </div>
-                                                          
+
                                                             <div class="modal-footer">
                                                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                                                                 <asp:Button ID="Button1" CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
@@ -130,7 +135,8 @@
                                                     </div>
 
 
-                                                <asp:HiddenField ID="hFIDCupon" Value='<%# Eval("ID") %>' runat="server" />
+                                                    <asp:HiddenField ID="hFIDCupon" Value='<%# Eval("ID") %>' runat="server" />
+                                                </div>
                                             </div>
                                         </div>
                                     </ItemTemplate>
@@ -141,14 +147,17 @@
                             </div>
 
                         </div>
+
+
+                        <div class="col-md-1"></div>
+
                     </div>
 
-
-                    <div class="col-md-1"></div>
 
                 </div>
 
             </div>
+
         </div>
 
     </div>

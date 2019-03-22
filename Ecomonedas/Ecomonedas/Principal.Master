@@ -159,11 +159,9 @@
         </div>
     </form>
 
-    <footer class="footer" style="background-color: black; color: white; text-align: center; border-top: 3px solid #A3D921; padding-bottom: 20px;">
+    <footer class="footer" style="  bottom:0px; width:100%;  background-color: black; color: white; text-align: center; border-top: 3px solid #A3D921; padding-bottom: 20px;">
 
         <div class="container">
-            <%--<asp:Label ID="lblCopyright" runat="server"--%>
-            <%--Text="<%$ AppSettings: copyright %>"></asp:Label>--%>
             <br />
             Daniel Bello Ramírez y Victor Salazar Badilla -
             I Cuatrimestre 2019

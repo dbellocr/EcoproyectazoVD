@@ -12,6 +12,8 @@
         .tab {
             margin: auto;
             width: 100%;
+            border: 1px solid black;
+         
         }
     </style>
 
@@ -37,7 +39,7 @@
                             <h3 style="border-bottom: 1px solid lightgray; padding-bottom: 10px;">Historial de Canjeo de Materiales</h3>
 
 
-                            <asp:GridView  EmptyDataText="De momento no has canjeado ningún material, cuando lo hagas tus canjeos aparecerán aquí."  BorderWidth="0px" EmptyDataRowStyle-BorderStyle="None" ID="gvCanjeoMateriales" CssClass="tab" runat="server" HeaderStyle-CssClass="table orange" RowStyle-CssClass="table table-hover" AutoGenerateColumns="False">
+                            <asp:GridView HeaderStyle-BorderColor="Black" EmptyDataText="De momento no has canjeado ningún material, cuando lo hagas tus canjeos aparecerán aquí."  BorderWidth="0px" EmptyDataRowStyle-BorderStyle="None" ID="gvCanjeoMateriales" CssClass="tab" runat="server" HeaderStyle-CssClass="table orange" RowStyle-CssClass="table table-hover" AutoGenerateColumns="False">
                <%--                <EmptyDataRowStyle BorderStyle="None" BorderWidth="0px" />
                                  <EmptyDataTemplate>
                                    <p> De momento no has canjeado ningún material, cuando lo hagas tus canjeos aparecerán aquí</p>

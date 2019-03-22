@@ -252,6 +252,8 @@
                                 <asp:Label ID="lblNombreCliente" runat="server" Text=""></asp:Label>
                             </p>
                         </li>
+                        <hr />
+
                         <li>
                             <a href="/Menus/Cliente/MenuPrincipal.aspx">Mis Ecomonedas</a>
                         </li>

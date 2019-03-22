@@ -136,13 +136,12 @@
                         Este es nuestra lista de productos que puedes canjear con <a style="color: green">eco</a>monedas
                     </p>
 
-                    <div>
-                        <%--Espacio para el Slide--%>
+                    <div class="row">
+                        
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
 
-
-
-
-                        <asp:Repeater ID="repeaterCupones" runat="server">
+                            <asp:Repeater ID="repeaterCupones" runat="server">
 
 
                             <HeaderTemplate>
@@ -186,6 +185,9 @@
                         </asp:Repeater>
 
                         <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">Ir por los EcoProductos</a>
+
+                        </div>
+                        <div class="col-md-1"></div>
 
                     </div>
 
