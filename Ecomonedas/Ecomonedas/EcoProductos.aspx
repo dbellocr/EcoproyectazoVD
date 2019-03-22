@@ -30,7 +30,7 @@
         }
 
         .card {
-            border: 1px solid #A3D921;
+            border: 3px solid #A3D921;
         }
 
             .card:hover {

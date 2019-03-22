@@ -34,7 +34,7 @@
         }
 
         .card {
-            border: 1px solid orange;
+            border: 3px solid orange;
         }
 
         .nombreProducto:hover {
@@ -53,7 +53,7 @@
 
             <div class="col-md-10">
 
-                <div style="border: 1px solid #EFEFF0; background-color: white; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4; padding-bottom:100px;">
+                <div style="border: 1px solid #EFEFF0; background-color: white; width: 100%; margin-top: 15px; box-shadow: 2px 2px 10px 10px #F3F3F4; padding-bottom: 100px;">
 
                     <div class="row">
 
@@ -66,6 +66,7 @@
 
 
                             <div class="row">
+
                                 <asp:ListView ID="lvCupones" runat="server">
 
                                     <EmptyDataTemplate>

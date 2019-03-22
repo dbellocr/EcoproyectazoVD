@@ -32,7 +32,7 @@
         }
 
         .card {
-            border: 1px solid #A3D921;
+            border: 3px solid #A3D921;
         }
 
             .card:hover {
@@ -47,14 +47,16 @@
                 background-color: #96C81E;
             }
 
-            .tras{
-                opacity:0;
+        .tras {
+            opacity: 0;
+        }
+
+            .tras:active {
+                opacity: 0;
             }
-            .tras:active{
-                opacity:0;
-            }
-            .tras:hover{
-                opacity:0;
+
+            .tras:hover {
+                opacity: 0;
             }
     </style>
 
@@ -78,13 +80,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner" style="height: 300px; margin-top: 40px; border: 2px solid #ECECEC; border-radius: 3px;">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" style="" src="/imagenes/Banner3.png" alt="First slide"/>
+                                <img class="d-block w-100" style="" src="/imagenes/Banner3.png" alt="First slide" />
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide"/>
+                                <img class="d-block w-100" src="/imagenes/BannerDesarrolloSostenible.png" alt="Second slide" />
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="/imagenes/EcoBanner.png" alt="Third slide"/>
+                                <img class="d-block w-100" src="/imagenes/EcoBanner.png" alt="Third slide" />
                             </div>
                         </div>
                         <a class="carousel-control-prev tras" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -117,10 +119,10 @@
                         </a>
                     </div>--%>
 
-                        <div style="margin: auto; text-align: center; background-image: url(/Imagenes/BannerEco2.png); width: 85%; height: 300px; border: 2px solid #ECECEC; border-radius: 3px;">
-                            <a class="btn botonAcopio text-white" href="CentrosAcopio.aspx" style="float: right; margin-right: 26px; width: 32%; margin-top: 250px;">Ver Centros de Acopio
-                            </a>
-                        </div>
+                    <div style="margin: auto; text-align: center; background-image: url(/Imagenes/BannerEco2.png); width: 85%; height: 300px; border: 2px solid #ECECEC; border-radius: 3px;">
+                        <a class="btn botonAcopio text-white" href="CentrosAcopio.aspx" style="float: right; margin-right: 26px; width: 32%; margin-top: 250px;">Ver Centros de Acopio
+                        </a>
+                    </div>
 
                 </div>
 
@@ -137,54 +139,55 @@
                     </p>
 
                     <div class="row">
-                        
+
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
 
                             <asp:Repeater ID="repeaterCupones" runat="server">
 
 
-                            <HeaderTemplate>
-                                <div class="row">
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <div class="col-lg-3">
-                                    <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                        <h3 class="card-header" style="text-align: center; font-size: 18px;"><%# Eval("Nombre") %></h3>
-                                        <img style="height: 150px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
+                                <HeaderTemplate>
+                                    <div class="row">
+                                </HeaderTemplate>
 
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item" style="text-align: center">Valor del Producto</li>
-                                            <li class="list-group-item" style="text-align: center; display: inline;">
+                                <ItemTemplate>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
+                                            <h3 class="card-header" style="text-align: center; font-size: 20px;"><%# Eval("Nombre") %></h3>
+                                            <img style="height: 150px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
-                                                <div class="">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" style="text-align: center">Valor del Producto</li>
+                                                <li class="list-group-item" style="text-align: center; display: inline;">
+
+                                                    <div class="">
 
 
-                                                    <div class="valor1">
-                                                        <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                        <div class="valor1">
+                                                            <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                        </div>
+
+                                                        <div class="valor2">
+                                                            <img src="/Imagenes/moneda.png" width="25" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
+                                                        </div>
                                                     </div>
 
-                                                    <div class="valor2">
-                                                        <img src="/Imagenes/moneda.png" width="25" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
-                                                    </div>
-                                                </div>
+                                                </li>
+                                            </ul>
 
-                                            </li>
-                                        </ul>
-
-                                        <div class="card-footer text-muted" style="text-align: center;">
-                                            <%--<asp:Button ID="btnCanjear"  Text="Ver Producto" runat="server" CssClass="btn btn-success" />--%>
+                                            <div class="card-footer text-muted" style="text-align: center;">
+                                                
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                </div>
+                                </ItemTemplate>
+                                <FooterTemplate>
+                                    </div>
                    
-                            </FooterTemplate>
-                        </asp:Repeater>
+                                </FooterTemplate>
+                            </asp:Repeater>
 
-                        <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">Ir por los EcoProductos</a>
+                            <a class="btn btn-success" style="width: 50%;" href="/EcoProductos.aspx">Ir por los EcoProductos</a>
 
                         </div>
                         <div class="col-md-1"></div>
