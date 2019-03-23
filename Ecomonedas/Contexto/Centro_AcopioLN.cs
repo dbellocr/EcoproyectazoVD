@@ -49,11 +49,15 @@ namespace Contexto
 
         }
 
-        public static List<Centro_Acopio> ListaCentrosAcopio()
+        public static List<Centro_Acopio> ListaCentrosAcopio(bool estado)
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return ((List<Centro_Acopio>)db.Centro_Acopio.Where(x=> x.Estado==true).ToList());
+
+            if (estado)
+                return ((List<Centro_Acopio>)db.Centro_Acopio.Where(x => x.Estado == true).ToList());
+            else
+                return ((List<Centro_Acopio>)db.Centro_Acopio.Where(x => x.Estado == false).ToList());
 
         }
         public static Centro_Acopio ObtenerCentro(int id)

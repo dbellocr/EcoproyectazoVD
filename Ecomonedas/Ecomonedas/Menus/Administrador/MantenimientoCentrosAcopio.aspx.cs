@@ -28,9 +28,7 @@ namespace Ecomonedas.Menus
                 ddlUsuario.DataTextField = "NombreCompleto";
                 ddlUsuario.DataBind();
 
-                grCentrosAcopio.DataSource = Centro_AcopioLN.ListaCentrosAcopio();
-                grCentrosAcopio.DataBind();
-
+                CargarGRIDActivos();
 
             }
             string accion = Request.QueryString["accion"];
@@ -43,6 +41,19 @@ namespace Ecomonedas.Menus
 
             }
 
+        }
+
+        private void CargarGRIDActivos()
+        {
+            grCentrosAcopio.Dispose();
+            grCentrosAcopio.DataSource = Centro_AcopioLN.ListaCentrosAcopio(true);
+            grCentrosAcopio.DataBind();
+        }
+        private void CargarGRIDInactivos()
+        {
+            grCentrosAcopio.Dispose();
+            grCentrosAcopio.DataSource = Centro_AcopioLN.ListaCentrosAcopio(false);
+            grCentrosAcopio.DataBind();
         }
 
         protected void grCentrosAcopio_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,6 +130,19 @@ namespace Ecomonedas.Menus
 
             btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;
+
+        }
+
+        protected void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chkEstado.Checked)
+            {
+                CargarGRIDInactivos();
+            }else
+            {
+                CargarGRIDActivos();
+            }
 
         }
     }
