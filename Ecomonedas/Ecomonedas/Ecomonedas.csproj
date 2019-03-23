@@ -100,6 +100,7 @@
     <Content Include="MiCuenta.aspx" />
     <Content Include="packages.config" />
     <Content Include="Pag_Error.aspx" />
+    <Content Include="Pag_ErrorSeguridad.aspx" />
     <Content Include="Principal.Master" />
     <Content Include="QueHacemos.aspx" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
@@ -352,6 +353,13 @@
     </Compile>
     <Compile Include="Pag_Error.aspx.designer.cs">
       <DependentUpon>Pag_Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pag_ErrorSeguridad.aspx.cs">
+      <DependentUpon>Pag_ErrorSeguridad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pag_ErrorSeguridad.aspx.designer.cs">
+      <DependentUpon>Pag_ErrorSeguridad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
