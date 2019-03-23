@@ -66,8 +66,7 @@
 
 
                             <div class="row">
-                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                                    <ContentTemplate>
+                              
                                         <asp:ListView ID="lvCupones" runat="server">
 
                                             <EmptyDataTemplate>
@@ -145,11 +144,7 @@
 
 
                                         </asp:ListView>
-                                    </ContentTemplate>
-                                    <Triggers>
-                                        <asp:AsyncPostBackTrigger ControlID="btnCanjear" EventName="Click" />
-                                    </Triggers>
-                                </asp:UpdatePanel>
+                                 
                             </div>
 
                         </div>

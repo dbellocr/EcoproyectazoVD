@@ -120,6 +120,8 @@ namespace Ecomonedas.Menus.Cliente
             Response.Close();
             Response.End();
             RefrescarListView(oUsuario);
+            Response.Redirect("CanjearCupones.aspx");
+
         }
     }
 }
