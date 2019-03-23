@@ -35,6 +35,8 @@ namespace Ecomonedas.Menus.Cliente
 
         private void RefrescarListView(Usuario oUsuario)
         {
+            //Libera el recurso de la memoria
+            lvCupones.Dispose();
             lvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCuponesAutorizados(oUsuario.Correo_Electronico)).ToList();
             lvCupones.DataBind();
         }

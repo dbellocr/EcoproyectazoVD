@@ -66,85 +66,90 @@
 
 
                             <div class="row">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <asp:ListView ID="lvCupones" runat="server">
 
-                                <asp:ListView ID="lvCupones" runat="server">
+                                            <EmptyDataTemplate>
 
-                                    <EmptyDataTemplate>
+                                                <p style="color: black;">Lo sentimos, no tienes cupones disponibles para canjear debido a que la cantidad de ecomonedas que tienes es insuficiente o debido a que ya has canjeado algunos de ellos. Sigue canjeando materiales para obtener más cupones</p>
 
-                                        <p style="color: black;">Lo sentimos, no tienes cupones disponibles para canjear debido a que la cantidad de ecomonedas que tienes es insuficiente o debido a que ya has canjeado algunos de ellos. Sigue canjeando materiales para obtener más cupones</p>
+                                            </EmptyDataTemplate>
 
-                                    </EmptyDataTemplate>
+                                            <EmptyItemTemplate>
+                                                <div class="col-lg-4">
+                                                </div>
+                                            </EmptyItemTemplate>
 
-                                    <EmptyItemTemplate>
-                                        <div class="col-lg-4">
-                                        </div>
-                                    </EmptyItemTemplate>
+                                            <GroupTemplate>
 
-                                    <GroupTemplate>
+                                                <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
 
-                                        <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
+                                            </GroupTemplate>
 
-                                    </GroupTemplate>
+                                            <ItemTemplate>
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
+                                                        <a href="<%# "Detalle_ProductoCliente.aspx?producto="+ Eval("ID") %>" class="link">
+                                                            <h3 class="card-header nombreProducto" style="text-align: center"><%# Eval("Nombre") %></h3>
+                                                        </a>
+                                                        <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
 
-                                    <ItemTemplate>
-                                        <div class="col-lg-4">
-                                            <div class="card mb-10" style="max-width: 100%; margin-bottom: 30px">
-                                                <a href="<%# "Detalle_ProductoCliente.aspx?producto="+ Eval("ID") %>" class="link">
-                                                    <h3 class="card-header nombreProducto" style="text-align: center"><%# Eval("Nombre") %></h3>
-                                                </a>
-                                                <img style="height: 200px; width: 100%; display: block;" src="/Imagenes/Cupones/<%# Eval("ImagenPath") %>" alt="<%# Eval("Nombre") %>">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item" style="text-align: center">Valor del Cupón</li>
+                                                            <li class="list-group-item" style="text-align: center; display: inline;">
 
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item" style="text-align: center">Valor del Cupón</li>
-                                                    <li class="list-group-item" style="text-align: center; display: inline;">
-
-                                                        <div class="">
+                                                                <div class="">
 
 
-                                                            <div class="valor1">
-                                                                <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
-                                                            </div>
+                                                                    <div class="valor1">
+                                                                        <asp:Label ID="lblPrecioReal" runat="server" Text='  <%# Eval("Cantidad_Ecomonedas", "₡{0:N0}") %>'></asp:Label>
+                                                                    </div>
 
-                                                            <div class="valor2">
-                                                                <img src="/Imagenes/moneda.png" width="35" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
-                                                            </div>
+                                                                    <div class="valor2">
+                                                                        <img src="/Imagenes/moneda.png" width="35" />&nbsp<asp:Label ID="lblPrecioEco" runat="server" Text='<%# String.Format("{0:N0}",  (Convert.ToInt32(Eval("Cantidad_Ecomonedas"))*10)) %>'></asp:Label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="card-footer text-muted" style="text-align: center;">
+
+                                                            <a href="#" class="btn boton" data-toggle="modal" data-target="#canjeoCupon">Canjear</a>
                                                         </div>
 
-                                                    </li>
-                                                </ul>
+                                                        <div class="modal fade" id="canjeoCupon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLabel">¿Segur@ que deseas canjear este cupon?</h5>
+                                                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
 
-                                                <div class="card-footer text-muted" style="text-align: center;">
-
-                                                    <a href="#" class="btn boton" data-toggle="modal" data-target="#canjeoCupon">Canjear</a>
-                                                </div>
-
-                                                <div class="modal fade" id="canjeoCupon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">¿Segur@ que deseas canjear este cupon?</h5>
-                                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">×</span>
-                                                                </button>
+                                                                    <div class="modal-footer">
+                                                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                                                        <asp:Button ID="btnCanjear" CssClass="btn boton"  runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
+                                                                    </div>
+                                                                </div>
                                                             </div>
 
-                                                            <div class="modal-footer">
-                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                                                <asp:Button ID="Button1" CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
-                                                            </div>
+
+                                                            <asp:HiddenField ID="hFIDCupon" Value='<%# Eval("ID") %>' runat="server" />
                                                         </div>
                                                     </div>
-
-
-                                                    <asp:HiddenField ID="hFIDCupon" Value='<%# Eval("ID") %>' runat="server" />
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </ItemTemplate>
+                                            </ItemTemplate>
 
 
-                                </asp:ListView>
-
+                                        </asp:ListView>
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="btnCanjear" EventName="Click" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
                             </div>
 
                         </div>
