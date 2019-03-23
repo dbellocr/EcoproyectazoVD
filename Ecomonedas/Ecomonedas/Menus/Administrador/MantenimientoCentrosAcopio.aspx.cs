@@ -45,13 +45,11 @@ namespace Ecomonedas.Menus
 
         private void CargarGRIDActivos()
         {
-            grCentrosAcopio.Dispose();
             grCentrosAcopio.DataSource = Centro_AcopioLN.ListaCentrosAcopio(true);
             grCentrosAcopio.DataBind();
         }
         private void CargarGRIDInactivos()
         {
-            grCentrosAcopio.Dispose();
             grCentrosAcopio.DataSource = Centro_AcopioLN.ListaCentrosAcopio(false);
             grCentrosAcopio.DataBind();
         }
