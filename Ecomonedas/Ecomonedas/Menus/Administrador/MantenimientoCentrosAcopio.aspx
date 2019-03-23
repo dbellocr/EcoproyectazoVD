@@ -12,6 +12,12 @@
         .tabla {
         }
 
+        .checkInactivos{
+            color:#c1c1c1;
+            float:right;
+            
+        }
+
         .mGrid {
             width: 100%;
             background-color: #fff; /*tabla*/
@@ -118,7 +124,7 @@
                         <h3 style="color: #222222; border-bottom: 1px solid lightgray; margin-bottom: 20px;">Lista de Centros de Acopio</h3>
 
                         <div class="form-group">
-                            <asp:CheckBox ID="chkEstado" Text="Mostrar inactivos" Checked="false" AutoPostBack="true" OnCheckedChanged="chkEstado_CheckedChanged" runat="server" />
+                            <asp:CheckBox ID="chkEstado" Text="Mostrar inactivos" Checked="false" AutoPostBack="true" CssClass="checkInactivos" OnCheckedChanged="chkEstado_CheckedChanged" runat="server" />
                             <%-- <asp:Label runat="server" Text="Filtrar por estado"></asp:Label>--%>
                         </div>
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
