@@ -15,6 +15,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 
+
+
     <style>
         /*
     DEMO STYLE
@@ -22,6 +24,8 @@
 
 */
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
 
 
         body {
@@ -185,38 +189,27 @@
         /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-        @media (max-width: 768px) {
+
+        @media (max-width: 700px) {
             #sidebar {
-                margin-left: -250px;
-            }
-
-                #sidebar.active {
-                    margin-left: 0;
-                }
-
-            #content {
                 width: 100%;
+                height: 400px;
+                position: relative;
             }
 
-                #content.active {
-                    width: calc(100% - 250px);
+                #sidebar a {
+                    float: left;
                 }
 
-            #sidebarCollapse span {
-                display: none;
+        }
+
+        @media screen and (max-width: 400px) {
+            #sidebar a {
+                text-align: center;
+                float: none;
             }
         }
 
-
-        ::selection {
-            background: #FA5818;
-            / WebKit/Blink Browsers /;
-        }
-
-        ::-moz-selection {
-            background: #FA5818;
-            / Gecko Browsers /;
-        }
 
         .boton {
             background-color: #FA5818;
@@ -233,9 +226,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-   
+
     <form id="form1" runat="server">
-         <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
         <div>
 
             <div class="wrapper">

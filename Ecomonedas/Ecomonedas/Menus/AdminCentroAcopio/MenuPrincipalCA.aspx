@@ -15,12 +15,22 @@
 
             <div class="col-md-10" style="background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; padding-bottom: 50px;">
 
-                <div style="margin-top: 200px; margin-bottom:217px; text-align: center; color:white;">
+                <div style="margin-top: 200px; margin-bottom:215px; color:white;">
 
 
-                    <a class="btn btn-success" href="CanjearMaterialesReciclables.aspx" style="width: 25%; height: 40px; margin-right:70px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/canjear2.png); background-size:90px; background-repeat:no-repeat; background-position:right;">Canjear Materiales</a>
-                    <a class="btn btn-success" href="ListadoCanjeosMateriales.aspx" style="width: 25%; height: 40px; margin-right:70px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/listado3.png); background-size:100px; background-repeat:no-repeat; background-position:right;">Historial de Canjes</a>
-                    <a class="btn btn-success" href="CambiarContrasenaCA.aspx" style="width: 25%; height: 40px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/cuenta2.png); background-size:100px; background-repeat:no-repeat; background-position:right;">Mi Cuenta</a>
+
+                    <table style="width:100%;" >
+
+                        <tr>
+                            <th><a class="btn btn-success" href="CanjearMaterialesReciclables.aspx" style="width:75%; height: 60px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/canjear2.png); background-size:90px; background-repeat:no-repeat; background-position:right;">Canjear Materiales</a></th>
+                            <th><a class="btn btn-success" href="ListadoCanjeosMateriales.aspx" style="width: 75%; height: 60px;  padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/listado3.png); background-size:100px; background-repeat:no-repeat; background-position:right;">Historial de Canjes</a></th>
+                            <th><a class="btn btn-success" href="CambiarContrasenaCA.aspx" style="width: 100%; height: 60px; padding-top:60px; padding-bottom:60px; padding-right:75px;  text-align-last:start; font-size:22px; font-weight:lighter; background-image:url(/Imagenes/iconos/cuenta2.png); background-size:100px; background-repeat:no-repeat; background-position:right;">Mi Cuenta</a></th>
+                        </tr>
+
+                    </table>
+                    
+                    
+                    
 
                     
 
