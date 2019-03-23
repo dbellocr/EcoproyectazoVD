@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="CentrosAcopio.aspx.cs" Inherits="Ecomonedas.CentrosAcopio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Centros de Acopio</title>
+    <title>Ecomonedas | Centros de Acopio</title>
     <style>
         .alu {
             background-color: #E41E29;

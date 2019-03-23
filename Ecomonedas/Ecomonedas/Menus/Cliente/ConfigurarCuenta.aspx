@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Configurar mi Cuenta</title>
+    <title>Ecomonedas | Configurar mi Cuenta</title>
     <style>
 
         .color{

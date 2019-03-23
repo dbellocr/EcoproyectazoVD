@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalAdminCentroAcopio.Master" AutoEventWireup="true" CodeBehind="MenuPrincipalCA.aspx.cs" Inherits="Ecomonedas.Menus.AdminCentroAcopio.MenuPrincipalCA" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Menu Administrador</title>
+    <title>Ecomonedas | Menu Administrador CA</title>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

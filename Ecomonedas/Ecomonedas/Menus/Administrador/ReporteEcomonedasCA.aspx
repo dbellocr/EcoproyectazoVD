@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Reporte de Ecomonedas producidas por Centro de Acopio</title>
+    <title>Ecomonedas | Reporte de Ecomonedas producidas por Centro de Acopio</title>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

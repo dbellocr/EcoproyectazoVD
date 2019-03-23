@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalCliente.Master" AutoEventWireup="true" CodeBehind="CanjearCupones.aspx.cs" Inherits="Ecomonedas.Menus.Cliente.CanjearCupones" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Canjear Cupones</title>
+    <title>Ecomonedas | Canjear Cupones</title>
     <style>
         .boton {
             width: 80%;

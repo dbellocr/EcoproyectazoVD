@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Centros de Acopio</title>
+    <title>Ecomonedas | Centros de Acopio</title>
     <style>
         .boton {
             float: right;

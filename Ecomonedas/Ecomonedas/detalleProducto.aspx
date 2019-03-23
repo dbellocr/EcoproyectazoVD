@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Producto</title>
+    <title>Ecomonedas | Producto</title>
 
     <style>
         .valor1 {
@@ -78,7 +78,7 @@
                                     </li>
                                 </ul>
                                 <div class="card-footer text-muted" style="margin: auto; text-align: center; background-color: #F7F7F7; width: 100%;">
-                                    <asp:Button runat="server" CssClass="btn btn-success" Text="Conseguir Producto" />
+                                    <a href="MiCuenta.aspx" runat="server" class="btn btn-success" >Para conseguir este productos necesitas de una cuenta</a>
                                 </div>
                             </div>
 

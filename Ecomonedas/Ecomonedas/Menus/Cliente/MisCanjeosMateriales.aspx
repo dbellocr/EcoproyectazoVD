@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Mis Canjeos de Materiales</title>
+    <title>Ecomonedas | Mis Canjeos de Materiales</title>
 
     <style>
         .orange {

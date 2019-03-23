@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalAdministrador.Master" AutoEventWireup="true" CodeBehind="ListadoUsuario.aspx.cs" Inherits="Ecomonedas.Menus.Administrador.ListadoUsuario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Listado de Usuarios</title>
+    <title>Ecomonedas | Listado de Usuarios</title>
 
     <style>
 

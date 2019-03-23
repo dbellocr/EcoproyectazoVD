@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Mis Cupones Canjeados</title>
+    <title>Ecomonedas | Mis Cupones Canjeados</title>
 
     <style>
         .boton {

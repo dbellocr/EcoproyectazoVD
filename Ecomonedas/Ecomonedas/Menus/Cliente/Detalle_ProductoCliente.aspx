@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Cupón</title>
+    <title>Ecomonedas | Cupón</title>
 
     <style>
         .valor1 {

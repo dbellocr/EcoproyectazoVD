@@ -6,7 +6,7 @@
 <head runat="server">
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Pantalla de Error</title>
+    <title>Ecomonedas | Error</title>
     <link rel="shortcut icon" href="/imagenes/iconos/LogoProvi2.ico" />
     <script src="Scripts/jquery-3.0.0.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />

@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Canjear Materiales Reciclables</title>
+    <title>Ecomonedas | Canjear Materiales Reciclables</title>
     <style>
         .boton {
             float: right;

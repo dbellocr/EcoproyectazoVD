@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Mi Cuenta</title>
+    <title>Ecomonedas | Configurar mi Cuenta</title>
     <style>
         .boton {
             float: right;

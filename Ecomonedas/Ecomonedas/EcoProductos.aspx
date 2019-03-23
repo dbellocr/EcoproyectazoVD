@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="EcoProductos.aspx.cs" Inherits="Ecomonedas.EcoProductos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>EcoProductos</title>
+    <title>Ecomonedas | EcoProductos</title>
     <style>
         .boton {
             width: 80%;

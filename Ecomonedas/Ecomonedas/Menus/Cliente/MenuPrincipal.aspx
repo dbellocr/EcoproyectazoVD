@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Cliente</title>
+    <title>Ecomonedas | Cliente</title>
 
     <style>
         .card:hover {

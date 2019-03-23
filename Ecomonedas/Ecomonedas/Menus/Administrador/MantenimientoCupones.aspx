@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Cupones</title>
+    <title>Ecomonedas | Cupones</title>
     <style>
         .boton {
             float: right;

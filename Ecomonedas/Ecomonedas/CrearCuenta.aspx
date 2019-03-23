@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Crear Cuenta</title>
+    <title>Ecomonedas | Crear Cuenta</title>
     <link rel="shortcut icon" href="/imagenes/iconos/LogoProvi1.ico" />
     <script src="Scripts/jquery-3.0.0.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -67,7 +67,7 @@
 
                 <div class="col-md-10">
 
-                    <div style="margin-top: 20px; width: 100%; background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; border-bottom: 1px solid #ACACAC; padding-bottom: 50px;">
+                    <div style="margin-top: 20px; width: 100%; background-color: white; border-left: 1px solid #ACACAC; border-right: 1px solid #ACACAC; border-bottom: 1px solid #ACACAC; padding-bottom: 30px;">
 
 
                         <div class="form-group">

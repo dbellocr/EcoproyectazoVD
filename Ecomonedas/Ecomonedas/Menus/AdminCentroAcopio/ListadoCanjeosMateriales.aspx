@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PrincipalAdminCentroAcopio.Master" AutoEventWireup="true" CodeBehind="ListadoCanjeosMateriales.aspx.cs" Inherits="Ecomonedas.Menus.AdminCentroAcopio.ListadoCanjeosMateriales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <title>Listado de Canjeos de Materiales</title>
+    <title>Ecomonedas | Listado de Canjeos de Materiales</title>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
