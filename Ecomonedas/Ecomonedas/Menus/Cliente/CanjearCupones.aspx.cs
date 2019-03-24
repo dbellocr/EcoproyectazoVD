@@ -11,6 +11,7 @@ using QRCoder;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Web.UI.HtmlControls;
+using System.Threading;
 
 namespace Ecomonedas.Menus.Cliente
 {
@@ -20,41 +21,26 @@ namespace Ecomonedas.Menus.Cliente
         {
             Usuario oUsuario = LoginLN.Login.Usuario;
             if (!IsPostBack)
-            {
-
-               
+            {         
                 if (oUsuario != null)
                 {
-
-
-
                     RefrescarListView(oUsuario);
-
-                    if (Request.QueryString["estado"] == "correcto")
-                    {
-                        Response.Redirect("CanjearCupones.aspx");
-                    }
-
+                }
+                string id = Request.QueryString["idCupon"];
+                if (Request.QueryString["idCupon"] != null)
+                {
+                    Response.Redirect("DescargarCupon.aspx?id=" + id);
                 }
 
             }
             else
             {
-
-                if (Request.QueryString["estado"] == "correcto")
+                string id = Request.QueryString["idCupon"];
+                if (Request.QueryString["idCupon"] != null)
                 {
-                    Response.Redirect("CanjearCupones.aspx");
+                    Response.Redirect("DescargarCupon.aspx?id=" + id);
                 }
-
             }
-
-
-
-
-
-
-
-
         }
 
         private void RefrescarListView(Usuario oUsuario)
@@ -72,82 +58,40 @@ namespace Ecomonedas.Menus.Cliente
             ListViewItem item = (ListViewItem)(sender as Control).NamingContainer;
 
             HiddenField idProducto = (HiddenField)item.FindControl("hFIDCupon");
-      
+            Button boton = (Button)item.FindControl("btnDescarga");
 
             Usuario oUsuario = LoginLN.Login.Usuario;
             Cupon cupon = CuponLN.ObtenerCupon(Convert.ToInt32(idProducto.Value));
 
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(cupon.ID.ToString(), QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            System.Web.UI.WebControls.Image imgBarCode = new System.Web.UI.WebControls.Image();
-            string ruta;
-            using (Bitmap qrCodeImage = qrCode.GetGraphic(20))
-            {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    qrCodeImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    byte[] byteImage = ms.ToArray();
-                    imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
-
-                    ruta = Convert.ToBase64String(byteImage);
-                }
-
-            }
-
-
-
-
-            ReportParameter[] p = new ReportParameter[4];
-            p[0] = new ReportParameter("nombreCliente", oUsuario.NombreCompleto);
-
-            p[1] = new ReportParameter("nombreProductoServicio", cupon.Nombre);
-            p[2] = new ReportParameter("precio", cupon.Cantidad_Ecomonedas.ToString());
-            p[3] = new ReportParameter("barrasCupon", ruta);
-
-            LocalReport report = new LocalReport();
-            report.ReportPath = Server.MapPath("~/Reportes/ReporteCupon.rdlc");
-            report.EnableExternalImages = true;
-            report.SetParameters(p);
-
-
-            report.Refresh();
-
-            string FileName = "Cupon-" + cupon.Nombre.Trim() + ".pdf";
-            string extension;
-            string encoding;
-            string mimeType;
-            string[] streams;
-            Warning[] warnings;
-
-
-
-            Byte[] mybytes = report.Render("PDF", null,
-                            out extension, out encoding,
-                            out mimeType, out streams, out warnings); //for exporting to PDF  
-            using (FileStream fs = File.Create(Server.MapPath("~/DescargasCupones/") + FileName))
-            {
-                fs.Write(mybytes, 0, mybytes.Length);
-            }
             CuponLN.ConsumirCupon(oUsuario.Correo_Electronico, cupon.ID);
             Billetera_Virtual_LN.ActualizarBilletera(oUsuario.Correo_Electronico, 0, (Convert.ToInt32(cupon.Cantidad_Ecomonedas) * 10));
 
 
-            HtmlInputButton html = (HtmlInputButton)item.FindControl("btnCanjeo");
-            html.Value = "Ya has canjeado este cupón";
-            html.Disabled = true;
+             
+            
 
 
-            Response.Buffer = true;
+     
 
-            Response.ContentType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "attachment; filename=" + FileName);
-            Response.WriteFile(Server.MapPath("~/DescargasCupones/" + FileName));
-        
+            Response.Redirect("CanjearCupones.aspx?idCupon="+cupon.ID);
+     
 
           
-            
+
+        }
+
+        protected void btnDescarga_Click(object sender, EventArgs e)
+        {
+            ListViewItem item = (ListViewItem)(sender as Control).NamingContainer;
+
+            HiddenField idProducto = (HiddenField)item.FindControl("hFIDCupon");
+
+
+            Usuario oUsuario = LoginLN.Login.Usuario;
+            Cupon cupon = CuponLN.ObtenerCupon(Convert.ToInt32(idProducto.Value));
+
        
+
         }
     }
 }

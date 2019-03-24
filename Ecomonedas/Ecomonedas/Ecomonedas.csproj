@@ -93,6 +93,7 @@
     <Content Include="Menus\Administrador\ReporteEcomonedasCA.aspx" />
     <Content Include="Menus\Cliente\CanjearCupones.aspx" />
     <Content Include="Menus\Cliente\ConfigurarCuenta.aspx" />
+    <Content Include="Menus\Cliente\DescargarCupon.aspx" />
     <Content Include="Menus\Cliente\Detalle_ProductoCliente.aspx" />
     <Content Include="Menus\Cliente\MenuPrincipal.aspx" />
     <Content Include="Menus\Cliente\MisCanjeosMateriales.aspx" />
@@ -311,6 +312,13 @@
     </Compile>
     <Compile Include="Menus\Cliente\ConfigurarCuenta.aspx.designer.cs">
       <DependentUpon>ConfigurarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Cliente\DescargarCupon.aspx.cs">
+      <DependentUpon>DescargarCupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus\Cliente\DescargarCupon.aspx.designer.cs">
+      <DependentUpon>DescargarCupon.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menus\Cliente\Detalle_ProductoCliente.aspx.cs">
       <DependentUpon>Detalle_ProductoCliente.aspx</DependentUpon>

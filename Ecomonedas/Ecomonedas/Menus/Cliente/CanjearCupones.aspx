@@ -148,7 +148,8 @@
 
                                                             <div class="modal-footer">
                                                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                                                <asp:Button ID="btnCanjear"  OnClientClick='ocultar()' CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
+                                                                <asp:Button ID="btnDescarga" PostBackUrl="~/Menus/Cliente/CanjearCupones.aspx"  Visible="false" OnClick="btnDescarga_Click" runat="server" Text="" />
+                                                                   <asp:Button ID="btnCanjear" PostBackUrl="~/Menus/Cliente/CanjearCupones.aspx"  OnClientClick='ocultar()' CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
                                                             </div>
                                                         </div>
                                                     </div>
