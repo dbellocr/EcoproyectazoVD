@@ -10,6 +10,7 @@ using System.IO;
 using QRCoder;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Web.UI.HtmlControls;
 
 namespace Ecomonedas.Menus.Cliente
 {
@@ -17,26 +18,34 @@ namespace Ecomonedas.Menus.Cliente
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
+
                 Usuario oUsuario = LoginLN.Login.Usuario;
                 if (oUsuario != null)
                 {
+
+
+
                     RefrescarListView(oUsuario);
                 }
 
-
-
-
             }
+
+
+
+
+
+
+
 
         }
 
         private void RefrescarListView(Usuario oUsuario)
         {
             //Libera el recurso de la memoria
-            lvCupones.Dispose();
+           
+            lvCupones.DataSource = null;
             lvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCuponesAutorizados(oUsuario.Correo_Electronico)).ToList();
             lvCupones.DataBind();
         }
@@ -47,7 +56,7 @@ namespace Ecomonedas.Menus.Cliente
             ListViewItem item = (ListViewItem)(sender as Control).NamingContainer;
 
             HiddenField idProducto = (HiddenField)item.FindControl("hFIDCupon");
-
+      
 
             Usuario oUsuario = LoginLN.Login.Usuario;
             Cupon cupon = CuponLN.ObtenerCupon(Convert.ToInt32(idProducto.Value));
@@ -115,12 +124,27 @@ namespace Ecomonedas.Menus.Cliente
             Response.Clear();
             Response.ContentType = "application/pdf";
             Response.AddHeader("Content-Disposition", "attachment; filename=" + FileName);
+            Response.AddHeader("Refresh", "0; url=CanjearCupones.aspx");
+
             Response.WriteFile(Server.MapPath("~/DescargasCupones/" + FileName));
+
+
+
             Response.Flush();
             Response.Close();
             Response.End();
-            RefrescarListView(oUsuario);
-            Response.Redirect("CanjearCupones.aspx");
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
     }
