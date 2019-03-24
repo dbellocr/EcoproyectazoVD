@@ -43,16 +43,15 @@
     </style>
     <script>
 
-        $('#canjeoCupon').on('hidden.bs.modal', function () {
-            location.reload(true);
-            window.location.href = window.location.href;
-        });
+    
         function ocultar() {
 
             $('#canjeoCupon').modal('hide')
         
-            window.location.href = window.location.href;
-
+            //window.location.href = window.location.href;
+            //setTimeout(function () {
+            //    window.location.reload(1);
+            //}, 5000);
 
 
         }
@@ -149,7 +148,7 @@
 
                                                             <div class="modal-footer">
                                                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                                                <asp:Button ID="btnCanjear" PostBackUrl="~/Menus/Cliente/CanjearCupones.aspx" OnClientClick='ocultar()' CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
+                                                                <asp:Button ID="btnCanjear"  OnClientClick='ocultar()' CssClass="btn boton" runat="server" OnClick="btnCanjear_Click" Text="Si, deseo canjear este cupón" />
                                                             </div>
                                                         </div>
                                                     </div>

@@ -18,16 +18,32 @@ namespace Ecomonedas.Menus.Cliente
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Usuario oUsuario = LoginLN.Login.Usuario;
             if (!IsPostBack)
             {
 
-                Usuario oUsuario = LoginLN.Login.Usuario;
+               
                 if (oUsuario != null)
                 {
 
 
 
                     RefrescarListView(oUsuario);
+
+                    if (Request.QueryString["estado"] == "correcto")
+                    {
+                        Response.Redirect("CanjearCupones.aspx");
+                    }
+
+                }
+
+            }
+            else
+            {
+
+                if (Request.QueryString["estado"] == "correcto")
+                {
+                    Response.Redirect("CanjearCupones.aspx");
                 }
 
             }
@@ -61,7 +77,6 @@ namespace Ecomonedas.Menus.Cliente
             Usuario oUsuario = LoginLN.Login.Usuario;
             Cupon cupon = CuponLN.ObtenerCupon(Convert.ToInt32(idProducto.Value));
 
-
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(cupon.ID.ToString(), QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
@@ -73,23 +88,23 @@ namespace Ecomonedas.Menus.Cliente
                 {
                     qrCodeImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                     byte[] byteImage = ms.ToArray();
-                     imgBarCode.ImageUrl= "data:image/png;base64," + Convert.ToBase64String(byteImage);
-              
+                    imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
+
                     ruta = Convert.ToBase64String(byteImage);
                 }
-                
-            }
-           
 
-            
+            }
+
+
+
 
             ReportParameter[] p = new ReportParameter[4];
             p[0] = new ReportParameter("nombreCliente", oUsuario.NombreCompleto);
 
             p[1] = new ReportParameter("nombreProductoServicio", cupon.Nombre);
             p[2] = new ReportParameter("precio", cupon.Cantidad_Ecomonedas.ToString());
-            p[3] = new ReportParameter("barrasCupon",  ruta);
-        
+            p[3] = new ReportParameter("barrasCupon", ruta);
+
             LocalReport report = new LocalReport();
             report.ReportPath = Server.MapPath("~/Reportes/ReporteCupon.rdlc");
             report.EnableExternalImages = true;
@@ -98,14 +113,14 @@ namespace Ecomonedas.Menus.Cliente
 
             report.Refresh();
 
-            string FileName = "Cupon-"+ cupon.Nombre.Trim()  +  ".pdf";
+            string FileName = "Cupon-" + cupon.Nombre.Trim() + ".pdf";
             string extension;
             string encoding;
             string mimeType;
             string[] streams;
             Warning[] warnings;
 
-      
+
 
             Byte[] mybytes = report.Render("PDF", null,
                             out extension, out encoding,
@@ -115,37 +130,24 @@ namespace Ecomonedas.Menus.Cliente
                 fs.Write(mybytes, 0, mybytes.Length);
             }
             CuponLN.ConsumirCupon(oUsuario.Correo_Electronico, cupon.ID);
-            Billetera_Virtual_LN.ActualizarBilletera(oUsuario.Correo_Electronico, 0, (Convert.ToInt32(cupon.Cantidad_Ecomonedas)*10));
+            Billetera_Virtual_LN.ActualizarBilletera(oUsuario.Correo_Electronico, 0, (Convert.ToInt32(cupon.Cantidad_Ecomonedas) * 10));
 
 
-            Response.ClearHeaders();
-            Response.ClearContent();
+            HtmlInputButton html = (HtmlInputButton)item.FindControl("btnCanjeo");
+            html.Value = "Ya has canjeado este cupón";
+            html.Disabled = true;
+
+
             Response.Buffer = true;
-            Response.Clear();
+
             Response.ContentType = "application/pdf";
             Response.AddHeader("Content-Disposition", "attachment; filename=" + FileName);
-            Response.AddHeader("Refresh", "0; url=CanjearCupones.aspx");
-
             Response.WriteFile(Server.MapPath("~/DescargasCupones/" + FileName));
+        
 
-
-
-            Response.Flush();
-            Response.Close();
-            Response.End();
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
+            
+       
         }
     }
 }
