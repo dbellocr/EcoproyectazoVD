@@ -68,6 +68,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="ProvinciaLN.cs" />
+    <Compile Include="Reporte.cs" />
+    <Compile Include="ReporteLN.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="RolLN.cs" />
     <Compile Include="sysdiagrams.cs" />

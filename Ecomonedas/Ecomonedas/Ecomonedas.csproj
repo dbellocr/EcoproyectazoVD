@@ -109,6 +109,17 @@
     <Content Include="PrincipalAdministrador.Master" />
     <Content Include="PrincipalAdminCentroAcopio.Master" />
     <Content Include="PrincipalCliente.Master" />
+    <Content Include="Reportes\dsCentrosAcopio.xsc">
+      <DependentUpon>dsCentrosAcopio.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dsCentrosAcopio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCentrosAcopio.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dsCentrosAcopio.xss">
+      <DependentUpon>dsCentrosAcopio.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -405,6 +416,11 @@
     <Compile Include="QueHacemos.aspx.designer.cs">
       <DependentUpon>QueHacemos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\dsCentrosAcopio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCentrosAcopio.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -423,6 +439,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\ReporteCupon.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEcomonedas.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
