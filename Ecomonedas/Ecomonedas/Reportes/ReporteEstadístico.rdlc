@@ -28,7 +28,6 @@
                               <Value>Nombre del centro de acopio</Value>
                               <Style>
                                 <FontFamily>century Gothic</FontFamily>
-                                <Color>#00ffffff</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -64,7 +63,6 @@
                               <Value>Cantidad de Ecomonedas producidas</Value>
                               <Style>
                                 <FontFamily>century Gothic</FontFamily>
-                                <Color>#00ffffff</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -127,14 +125,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Cantidad_Total">
+                    <Textbox Name="CantidadProducida">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Cantidad_Total.Value</Value>
+                              <Value>=Fields!CantidadProducida.Value</Value>
                               <Style>
                                 <FontFamily>century Gothic</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -146,7 +144,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Cantidad_Total</rd:DefaultName>
+                      <rd:DefaultName>CantidadProducida</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -181,8 +179,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.13567cm</Top>
-        <Left>1.76953cm</Left>
+        <Top>0.71233cm</Top>
+        <Left>1.77214cm</Left>
         <Height>1.2cm</Height>
         <Width>12.96572cm</Width>
         <Style>
@@ -192,13 +190,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>0.99167in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>3.06803cm</Height>
+      <Height>3.23737cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -223,7 +221,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.07103cm</Top>
+          <Top>0.84286cm</Top>
           <Height>0.6cm</Height>
           <Width>16.51cm</Width>
           <Style>
@@ -257,10 +255,61 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.70631cm</Top>
+          <Top>1.47814cm</Top>
           <Height>0.6cm</Height>
           <Width>16.51cm</Width>
           <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox5">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Del </Value>
+                  <Style>
+                    <FontFamily>century Gothic</FontFamily>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Parameters!fechaInicial.Value</Value>
+                  <Style>
+                    <FontFamily>century Gothic</FontFamily>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value> al </Value>
+                  <Style>
+                    <FontFamily>century Gothic</FontFamily>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Parameters!fechaFinal.Value</Value>
+                  <Style>
+                    <FontFamily>century Gothic</FontFamily>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>2.11342cm</Top>
+          <Height>0.6cm</Height>
+          <Width>16.51cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -279,7 +328,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.73567cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -308,7 +357,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.543cm</Top>
+          <Top>0.88533cm</Top>
           <Height>0.6cm</Height>
           <Width>16.51cm</Width>
           <Style>
@@ -339,40 +388,49 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsCentrosAcopio">
+    <DataSource Name="Contexto">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>36eae652-8ae9-4e5a-839e-ffdb0c5d70c1</rd:DataSourceID>
+      <rd:DataSourceID>f29344bf-8ea8-43f9-b76d-92d337597491</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>dsCentrosAcopio</DataSourceName>
+        <DataSourceName>Contexto</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Cantidad_Total">
-          <DataField>Cantidad_Total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="Nombre">
           <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="CantidadProducida">
+          <DataField>CantidadProducida</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dsCentrosAcopio</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Daniel\Source\Repos\EcoproyectazoVD\Ecomonedas\Ecomonedas\Reportes\dsCentrosAcopio.xsd</rd:SchemaPath>
-        <rd:TableName>Centro_Acopio</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Centro_AcopioTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>Contexto</rd:DataSetName>
+        <rd:TableName>ReporteLN</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>ListaReporte</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[Contexto.Reporte] ListaReporte(System.DateTime, System.DateTime)</rd:ObjectDataSourceSelectMethodSignature>
+        <rd:ObjectDataSourceType>Contexto.ReporteLN, Contexto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="fechaInicial">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="fechaFinal">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>7a152ce7-90bd-4233-b6e8-2e7e4eb1e6aa</rd:ReportID>
+  <rd:ReportID>a9ca8c41-5da7-406d-b87e-196771c11cc9</rd:ReportID>
 </Report>

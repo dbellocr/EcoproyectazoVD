@@ -10,7 +10,7 @@ namespace Contexto
     {
 
         public string Nombre { get; set; }
-        public int CantidadProducida { get; set; }
+        public decimal? CantidadProducida { get; set; }
 
     }
 }
