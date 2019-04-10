@@ -1,5 +1,6 @@
 ﻿using Contexto;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,7 +22,7 @@ namespace Ecomonedas.Menus
                 //ddlRol.DataTextField = "Descripcion";
                 //ddlRol.DataBind();
 
-                gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaAdminCentroAcopio()).ToList();
+                gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaAdminCentroAcopio(true)).ToList();
                 gvUsuarios.DataBind();
             }
             string accion = Request.QueryString["accion"];
@@ -87,6 +88,29 @@ namespace Ecomonedas.Menus
             txtTelefono.Text = "";
             btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;
+        }
+
+        private void CargarGRIDActivos()
+        {
+            gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaAdminCentroAcopio(true)).ToList();
+            gvUsuarios.DataBind();
+        }
+        private void CargarGRIDInactivos()
+        {
+            gvUsuarios.DataSource = ((IEnumerable<Usuario>)UsuarioLN.ListaAdminCentroAcopio(false)).ToList();
+            gvUsuarios.DataBind();
+        }
+
+        protected void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEstado.Checked)
+            {
+                CargarGRIDInactivos();
+            }
+            else
+            {
+                CargarGRIDActivos();
+            }
         }
     }
 }

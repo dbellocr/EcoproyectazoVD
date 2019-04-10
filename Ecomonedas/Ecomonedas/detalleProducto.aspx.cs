@@ -21,7 +21,7 @@ namespace Ecomonedas
                 if (esNumero)
                 {
 
-                    fvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).Where(x => x.ID==id && x.Estado==true);
+                    fvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones(true)).Where(x => x.ID==id && x.Estado==true);
                     fvCupones.DataBind();
                 }
 

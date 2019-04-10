@@ -9,14 +9,26 @@ namespace Contexto
     public class CuponLN
     {
 
-        public static IQueryable ListaCupones(string primerosTres="")
+        public static IQueryable ListaCupones(bool estado,string primerosTres = "")
         {
             EcomonedasContexto db = new EcomonedasContexto();
-            if (primerosTres != "")
+
+            if (estado)
             {
-            
-                return db.Cupon.Where(x => x.Estado == true).Take(3);
+
+                if (primerosTres != "")
+                {
+
+                    return db.Cupon.Where(x => x.Estado == true).Take(3);
+                }
+
+            }else
+            {
+                
+                    return db.Cupon.Where(x => x.Estado == false);
+                
             }
+            
 
             return db.Cupon;
 
@@ -68,7 +80,7 @@ namespace Contexto
             //}
 
             var query =
-    from c in lista 
+    from c in lista
     where !(from o in db.Canjeo_Cupon
             select o.ID_Cupon)
            .Contains(c.ID)

@@ -51,11 +51,18 @@ namespace Contexto
            return db.SaveChanges();
 
         }
-        public static IQueryable ListaMateriales()
+        public static IQueryable ListaMateriales(bool estado)
         {
 
             EcomonedasContexto db = new EcomonedasContexto();
-            return db.Tipo_Material.Where(x=> x.Estado==1);
+
+            if (estado)
+            {
+                return db.Tipo_Material.Where(x => x.Estado == 1);
+            }else
+            {
+                return db.Tipo_Material.Where(x => x.Estado == 0);
+            }
 
         }
         public static Tipo_Material ObtenerMaterial(int id)

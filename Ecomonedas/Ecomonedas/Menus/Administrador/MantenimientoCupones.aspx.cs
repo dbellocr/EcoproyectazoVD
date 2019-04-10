@@ -1,5 +1,6 @@
 ﻿using Contexto;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,15 +18,12 @@ namespace Ecomonedas.Menus.Administrador
             if (!IsPostBack)
             {
 
-                gvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones()).ToList();
+                gvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones(true)).ToList();
                 gvCupones.DataBind();
 
-
-
+                
             }
-
-
-
+            
             string accion = Request.QueryString["accion"];
             if (accion == "guardar")
             {
@@ -35,7 +33,6 @@ namespace Ecomonedas.Menus.Administrador
                 lblMensaje.Text = "Se ha guardado la información del cupón";
 
             }
-
 
 
         }
@@ -187,6 +184,29 @@ namespace Ecomonedas.Menus.Administrador
             //Asinga al dropdown list el primer elemento de la lista de colores
             btnGuardar.Text = "Guardar";
             btnNuevo.Visible = false;
+        }
+
+        private void CargarGRIDActivos()
+        {
+            gvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones(true)).ToList();
+            gvCupones.DataBind();
+        }
+        private void CargarGRIDInactivos()
+        {
+            gvCupones.DataSource = ((IEnumerable<Cupon>)CuponLN.ListaCupones(false)).ToList();
+            gvCupones.DataBind();
+        }
+
+        protected void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEstado.Checked)
+            {
+                CargarGRIDInactivos();
+            }
+            else
+            {
+                CargarGRIDActivos();
+            }
         }
     }
 }

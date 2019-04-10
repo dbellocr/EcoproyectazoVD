@@ -1,5 +1,6 @@
 ﻿using Contexto;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,7 +23,7 @@ namespace Ecomonedas
                 ddlColor.DataTextField = "Descripcion";
                 ddlColor.DataBind();
 
-                gvMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales()).ToList();
+                gvMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales(true)).ToList();
                 gvMateriales.DataBind();
 
 
@@ -213,5 +214,28 @@ namespace Ecomonedas
         }
 
 
+
+        private void CargarGRIDActivos()
+        {
+            gvMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales(true)).ToList();
+            gvMateriales.DataBind();
+        }
+        private void CargarGRIDInactivos()
+        {
+            gvMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales(false)).ToList();
+            gvMateriales.DataBind();
+        }
+
+        protected void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEstado.Checked)
+            {
+                CargarGRIDInactivos();
+            }
+            else
+            {
+                CargarGRIDActivos();
+            }
+        }
     }
 }

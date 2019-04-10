@@ -28,7 +28,7 @@ namespace Ecomonedas.Menus.AdminCentroAcopio
         }
         private void CargarRepeater()
         {
-            repeaterMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales()).ToList();
+            repeaterMateriales.DataSource = ((IEnumerable<Tipo_Material>)TipoMaterialLN.ListaMateriales(true)).ToList();
             repeaterMateriales.DataBind();
         }
         protected void txtCantidad_TextChanged(object sender, EventArgs e)
